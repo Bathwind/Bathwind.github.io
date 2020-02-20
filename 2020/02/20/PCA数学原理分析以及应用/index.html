@@ -25,19 +25,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。 P">
+  <meta name="description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PCA主成分分析：">
 <meta property="og:url" content="http://yoursite.com/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="一只菜鸟的电子之路">
-<meta property="og:description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。 P">
+<meta property="og:description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/01.png">
 <meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/02.png">
 <meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/05.png">
 <meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png">
 <meta property="article:published_time" content="2020-02-20T10:22:00.000Z">
-<meta property="article:modified_time" content="2020-02-20T10:13:57.163Z">
+<meta property="article:modified_time" content="2020-02-20T10:15:08.813Z">
 <meta property="article:author" content="WYW@HD">
 <meta property="article:tag" content="PCA降维">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-20 18:22:00 / 修改时间：18:13:57" itemprop="dateCreated datePublished" datetime="2020-02-20T18:22:00+08:00">2020-02-20</time>
+              <time title="创建时间：2020-02-20 18:22:00 / 修改时间：18:15:08" itemprop="dateCreated datePublished" datetime="2020-02-20T18:22:00+08:00">2020-02-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -281,7 +281,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
+        <h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
 <p><strong>PCA数学原理分析</strong>：</p>
 <p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
 <p>分析这篇文章写的很好：可以参考这篇文章。</p>

@@ -3,7 +3,7 @@
   <entry>
     <title>PCA主成分分析：</title>
     <url>/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
+    <content><![CDATA[<html><head></head><body><h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
 <p><strong>PCA数学原理分析</strong>：</p>
 <p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
 <p>分析这篇文章写的很好：可以参考这篇文章。</p>
