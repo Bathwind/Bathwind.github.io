@@ -25,29 +25,37 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="永远相信美好的事情即将发生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一只菜鸟的电子之路">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。 P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PCA主成分分析：">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="一只菜鸟的电子之路">
-<meta property="og:description" content="永远相信美好的事情即将发生">
+<meta property="og:description" content="PCA主成分分析：主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。 P">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/01.png">
+<meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/02.png">
+<meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/05.png">
+<meta property="og:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png">
+<meta property="article:published_time" content="2020-02-20T10:22:00.000Z">
+<meta property="article:modified_time" content="2020-02-20T10:13:57.163Z">
 <meta property="article:author" content="WYW@HD">
+<meta property="article:tag" content="PCA降维">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/.com//%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/01.png">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>一只菜鸟的电子之路</title>
+  <title>PCA主成分分析： | 一只菜鸟的电子之路</title>
   
 
 
@@ -199,10 +207,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -216,8 +224,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/" class="post-title-link" itemprop="url">PCA主成分分析：</a>
+          PCA主成分分析：
         </h1>
 
         <div class="post-meta">
@@ -242,7 +249,14 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -267,7 +281,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
+        <h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
 <p><strong>PCA数学原理分析</strong>：</p>
 <p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
 <p>分析这篇文章写的很好：可以参考这篇文章。</p>
@@ -358,112 +372,94 @@ C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及�
 <p>代码如下：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> imtools <span class="keyword">import</span> get_imlist</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pca</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="string">"""主成分分析</span></span><br><span class="line"><span class="string">    输入：矩阵X其中该矩阵中存储训练数据，每一行为一条训练数据</span></span><br><span class="line"><span class="string">    返回：投影矩阵（按照维度的重要性排序），方差和均值</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    num_data,dim = X.shape<span class="comment">#获取维数</span></span><br><span class="line">    <span class="comment">#数据中心化</span></span><br><span class="line">    mean_x = X.mean(axis=<span class="number">0</span>)<span class="comment">#axis = 0：压缩行，对各列求均值，返回 1* n 矩阵axis =1 ：压缩列，对各行求均值，返回 m *1 矩阵</span></span><br><span class="line">    X = X - mean_x</span><br><span class="line">    <span class="keyword">if</span> dim > num_data:</span><br><span class="line">        M = dot(X,X.T) <span class="comment">#PCA-使用紧致技巧得到协方差矩阵</span></span><br><span class="line">        e,EV = linalg.eigh(M)<span class="comment">#计算特征值和特征向量</span></span><br><span class="line">        tmp = dot(X.T,EV).T<span class="comment">#这就是紧致技巧</span></span><br><span class="line">        V  = tmp[::<span class="number">-1</span>]<span class="comment">#由于最后的特征向量就是我们需要的，所以将其逆转</span></span><br><span class="line">        S = sqrt(e)[::<span class="number">-1</span>]<span class="comment">#由于特征值是按照递增顺序排列的，所以需要将其逆转。</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(V.shape[<span class="number">1</span>]):</span><br><span class="line">            V[:,i] /= S</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        U,S,V = linalg.svd(X)</span><br><span class="line">        V = V[:num_data]<span class="comment">#仅仅返回num_data维的数据才合理</span></span><br><span class="line">    <span class="keyword">return</span> V,S,mean_x<span class="comment">#返回投影矩阵，方差和均值</span></span><br><span class="line">imlist = get_imlist(<span class="string">r'..\image\1.jpg'</span>,<span class="string">'.jpg'</span>)</span><br><span class="line">im = array(Image.open(imlist[<span class="number">0</span>]))<span class="comment">#打开一幅图像，获得其大小</span></span><br><span class="line">m,n = im.shape[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">imnum = len(imlist)</span><br><span class="line"><span class="comment">#创建矩阵，保存所有压平后的图像数据</span></span><br><span class="line">immatrix = array([array(Image.open(im)).flatten() <span class="keyword">for</span> im <span class="keyword">in</span> imlist],<span class="string">'f'</span>)</span><br><span class="line"><span class="comment">#执行PCA操作</span></span><br><span class="line">V,S,immean = pca(immatrix)</span><br><span class="line"><span class="comment">#显示一些图像（均值图像和前10个模式）</span></span><br><span class="line">figure()</span><br><span class="line">gray()</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>)<span class="comment">#m和n代表在一个图像窗口中显示m行n列个图像</span></span><br><span class="line">imshow(immean.reshape(m,n))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">9</span>):</span><br><span class="line">    subplot(<span class="number">2</span>,<span class="number">5</span>,i+<span class="number">2</span>)</span><br><span class="line">    imshow(V[i].reshape(m,n))</span><br></pre></td></tr></tbody></table></figure>
 
-      
     </div>
 
     
     
     
-      <footer class>
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechat.jpg" alt="WYW@HD 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="WYW@HD 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="WYW@HD">
-      <meta itemprop="description" content="永远相信美好的事情即将发生">
-    </span>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>WYW@HD
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/" title="PCA主成分分析：">http://yoursite.com/2020/02/20/PCA数学原理分析以及应用/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一只菜鸟的电子之路">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">Harris角点检测</a>
-        </h1>
+        
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-              <time title="创建时间：2020-02-19 22:56:00" itemprop="dateCreated datePublished" datetime="2020-02-19T22:56:00+08:00">2020-02-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
                 </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-20 17:38:20" itemprop="dateModified" datetime="2020-02-20T17:38:20+08:00">2020-02-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%92%E7%82%B9%E6%8F%8F%E8%BF%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">角点描述</span>
-                  </a>
-                </span>
-            </span>
 
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 ≈</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>角点的定义：角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/#more" rel="contents">
-                阅读全文 »
+                <span class="label">RSS</span>
               </a>
             </div>
-          <!--/noindex-->
-        
-      
     </div>
+  </div>
 
+      <div>
+  
+    <div>
     
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
     
-    
-      <footer class>
-        <div class="post-eof"></div>
+</div>
+  
+</div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/PCA%E9%99%8D%E7%BB%B4/" rel="tag"># PCA降维</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/" rel="prev" title="Harris角点检测">
+      <i class="fa fa-chevron-left"></i> Harris角点检测
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
@@ -471,12 +467,10 @@ C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及�
 
   </div>
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -522,6 +516,7 @@ C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PCA主成分分析："><span class="nav-number">1.</span> <span class="nav-text">PCA主成分分析：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内积和-投影："><span class="nav-number">1.1.</span> <span class="nav-text">内积和 投影：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基变换的矩阵表示"><span class="nav-number">1.3.</span> <span class="nav-text">基变换的矩阵表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协方差矩阵及其表示："><span class="nav-number">1.4.</span> <span class="nav-text">协方差矩阵及其表示：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协方差矩阵对角化："><span class="nav-number">1.5.</span> <span class="nav-text">协方差矩阵对角化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PCA算法"><span class="nav-number">1.6.</span> <span class="nav-text">PCA算法</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -765,6 +760,25 @@ setInterval("createtime()",250);
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '0b61cbbc081aad24c740',
+      clientSecret: 'aeaa8677185e8183c27a7c024c16984da03f449a',
+      repo        : 'wywhd.github.io',
+      owner       : 'wywaihandan',
+      admin       : ['wywaihandan'],
+      id          : '96b2c3ab0ee4b12e1517121c5c20aa28',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 
 
