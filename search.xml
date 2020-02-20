@@ -24,16 +24,16 @@ E(u,v)=\sum_{x,y}w(x,y) \left[]
   IxIy & Iy^2
   \end{matrix}
   \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p>
-<p><img src="/images/1.png" alt="图一"></p>
+<p><img src="https://github.com/wywaihandan/testimage/blob/master/images/harris1.png" alt></p>
 <p>具体推导过程为:</p>
 <p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p>
 <p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p>
 <script type="math/tex; mode=display">
 E(u,v)=\sum_{x,y}w(x,y)[I(x+u,y+v)-I(x,y)]^2</script><p>   高数中将这个式子进行泰勒展开：</p>
 <script type="math/tex; mode=display">
-f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)\\
-所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2\\
-=\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\sum[u,v] \left[
+f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)</script><script type="math/tex; mode=display">
+所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2</script><script type="math/tex; mode=display">
+=\\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\\sum[u,v] \left[
  \begin{matrix}
   Ix^2 & IxIy\\
   IxIy & Iy^2
