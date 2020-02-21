@@ -1287,7 +1287,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7ec813;
+  background: #49ff3e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2885,7 +2885,7 @@ mjx-container + br {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("/images/bg.jpg");
+  background: url("http://wyw_hd.gitee.io/blog2/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
