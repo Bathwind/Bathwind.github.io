@@ -1287,7 +1287,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffb496;
+  background: #34ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2907,9 +2907,6 @@ body #footer > div > div {
 .main-inner {
   background: #fff;
   opacity: 1;
-}
-.post-toc .nav .nav-child {
-  display: block;
 }
 .post-toc ol {
   font-size: 16px;
