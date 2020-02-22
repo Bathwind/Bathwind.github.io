@@ -1,266 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>汇编语言的学习记录</title>
-    <url>/blog2/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。<a id="more"></a>然后我打算把我每天学习的记录一下。为了日后看的时候方便一点。</p>
-<h2 id="1-1-机器语言："><a href="#1-1-机器语言：" class="headerlink" title="1.1 机器语言："></a>1.1 机器语言：</h2><p>机器语言就是0和1，但机器语言实在过于复杂，所以以前的程序猿真的苦逼，要写一堆0和1.所以汇编语言就产生了。与现在的高级语言的效率相比。汇编语言的效率是最快的。</p>
-<h2 id="1-2-编译器作用"><a href="#1-2-编译器作用" class="headerlink" title="1.2 编译器作用"></a>1.2 编译器作用</h2><p>编译器的作用就是将汇编指令转换为机器指令。</p>
-<h2 id="1-3汇编语言的组成"><a href="#1-3汇编语言的组成" class="headerlink" title="1.3汇编语言的组成"></a>1.3汇编语言的组成</h2><p>汇编语言通常有以下3类指令：</p>
-<p>(1):汇编指令：机器码的助记符，有对应的机器码。<br>(2):伪指令：没有对应的机器码，由编译器执行，计算机并不执行。<br>(3):其他符号：如+，-，*，/等，由编译器识别，没有对应的机器码。</p>
-<h2 id="1-4指令和数据"><a href="#1-4指令和数据" class="headerlink" title="1.4指令和数据"></a>1.4指令和数据</h2><p>指令和数据在内存或者磁盘上存储的时候是一样的。都是二进制信息。但是CPU可以把一串二进制信息看作数据来处理，也可以将其看作指令处理</p>
-<h2 id="1-6存储单元"><a href="#1-6存储单元" class="headerlink" title="1.6存储单元"></a>1.6存储单元</h2><p>这个概念是比较课本的概念。存储器被划分为若干个存储单元。每个存储单元从0开始编号。也就是从0到127.一个存储器有128个存储单元，一个存储单元可以存储一个Byte.即8个二进制位。</p>
-<h2 id="1-7CPU对数据进行读写"><a href="#1-7CPU对数据进行读写" class="headerlink" title="1.7CPU对数据进行读写"></a>1.7CPU对数据进行读写</h2><p>CPU要想进行数据的读写，必须和外部器件进行交互。必须有以下三类信息的交互:<br><br>1：存储单元的地址<br><br>2：器件的选择，读或写的命令。<br><br>3：读或写的数据(数据信息)<br><br>CPU对数据进行读取的过程如下所示：<br><img src="http://q5zz73y15.bkt.clouddn.com/XL%5B%7BX%7B9QVNBE0A%29LW_LP5$V.png" alt><br>(1):cpu通过地址总线将地址信息3发出<br><br>(2):cpu通过控制线发出内存读命令，选中存储器芯片，并通知他。从中读取数据。<br><br>(3):存储器将3号单元的数据8通过数据线送入CPU。写操作也是类似的。</p>
-<h2 id="1-8地址总线"><a href="#1-8地址总线" class="headerlink" title="1.8地址总线"></a>1.8地址总线</h2><p>CPU通过地址总线来指定存储器单元的。假如一个CPU有10根地址总线，那么就是2的10次方个。也就是从0到1023.<br><img src="http://q5zz73y15.bkt.clouddn.com/666.png" alt><br>先写这莫多。睡觉</p>
-</body></html>]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>汇编语言的学习记录</title>
+      <link href="/blog2/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/"/>
+      <url>/blog2/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。<a id="more"></a>然后我打算把我每天学习的记录一下。为了日后看的时候方便一点。</p><h2 id="1-1-机器语言："><a href="#1-1-机器语言：" class="headerlink" title="1.1 机器语言："></a>1.1 机器语言：</h2><p>机器语言就是0和1，但机器语言实在过于复杂，所以以前的程序猿真的苦逼，要写一堆0和1.所以汇编语言就产生了。与现在的高级语言的效率相比。汇编语言的效率是最快的。</p><h2 id="1-2-编译器作用"><a href="#1-2-编译器作用" class="headerlink" title="1.2 编译器作用"></a>1.2 编译器作用</h2><p>编译器的作用就是将汇编指令转换为机器指令。</p><h2 id="1-3汇编语言的组成"><a href="#1-3汇编语言的组成" class="headerlink" title="1.3汇编语言的组成"></a>1.3汇编语言的组成</h2><p>汇编语言通常有以下3类指令：</p><p>(1):汇编指令：机器码的助记符，有对应的机器码。<br>(2):伪指令：没有对应的机器码，由编译器执行，计算机并不执行。<br>(3):其他符号：如+，-，*，/等，由编译器识别，没有对应的机器码。</p><h2 id="1-4指令和数据"><a href="#1-4指令和数据" class="headerlink" title="1.4指令和数据"></a>1.4指令和数据</h2><p>指令和数据在内存或者磁盘上存储的时候是一样的。都是二进制信息。但是CPU可以把一串二进制信息看作数据来处理，也可以将其看作指令处理</p><h2 id="1-6存储单元"><a href="#1-6存储单元" class="headerlink" title="1.6存储单元"></a>1.6存储单元</h2><p>这个概念是比较课本的概念。存储器被划分为若干个存储单元。每个存储单元从0开始编号。也就是从0到127.一个存储器有128个存储单元，一个存储单元可以存储一个Byte.即8个二进制位。</p><h2 id="1-7CPU对数据进行读写"><a href="#1-7CPU对数据进行读写" class="headerlink" title="1.7CPU对数据进行读写"></a>1.7CPU对数据进行读写</h2><p>CPU要想进行数据的读写，必须和外部器件进行交互。必须有以下三类信息的交互:<br><br>1：存储单元的地址<br><br>2：器件的选择，读或写的命令。<br><br>3：读或写的数据(数据信息)<br><br>CPU对数据进行读取的过程如下所示：<br><img src="http://q5zz73y15.bkt.clouddn.com/XL%5B%7BX%7B9QVNBE0A%29LW_LP5$V.png" alt><br>(1):cpu通过地址总线将地址信息3发出<br><br>(2):cpu通过控制线发出内存读命令，选中存储器芯片，并通知他。从中读取数据。<br><br>(3):存储器将3号单元的数据8通过数据线送入CPU。写操作也是类似的。</p><h2 id="1-8地址总线"><a href="#1-8地址总线" class="headerlink" title="1.8地址总线"></a>1.8地址总线</h2><p>CPU通过地址总线来指定存储器单元的。假如一个CPU有10根地址总线，那么就是2的10次方个。也就是从0到1023.<br><img src="http://q5zz73y15.bkt.clouddn.com/666.png" alt><br>先写这莫多。睡觉</p></body></html>]]></content>
+      
+      
       <categories>
-        <category>汇编语言</category>
+          
+          <category> 汇编语言 </category>
+          
       </categories>
-      <tags>
-        <tag>汇编知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PCA主成分分析：</title>
-    <url>/blog2/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
-<p><strong>PCA数学原理分析</strong>：</p>
-<p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
-<p>分析这篇文章写的很好：可以参考这篇文章。</p>
-<p>我们生活所面对的数据都可以完全被抽象为一组向量。</p>
-<h2 id="内积和-投影："><a href="#内积和-投影：" class="headerlink" title="内积和 投影："></a>内积和 投影：</h2><p>两个维数相同的向量的内积被定义为：</p>
-<script type="math/tex; mode=display">
-(a_1,a_2 ... a_n)*(b_1,b_2...b_n)=a_1b_1+a_2b_2+...+a_nb_n</script><p><img src="http://q5zz73y15.bkt.clouddn.com/01.png" alt></p>
-<p>设A=(x1,y1),B=(x2,y2).好，现在我们从A点向B所在直线引一条垂线。我们知道垂线与B的交点叫做A在B上的投影，再设A与B的夹角是a，则投影的矢量长度为</p>
-<script type="math/tex; mode=display">
-|A|cosa</script><p>接下来内积还有另外一种表示方法：</p>
-<script type="math/tex; mode=display">
-A*B=|A|*|B|*cosa</script><p>也就是说，<strong>设向量B的模为1，则A与B的内积值等于A向B所在直线投影的矢量长度</strong>！</p>
-<h2 id="基："><a href="#基：" class="headerlink" title="基："></a>基：</h2><p><img src="http://q5zz73y15.bkt.clouddn.com/02.png" alt></p>
-<p>这个红色线段的向量我们通常都直接认为是(3,2).但实际上这样说只是相对于当前的这个坐标系来说。所以来说并不是特别准确。</p>
-<p>实际要准确表示这个向量的话，应该按照下面的去表示：</p>
-<script type="math/tex; mode=display">
-3(1,0)^T+2(0,1)^T</script><p>此处(1,0)和(0,1)叫做二维空间中的一组基。所以，<strong>要准确描述向量，首先要确定一组基，然后给出在基所在的各个直线上的投影值，就可以了</strong>。只不过我们经常省略第一步，而默认以(1,0)和(0,1)为基。我们之所以默认选择(1,0)和(0,1)为基，当然是比较方便，因为它们分别是x和y轴正方向上的单位向量，因此就使得二维平面上点坐标和向量一一对应，非常方便。但实际上任何两个线性无关的二维向量都可以成为一组基，所谓线性无关在二维平面内可以直观认为是两个不在一条直线上的向量。</p>
-<p>，(1,1)和(-1,1)也可以成为一组基。一般来说，我们希望基的模是1，因为从内积的意义可以看到，如果基的模是1，那么就可以方便的用向量点乘基而直接获得其在新基上的坐标了！实际上，对应任何一个向量我们总可以找到其同方向上模为1的向量，只要让两个分量分别除以模就好了。这一步通常在线性代数也叫做单位化。所以上面的基可以变为：</p>
-<script type="math/tex; mode=display">
-(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}）</script><p>现在我们要想获得(3,2)在新的基上的坐标，我们只需要分别计算(3,2)与新的基的内积即可，</p>
-<p>所以可以得到：</p>
-<script type="math/tex; mode=display">
-(\frac{5}{\sqrt{2}},\frac{-1}{\sqrt{2}})</script><p><img src="http://q5zz73y15.bkt.clouddn.com/05.png" alt></p>
-<p>我们所选的大多数情况下选的基都是正交的。</p>
-<h2 id="基变换的矩阵表示"><a href="#基变换的矩阵表示" class="headerlink" title="基变换的矩阵表示"></a>基变换的矩阵表示</h2><p>因为进行基变换的方法坐标分别与基做内积运算。所以我们可以用矩阵去表示这种变换，我们写的时候通常将原来的坐标写为列向量的形式。</p>
-<script type="math/tex; mode=display">
-\begin{pmatrix} 1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix} \begin{pmatrix} 3 \\ 2 \end{pmatrix} = \begin{pmatrix} 5/\sqrt{2} \\ -1/\sqrt{2} \end{pmatrix}</script><p>如果我们有m个二维向量，只要将二维向量按列排成一个两行m列矩阵，然后用“基矩阵”乘以这个矩阵，就得到了所有这些向量在新基下的值。</p>
-<p><strong>一般的，如果我们有M个N维向量，想将其变换为由R个N维向量表示的新空间中，那么首先将R个基按行组成矩阵A，然后将向量按列组成矩阵B，那么两矩阵的乘积AB就是变换结果，其中AB的第m列为A中第m列变换后的结果</strong>。</p>
-<p>矩阵的相乘在看完那篇博客后好像明白他们的意义。其实矩阵变换无非就是<strong>两个矩阵相乘的意义是将右边矩阵中的每一列列向量变换到左边矩阵中每一行行向量为基所表示的空间中去</strong>。</p>
-<h2 id="协方差矩阵及其表示："><a href="#协方差矩阵及其表示：" class="headerlink" title="协方差矩阵及其表示："></a>协方差矩阵及其表示：</h2><p>如果进行<strong>矩阵变换的时候基的数量少于向量本身的维数的时候我们就达到了降维的目的</strong>。但是如何选取基又是一个问题。看了别人的博客写的后感觉这种变换的思想真的巧妙。</p>
-<p>选取一个合适的基的意思是变换后的坐标尽量分散。而分散的程度我们在数学上通常使用方差来表示，一个字段的方差可以看做是每个元素与字段均值的差的平方和的均值，</p>
-<script type="math/tex; mode=display">
-Var(a)=\frac{1}{m}\sum_{i=1}^m{(a_i-\mu)^2}</script><p>在这里为了<strong>简化运算我们通常提前对数据进行处理，每个数据减去这个字段的均值。</strong></p>
-<p>处理过程很简单。举个例子：</p>
-<script type="math/tex; mode=display">
-1,2,3,4,5这五个数据的均值为15/5=3所以每个数据都减去3.所以处理后的数据为：-2，-1,0，1,2.这五个数据均值一定为0.</script><p>这样处理后，</p>
-<script type="math/tex; mode=display">
-这样\mu可以为0了。</script><p><strong><em>所以寻找一个基，使得所有数据变换为这个基上的坐标表示后，方差值最大。</em></strong></p>
-<p>对于上面二维降成一维的问题来说，找到那个使得方差最大的方向就可以了。不过对于更高维，还有一个问题需要解决。考虑三维降到二维问题。与之前相同，首先我们希望找到一个方向使得投影后方差最大，这样就完成了第一个方向的选择，继而我们选择第二个投影方向。</p>
-<p>如果我们还是单纯只选择方差最大的方向，很明显，这个方向与第一个方向应该是“几乎重合在一起”，显然这样的维度是没有用的，因此，应该有其他约束条件。从直观上说，让两个字段尽可能表示更多的原始信息，我们是不希望它们之间存在（线性）相关性的，因为相关性意味着两个字段不是完全独立，必然存在重复表示的信息。</p>
-<p>数学上可以用两个字段的协方差表示其相关性，由于已经让每个字段均值为0，协方差原始公式为：<img src="/blog2/.io//学习记录\4.png" alt></p>
-<p>则协方差的公式如下：</p>
-<script type="math/tex; mode=display">
-Cov(a,b)=\frac{1}{m}\sum_{i=1}^m{a_ib_i}</script><p>可以看到，在字段均值为0的情况下，两个字段的协方差简洁的表示为其内积除以元素数m。当协方差为0时，表示两个字段完全独立。为了让协方差为0，我们选择第二个基时只能在与第一个基正交的方向上选择。因此最终选择的两个方向一定是正交的。为什么正交的话？因为线性代数里面也说正交的话内积为0，所以协方差就为0.</p>
-<p><strong>将一组N维向量降为K维（K大于0，小于N），其目标是选择K个单位（模为1）正交基，使得原始数据变换到这组基上后，各字段两两间协方差为0，而字段的方差则尽可能大（在正交的约束下，取最大的K个方差）</strong></p>
-<p>上面就是我们要得到的目标，但是就是上面的这个结论并不能告诉我们要具体怎么去做。所以说数学的思想真的巧妙。</p>
-<p>我们设有a和b俩个字段。</p>
-<script type="math/tex; mode=display">
-X=\begin{pmatrix} a_1 & a_2 & \cdots & a_m \\ b_1 & b_2 & \cdots & b_m \end{pmatrix}</script><p>然后我们用X乘以X的转置，并乘上系数1/m：</p>
-<script type="math/tex; mode=display">
-\frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a_i^2} & \frac{1}{m}\sum_{i=1}^m{a_ib_i} \\ \frac{1}{m}\sum_{i=1}^m{a_ib_i} & \frac{1}{m}\sum_{i=1}^m{b_i^2} \end{pmatrix}</script><p>然后神奇的事情发生了，主对角线上是方差，斜对角线是协方差。</p>
-<p><strong>设我们有m个n维数据记录，将其按列排成n乘m的矩阵X，设</strong></p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}XX^\mathsf{T}</script><p><strong>，则C是一个对称矩阵，其对角线分别个各个字段的方差，而第i行j列和j行i列元素相同，表示i和j两个字段的协方差</strong></p>
-<h2 id="协方差矩阵对角化："><a href="#协方差矩阵对角化：" class="headerlink" title="协方差矩阵对角化："></a>协方差矩阵对角化：</h2><p>为什么要将协方差矩阵对角化呢。首先我们了解一下相似矩阵。设A和B为n阶矩阵如果存在n阶可逆矩阵P，使得：</p>
-<script type="math/tex; mode=display">
-P^{-1}AP=B</script><p>我们就称A相似于B，或者说A和B相似。矩阵相似具有非常多好用的性质：</p>
-<p><strong>A和B有相等的行列式。A和B有相等的迹。</strong></p>
-<p>相似矩阵具有许多共同的性质，对于N阶矩阵。我们希望与A相似的矩阵中寻找一个较简单的矩阵。所以我们考虑n阶矩阵是否与一个对角矩阵相似的问题的时候。这时候就用到了矩阵对角化。</p>
-<p>设原始数据矩阵X对应的协方差矩阵为C，而P是一组基按行组成的矩阵，设Y=PX，则Y为X对P做基变换后的数据。设Y的协方差矩阵为D，我们推导一下D与C的关系：</p>
-<script type="math/tex; mode=display">
-\begin{array}{l l l} D & = & \frac{1}{m}YY^\mathsf{T} \\ & = & \frac{1}{m}(PX)(PX)^\mathsf{T} \\ & = & \frac{1}{m}PXX^\mathsf{T}P^\mathsf{T} \\ & = & P(\frac{1}{m}XX^\mathsf{T})P^\mathsf{T} \\ & = & PCP^\mathsf{T} \end{array}</script><p>现在事情很明白了！我们要找的P不是别的，而是能让原始协方差矩阵对角化的P。换句话说，优化目标变成了<strong>寻找一个矩阵P，满足</strong></p>
-<script type="math/tex; mode=display">
-PCP^\mathsf{T}</script><hr>
-<p><strong>是一个对角矩阵，并且对角元素按从大到小依次排列，那么P的前K行就是要寻找的基，用P的前K行组成的矩阵乘以X就使得X从N维降到了K维并满足上述优化条件</strong>。</p>
-<p>，在线性代数上，实对称矩阵有一系列非常好的性质：</p>
-<p>1）实对称矩阵不同特征值对应的特征向量必然正交。</p>
-<script type="math/tex; mode=display">
-2）设特征向量\lambda重数为r，则必然存在r个线性无关的特征向量对应于\lambda\\
-
-因此可以将这r个特征向量单位正交化。</script><p>一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量，设这n个特征向量为:</p>
-<script type="math/tex; mode=display">
-e_1,e_2,\cdots,e_n</script><p>则对协方差矩阵C有如下结论：</p>
-<script type="math/tex; mode=display">
-E^\mathsf{T}CE=\Lambda=\begin{pmatrix} \lambda_1 & & & \\ & \lambda_2 & & \\ & & \ddots & \\ & & & \lambda_n \end{pmatrix}</script><script type="math/tex; mode=display">
-P=E^\mathsf{T}</script><p>矩阵P就已经得到了。</p>
-<p>P是协方差矩阵的特征向量单位化后按行排列出的矩阵，其中每一行都是C的一个特征向量。如果设P按照特征值的从大到小，将特征向量从上到下排列，则用P的前K行组成的矩阵乘以原始数据矩阵X，就得到了我们需要的降维后的数据矩阵Y。</p>
-<h2 id="PCA算法"><a href="#PCA算法" class="headerlink" title="PCA算法"></a>PCA算法</h2><p>总结一下PCA的算法步骤：</p>
-<p>设有m条n维数据。</p>
-<p>1）将原始数据按列组成n行m列矩阵X</p>
-<p>2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值</p>
-<p>3）求出协方差矩阵</p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及对应的特征向量</p>
-<p>5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P</p>
-<p>6）Y=PX即为降维到k维后的数据</p>
-<p>代码如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> imtools <span class="keyword">import</span> get_imlist</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pca</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="string">"""主成分分析</span></span><br><span class="line"><span class="string">    输入：矩阵X其中该矩阵中存储训练数据，每一行为一条训练数据</span></span><br><span class="line"><span class="string">    返回：投影矩阵（按照维度的重要性排序），方差和均值</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    num_data,dim = X.shape<span class="comment">#获取维数</span></span><br><span class="line">    <span class="comment">#数据中心化</span></span><br><span class="line">    mean_x = X.mean(axis=<span class="number">0</span>)<span class="comment">#axis = 0：压缩行，对各列求均值，返回 1* n 矩阵axis =1 ：压缩列，对各行求均值，返回 m *1 矩阵</span></span><br><span class="line">    X = X - mean_x</span><br><span class="line">    <span class="keyword">if</span> dim > num_data:</span><br><span class="line">        M = dot(X,X.T) <span class="comment">#PCA-使用紧致技巧得到协方差矩阵</span></span><br><span class="line">        e,EV = linalg.eigh(M)<span class="comment">#计算特征值和特征向量</span></span><br><span class="line">        tmp = dot(X.T,EV).T<span class="comment">#这就是紧致技巧</span></span><br><span class="line">        V  = tmp[::<span class="number">-1</span>]<span class="comment">#由于最后的特征向量就是我们需要的，所以将其逆转</span></span><br><span class="line">        S = sqrt(e)[::<span class="number">-1</span>]<span class="comment">#由于特征值是按照递增顺序排列的，所以需要将其逆转。</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(V.shape[<span class="number">1</span>]):</span><br><span class="line">            V[:,i] /= S</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        U,S,V = linalg.svd(X)</span><br><span class="line">        V = V[:num_data]<span class="comment">#仅仅返回num_data维的数据才合理</span></span><br><span class="line">    <span class="keyword">return</span> V,S,mean_x<span class="comment">#返回投影矩阵，方差和均值</span></span><br><span class="line">imlist = get_imlist(<span class="string">r'..\image\1.jpg'</span>,<span class="string">'.jpg'</span>)</span><br><span class="line">im = array(Image.open(imlist[<span class="number">0</span>]))<span class="comment">#打开一幅图像，获得其大小</span></span><br><span class="line">m,n = im.shape[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">imnum = len(imlist)</span><br><span class="line"><span class="comment">#创建矩阵，保存所有压平后的图像数据</span></span><br><span class="line">immatrix = array([array(Image.open(im)).flatten() <span class="keyword">for</span> im <span class="keyword">in</span> imlist],<span class="string">'f'</span>)</span><br><span class="line"><span class="comment">#执行PCA操作</span></span><br><span class="line">V,S,immean = pca(immatrix)</span><br><span class="line"><span class="comment">#显示一些图像（均值图像和前10个模式）</span></span><br><span class="line">figure()</span><br><span class="line">gray()</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>)<span class="comment">#m和n代表在一个图像窗口中显示m行n列个图像</span></span><br><span class="line">imshow(immean.reshape(m,n))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">9</span>):</span><br><span class="line">    subplot(<span class="number">2</span>,<span class="number">5</span>,i+<span class="number">2</span>)</span><br><span class="line">    imshow(V[i].reshape(m,n))</span><br></pre></td></tr></tbody></table></figure>
-</body></html>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 汇编知识点 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PCA主成分分析：</title>
+      <link href="/blog2/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/"/>
+      <url>/blog2/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p><p><strong>PCA数学原理分析</strong>：</p><p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p><p>分析这篇文章写的很好：可以参考这篇文章。</p><p>我们生活所面对的数据都可以完全被抽象为一组向量。</p><h2 id="内积和-投影："><a href="#内积和-投影：" class="headerlink" title="内积和 投影："></a>内积和 投影：</h2><p>两个维数相同的向量的内积被定义为：</p><script type="math/tex; mode=display">(a_1,a_2 ... a_n)*(b_1,b_2...b_n)=a_1b_1+a_2b_2+...+a_nb_n</script><p><img src="http://q5zz73y15.bkt.clouddn.com/01.png" alt></p><p>设A=(x1,y1),B=(x2,y2).好，现在我们从A点向B所在直线引一条垂线。我们知道垂线与B的交点叫做A在B上的投影，再设A与B的夹角是a，则投影的矢量长度为</p><script type="math/tex; mode=display">|A|cosa</script><p>接下来内积还有另外一种表示方法：</p><script type="math/tex; mode=display">A*B=|A|*|B|*cosa</script><p>也就是说，<strong>设向量B的模为1，则A与B的内积值等于A向B所在直线投影的矢量长度</strong>！</p><h2 id="基："><a href="#基：" class="headerlink" title="基："></a>基：</h2><p><img src="http://q5zz73y15.bkt.clouddn.com/02.png" alt></p><p>这个红色线段的向量我们通常都直接认为是(3,2).但实际上这样说只是相对于当前的这个坐标系来说。所以来说并不是特别准确。</p><p>实际要准确表示这个向量的话，应该按照下面的去表示：</p><script type="math/tex; mode=display">3(1,0)^T+2(0,1)^T</script><p>此处(1,0)和(0,1)叫做二维空间中的一组基。所以，<strong>要准确描述向量，首先要确定一组基，然后给出在基所在的各个直线上的投影值，就可以了</strong>。只不过我们经常省略第一步，而默认以(1,0)和(0,1)为基。我们之所以默认选择(1,0)和(0,1)为基，当然是比较方便，因为它们分别是x和y轴正方向上的单位向量，因此就使得二维平面上点坐标和向量一一对应，非常方便。但实际上任何两个线性无关的二维向量都可以成为一组基，所谓线性无关在二维平面内可以直观认为是两个不在一条直线上的向量。</p><p>，(1,1)和(-1,1)也可以成为一组基。一般来说，我们希望基的模是1，因为从内积的意义可以看到，如果基的模是1，那么就可以方便的用向量点乘基而直接获得其在新基上的坐标了！实际上，对应任何一个向量我们总可以找到其同方向上模为1的向量，只要让两个分量分别除以模就好了。这一步通常在线性代数也叫做单位化。所以上面的基可以变为：</p><script type="math/tex; mode=display">(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}）</script><p>现在我们要想获得(3,2)在新的基上的坐标，我们只需要分别计算(3,2)与新的基的内积即可，</p><p>所以可以得到：</p><script type="math/tex; mode=display">(\frac{5}{\sqrt{2}},\frac{-1}{\sqrt{2}})</script><p><img src="http://q5zz73y15.bkt.clouddn.com/05.png" alt></p><p>我们所选的大多数情况下选的基都是正交的。</p><h2 id="基变换的矩阵表示"><a href="#基变换的矩阵表示" class="headerlink" title="基变换的矩阵表示"></a>基变换的矩阵表示</h2><p>因为进行基变换的方法坐标分别与基做内积运算。所以我们可以用矩阵去表示这种变换，我们写的时候通常将原来的坐标写为列向量的形式。</p><script type="math/tex; mode=display">\begin{pmatrix} 1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix} \begin{pmatrix} 3 \\ 2 \end{pmatrix} = \begin{pmatrix} 5/\sqrt{2} \\ -1/\sqrt{2} \end{pmatrix}</script><p>如果我们有m个二维向量，只要将二维向量按列排成一个两行m列矩阵，然后用“基矩阵”乘以这个矩阵，就得到了所有这些向量在新基下的值。</p><p><strong>一般的，如果我们有M个N维向量，想将其变换为由R个N维向量表示的新空间中，那么首先将R个基按行组成矩阵A，然后将向量按列组成矩阵B，那么两矩阵的乘积AB就是变换结果，其中AB的第m列为A中第m列变换后的结果</strong>。</p><p>矩阵的相乘在看完那篇博客后好像明白他们的意义。其实矩阵变换无非就是<strong>两个矩阵相乘的意义是将右边矩阵中的每一列列向量变换到左边矩阵中每一行行向量为基所表示的空间中去</strong>。</p><h2 id="协方差矩阵及其表示："><a href="#协方差矩阵及其表示：" class="headerlink" title="协方差矩阵及其表示："></a>协方差矩阵及其表示：</h2><p>如果进行<strong>矩阵变换的时候基的数量少于向量本身的维数的时候我们就达到了降维的目的</strong>。但是如何选取基又是一个问题。看了别人的博客写的后感觉这种变换的思想真的巧妙。</p><p>选取一个合适的基的意思是变换后的坐标尽量分散。而分散的程度我们在数学上通常使用方差来表示，一个字段的方差可以看做是每个元素与字段均值的差的平方和的均值，</p><script type="math/tex; mode=display">Var(a)=\frac{1}{m}\sum_{i=1}^m{(a_i-\mu)^2}</script><p>在这里为了<strong>简化运算我们通常提前对数据进行处理，每个数据减去这个字段的均值。</strong></p><p>处理过程很简单。举个例子：</p><script type="math/tex; mode=display">1,2,3,4,5这五个数据的均值为15/5=3所以每个数据都减去3.所以处理后的数据为：-2，-1,0，1,2.这五个数据均值一定为0.</script><p>这样处理后，</p><script type="math/tex; mode=display">这样\mu可以为0了。</script><p><strong><em>所以寻找一个基，使得所有数据变换为这个基上的坐标表示后，方差值最大。</em></strong></p><p>对于上面二维降成一维的问题来说，找到那个使得方差最大的方向就可以了。不过对于更高维，还有一个问题需要解决。考虑三维降到二维问题。与之前相同，首先我们希望找到一个方向使得投影后方差最大，这样就完成了第一个方向的选择，继而我们选择第二个投影方向。</p><p>如果我们还是单纯只选择方差最大的方向，很明显，这个方向与第一个方向应该是“几乎重合在一起”，显然这样的维度是没有用的，因此，应该有其他约束条件。从直观上说，让两个字段尽可能表示更多的原始信息，我们是不希望它们之间存在（线性）相关性的，因为相关性意味着两个字段不是完全独立，必然存在重复表示的信息。</p><p>数学上可以用两个字段的协方差表示其相关性，由于已经让每个字段均值为0，协方差原始公式为：<img src="/blog2/.io//学习记录\4.png" alt></p><p>则协方差的公式如下：</p><script type="math/tex; mode=display">Cov(a,b)=\frac{1}{m}\sum_{i=1}^m{a_ib_i}</script><p>可以看到，在字段均值为0的情况下，两个字段的协方差简洁的表示为其内积除以元素数m。当协方差为0时，表示两个字段完全独立。为了让协方差为0，我们选择第二个基时只能在与第一个基正交的方向上选择。因此最终选择的两个方向一定是正交的。为什么正交的话？因为线性代数里面也说正交的话内积为0，所以协方差就为0.</p><p><strong>将一组N维向量降为K维（K大于0，小于N），其目标是选择K个单位（模为1）正交基，使得原始数据变换到这组基上后，各字段两两间协方差为0，而字段的方差则尽可能大（在正交的约束下，取最大的K个方差）</strong></p><p>上面就是我们要得到的目标，但是就是上面的这个结论并不能告诉我们要具体怎么去做。所以说数学的思想真的巧妙。</p><p>我们设有a和b俩个字段。</p><script type="math/tex; mode=display">X=\begin{pmatrix} a_1 & a_2 & \cdots & a_m \\ b_1 & b_2 & \cdots & b_m \end{pmatrix}</script><p>然后我们用X乘以X的转置，并乘上系数1/m：</p><script type="math/tex; mode=display">\frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a_i^2} & \frac{1}{m}\sum_{i=1}^m{a_ib_i} \\ \frac{1}{m}\sum_{i=1}^m{a_ib_i} & \frac{1}{m}\sum_{i=1}^m{b_i^2} \end{pmatrix}</script><p>然后神奇的事情发生了，主对角线上是方差，斜对角线是协方差。</p><p><strong>设我们有m个n维数据记录，将其按列排成n乘m的矩阵X，设</strong></p><script type="math/tex; mode=display">C=\frac{1}{m}XX^\mathsf{T}</script><p><strong>，则C是一个对称矩阵，其对角线分别个各个字段的方差，而第i行j列和j行i列元素相同，表示i和j两个字段的协方差</strong></p><h2 id="协方差矩阵对角化："><a href="#协方差矩阵对角化：" class="headerlink" title="协方差矩阵对角化："></a>协方差矩阵对角化：</h2><p>为什么要将协方差矩阵对角化呢。首先我们了解一下相似矩阵。设A和B为n阶矩阵如果存在n阶可逆矩阵P，使得：</p><script type="math/tex; mode=display">P^{-1}AP=B</script><p>我们就称A相似于B，或者说A和B相似。矩阵相似具有非常多好用的性质：</p><p><strong>A和B有相等的行列式。A和B有相等的迹。</strong></p><p>相似矩阵具有许多共同的性质，对于N阶矩阵。我们希望与A相似的矩阵中寻找一个较简单的矩阵。所以我们考虑n阶矩阵是否与一个对角矩阵相似的问题的时候。这时候就用到了矩阵对角化。</p><p>设原始数据矩阵X对应的协方差矩阵为C，而P是一组基按行组成的矩阵，设Y=PX，则Y为X对P做基变换后的数据。设Y的协方差矩阵为D，我们推导一下D与C的关系：</p><script type="math/tex; mode=display">\begin{array}{l l l} D & = & \frac{1}{m}YY^\mathsf{T} \\ & = & \frac{1}{m}(PX)(PX)^\mathsf{T} \\ & = & \frac{1}{m}PXX^\mathsf{T}P^\mathsf{T} \\ & = & P(\frac{1}{m}XX^\mathsf{T})P^\mathsf{T} \\ & = & PCP^\mathsf{T} \end{array}</script><p>现在事情很明白了！我们要找的P不是别的，而是能让原始协方差矩阵对角化的P。换句话说，优化目标变成了<strong>寻找一个矩阵P，满足</strong></p><script type="math/tex; mode=display">PCP^\mathsf{T}</script><hr><p><strong>是一个对角矩阵，并且对角元素按从大到小依次排列，那么P的前K行就是要寻找的基，用P的前K行组成的矩阵乘以X就使得X从N维降到了K维并满足上述优化条件</strong>。</p><p>，在线性代数上，实对称矩阵有一系列非常好的性质：</p><p>1）实对称矩阵不同特征值对应的特征向量必然正交。</p><script type="math/tex; mode=display">2）设特征向量\lambda重数为r，则必然存在r个线性无关的特征向量对应于\lambda\\因此可以将这r个特征向量单位正交化。</script><p>一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量，设这n个特征向量为:</p><script type="math/tex; mode=display">e_1,e_2,\cdots,e_n</script><p>则对协方差矩阵C有如下结论：</p><script type="math/tex; mode=display">E^\mathsf{T}CE=\Lambda=\begin{pmatrix} \lambda_1 & & & \\ & \lambda_2 & & \\ & & \ddots & \\ & & & \lambda_n \end{pmatrix}</script><script type="math/tex; mode=display">P=E^\mathsf{T}</script><p>矩阵P就已经得到了。</p><p>P是协方差矩阵的特征向量单位化后按行排列出的矩阵，其中每一行都是C的一个特征向量。如果设P按照特征值的从大到小，将特征向量从上到下排列，则用P的前K行组成的矩阵乘以原始数据矩阵X，就得到了我们需要的降维后的数据矩阵Y。</p><h2 id="PCA算法"><a href="#PCA算法" class="headerlink" title="PCA算法"></a>PCA算法</h2><p>总结一下PCA的算法步骤：</p><p>设有m条n维数据。</p><p>1）将原始数据按列组成n行m列矩阵X</p><p>2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值</p><p>3）求出协方差矩阵</p><script type="math/tex; mode=display">C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及对应的特征向量</p><p>5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P</p><p>6）Y=PX即为降维到k维后的数据</p><p>代码如下：</p><div><div class="fold_hider"><div class="close hider_title">点击显/隐内容</div></div><div class="fold"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> imtools <span class="keyword">import</span> get_imlist</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pca</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="string">"""主成分分析</span></span><br><span class="line"><span class="string">    输入：矩阵X其中该矩阵中存储训练数据，每一行为一条训练数据</span></span><br><span class="line"><span class="string">    返回：投影矩阵（按照维度的重要性排序），方差和均值</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    num_data,dim = X.shape<span class="comment">#获取维数</span></span><br><span class="line">    <span class="comment">#数据中心化</span></span><br><span class="line">    mean_x = X.mean(axis=<span class="number">0</span>)<span class="comment">#axis = 0：压缩行，对各列求均值，返回 1* n 矩阵axis =1 ：压缩列，对各行求均值，返回 m *1 矩阵</span></span><br><span class="line">    X = X - mean_x</span><br><span class="line">    <span class="keyword">if</span> dim &gt; num_data:</span><br><span class="line">        M = dot(X,X.T) <span class="comment">#PCA-使用紧致技巧得到协方差矩阵</span></span><br><span class="line">        e,EV = linalg.eigh(M)<span class="comment">#计算特征值和特征向量</span></span><br><span class="line">        tmp = dot(X.T,EV).T<span class="comment">#这就是紧致技巧</span></span><br><span class="line">        V  = tmp[::<span class="number">-1</span>]<span class="comment">#由于最后的特征向量就是我们需要的，所以将其逆转</span></span><br><span class="line">        S = sqrt(e)[::<span class="number">-1</span>]<span class="comment">#由于特征值是按照递增顺序排列的，所以需要将其逆转。</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(V.shape[<span class="number">1</span>]):</span><br><span class="line">            V[:,i] /= S</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        U,S,V = linalg.svd(X)</span><br><span class="line">        V = V[:num_data]<span class="comment">#仅仅返回num_data维的数据才合理</span></span><br><span class="line">    <span class="keyword">return</span> V,S,mean_x<span class="comment">#返回投影矩阵，方差和均值</span></span><br><span class="line">imlist = get_imlist(<span class="string">r'..\image\1.jpg'</span>,<span class="string">'.jpg'</span>)</span><br><span class="line">im = array(Image.open(imlist[<span class="number">0</span>]))<span class="comment">#打开一幅图像，获得其大小</span></span><br><span class="line">m,n = im.shape[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">imnum = len(imlist)</span><br><span class="line"><span class="comment">#创建矩阵，保存所有压平后的图像数据</span></span><br><span class="line">immatrix = array([array(Image.open(im)).flatten() <span class="keyword">for</span> im <span class="keyword">in</span> imlist],<span class="string">'f'</span>)</span><br><span class="line"><span class="comment">#执行PCA操作</span></span><br><span class="line">V,S,immean = pca(immatrix)</span><br><span class="line"><span class="comment">#显示一些图像（均值图像和前10个模式）</span></span><br><span class="line">figure()</span><br><span class="line">gray()</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>)<span class="comment">#m和n代表在一个图像窗口中显示m行n列个图像</span></span><br><span class="line">imshow(immean.reshape(m,n))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">9</span>):</span><br><span class="line">    subplot(<span class="number">2</span>,<span class="number">5</span>,i+<span class="number">2</span>)</span><br><span class="line">    imshow(V[i].reshape(m,n))</span><br></pre></td></tr></table></figure></div></div></body></html>]]></content>
+      
+      
       <categories>
-        <category>PCA主成分分析</category>
+          
+          <category> PCA主成分分析 </category>
+          
       </categories>
-      <tags>
-        <tag>PCA降维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Harris角点检测</title>
-    <url>/blog2/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br><a id="more"></a><br>角点：最直观的印象就是在水平和竖直两个方向变化均较大的两个点，即X,Y方向梯度都较大</p>
-<p>边缘：仅在水平或竖直方向有较大的变化量，即X、Y方向梯度只有一个较大</p>
-<p>平坦区域：在水平和竖直方向的变化量均较小，即X、Y方向梯度都较小</p>
-<p><strong>在特征点检测中经常提出尺度不变、旋转不变、抗噪声影响等，这些是判断特征点是否稳定的指标。</strong></p>
-<p><strong>性能较好的角点：</strong></p>
-<ol>
-<li><strong>检测出图像中“真实”的角点</strong></li>
-<li><strong>准确的定位性能</strong></li>
-<li><strong>很高的重复检测率</strong></li>
-<li><strong>噪声的鲁棒性</strong></li>
-<li><strong>较高的计算效率</strong></li>
-</ol>
-<p>今天看到角点检测的时候真的是一脸蒙蔽，服了，书上直接给出的公式。整的我直接懵了。参考晚上其他大佬写的博客后逐渐明白了一点</p>
-<p>书上给的公式如下：</p>
-<script type="math/tex; mode=display">
-E(u,v)=\sum_{x,y}w(x,y) \left[]
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p>
-<p><img src="http://q5zz73y15.bkt.clouddn.com/harris5.JPG" alt></p>
-<h2 id="Harris矩阵推导过程"><a href="#Harris矩阵推导过程" class="headerlink" title="Harris矩阵推导过程:"></a>Harris矩阵推导过程:</h2><p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p>
-<p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p>
-<script type="math/tex; mode=display">
-E(u,v)=\sum_{x,y}w(x,y)[I(x+u,y+v)-I(x,y)]^2</script><p>   高数中将这个式子进行泰勒展开：</p>
-<script type="math/tex; mode=display">
-f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)</script><script type="math/tex; mode=display">
-所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2</script><script type="math/tex; mode=display">
-=\\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\\sum[u,v] \left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right] \tag{B}
-  \left[
-  \begin{matrix}
-  u\\
-  v\\
-  \end{matrix}
-  \right]</script><ul>
-<li>[u,v][u,v]是窗口WW的偏移量；</li>
-<li>(x,y)(x,y)是窗口WW所对应的像素坐标位置，窗口有多大，就有多少个位置；</li>
-<li>I(x,y)是像素坐标位置(x,y)的图像灰度值；</li>
-<li>I(x+u,y+v)是像素坐标位置(x+u,y+v)的图像灰度值；</li>
-</ul>
-<p> Ix,Iy分别为窗口内像素点(x,y)在x方向上和y方向上的梯度值。  其中<strong>窗口函数（权重矩阵）</strong>可以是平坦的，通常为高斯滤波器Gσ：</p>
-<p>设:</p>
-<script type="math/tex; mode=display">
-Mi =\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]\\
-  M = \sum_{x,y}w(x,y) * Mi</script><p>所以可以得到卷积：M</p>
-<p>该卷积的目的是得到MI在周围像素上的局部平均。<strong>矩阵M又称为Harris矩阵。</strong>W 的宽度决定了在像素x 周围的感兴趣区域。</p>
-<p>根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。</p>
-<p>接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.</p>
-<p>则有以下三种情况：</p>
-<p><img src="http://q5zz73y15.bkt.clouddn.com/harris1.png" alt></p>
-<p>具体为什么有这三种情况以下就是推导过程：</p>
-<p>我们可以将E(u,v)近似为二项函数：</p>
-<p>​                                                        </p>
-<script type="math/tex; mode=display">
-E(u,v)=Au^2+2Cuv+Bv^2=\left[
- \begin{matrix}
-  A & C\\
-  C & A\\
-  \end{matrix}
-  \right]\\
-A=\sum_{x,y}w(x,y)*Ix^2\\
-B=\sum_{x,y}w(x,y)*Iy^2\\
-C=\sum_{x,y}w(x,y)*IxIy</script><p>二次项函数本质上就是一个椭圆函数。椭圆的长和宽是由MM的特征值λ1,λ2决定的(椭圆的长短轴正是矩阵MM特征值平方根的倒数)，椭圆的方向是由M的特征向量决定的，椭圆方程为：</p>
-<script type="math/tex; mode=display">
-\left[
- \begin{matrix}
-  u & v\\
-  \end{matrix}
-  \right]*M*\left[
- \begin{matrix}
-   u\\
-   v\\
-  \end{matrix}
-  \right]=1</script><p>虽然我们利用E(u,v)来描述角点的基本思想，然而最终我们仅仅使用的是矩阵M。让我们看看矩阵M形式，是不是跟协方差矩阵形式很像，像归像，但是还是有些不同，哪儿不同？一般协方差矩阵对应维的随机变量需要减去该维随机变量的均值：</p>
-<p>把Ix,Iy看成两个字段，假设窗口内有m个像素点，也就是等价于有m个样本，我们先计算每个字段的均值：</p>
-<script type="math/tex; mode=display">
-\overline{Ix}=\sum_{i}^mIxi\\
-\overline{Iy}=\sum_{i}^mIyi</script><p>我们仍然使用(Ixi,Iyi)表示样本(Ixi,Iyi)去均值后的值，则由这m个样本组成的矩阵：</p>
-<script type="math/tex; mode=display">
-x=\left[
- \begin{matrix}
-   Ix1 & Ix2 & ... & Ixm \\
-   Iy1 & Iy2 & ... & Iym\\
-  \end{matrix}
-  \right]</script><p>则对应协方差矩阵可以写成：</p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}*X*X^T=\frac{1}{m}*\sum_{i=1}\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]</script><p>但矩阵M中并没有这样做，所以在矩阵M里，我们先进行各维的均值化处理，那么各维所对应的随机变量的均值为0，协方差矩阵就大大简化了，简化的最终结果就是矩阵M，是否明白了(注意为了简化运算，我们先假设M矩阵中的权重系数w(x,y)=1，并且省略掉了求均值.我们的目的是分析数据的主要成分</p>
-<p>如果我们对协方差矩阵M进行对角化，很明显，其对角线就是各个字段的方差，这点大家应该明白吧？不明白的话可以复习下PCA原理。</p>
-<ul>
-<li>如果两个字段(Ix,Iy)所对应的特征值都比较大，说明什么？ 像素点的梯度分布比较散，梯度变化程度比较大，符合角点在窗口区域的特点；</li>
-<li>如果是平坦区域，那么像素点的梯度所构成的点集比较集中在原点附近，因为窗口区域内的像素点的梯度幅值非常小，此时矩阵M的对角化的两个特征值比较小；</li>
-<li>如果是边缘区域，在计算像素点的x、y方向上的梯度时，边缘上的像素点的某个方向的梯度幅值变化比较明显，另一个方向上的梯度幅值变化较弱，其余部分的点都还是集中原点附近，这样MM对角化后的两个特征值理论应该是一个比较大，一个比较小，当然对于边缘这种情况，可能是呈45°的边缘，致使计算出的特征值并不是都特别的大，总之跟含有角点的窗口的分布情况还是不同的。</li>
-</ul>
-<p>因此可以得出下列结论：</p>
-<ul>
-<li><p>特征值都比较大时，即窗口中含有角点；</p>
-</li>
-<li><p>特征值一个较大，一个较小，窗口中含有边缘；</p>
-</li>
-<li><p>特征值都比较小，窗口处在平坦区域；</p>
-<p>那么根据书上又提出了一个不用实际计算特征值的方法。也就是度量角点响应：</p>
-<p>对每一个窗口计算得到一个分数R，根据R的大小来判定窗口内是否存在harris特征角。分数R根据下面公式计算得到：</p>
-<script type="math/tex; mode=display">
-R=det(M)-k(trace(M))^2\\
-其中：det(M)=\lambda1*\lambda2\\
-trace(M)=\lambda1+\lambda2\\
-另外我在别的地方看到简化后的R为：
-R=[(Ix^2+Iy^2)-(IxIy)^2]/(Ix^2+Iy^2)</script></li>
-</ul>
-<h3 id="得到Harris角点的步骤"><a href="#得到Harris角点的步骤" class="headerlink" title="得到Harris角点的步骤"></a>得到Harris角点的步骤</h3><p>所以得到Harris角点的步骤为：</p>
-<p>1、计算图像I(x,y)I(x,y)在x和y两个方向的梯度Ix,Iy;</p>
-<p>2、计算图像两个方向梯度的乘积;</p>
-<p>3、使用高斯函数对第二步算出的数进行高斯加权，计算中心点为(x,y)的窗口W对应的矩阵M</p>
-<p>4、计算每个像素点(x,y)处的(x,y)处的Harris响应值R；</p>
-<p>5：过滤大于某一阈值t的R值；</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>python代码如下：<br></p><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.ndimage <span class="keyword">import</span> filters</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> imtools <span class="keyword">import</span> imresize</span><br><span class="line">np.set_printoptions(threshold=np.inf)<span class="comment">#解决printf打印矩阵不完全的问题</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">harris_response</span><span class="params">(im,sigma=<span class="number">3</span>)</span>:</span></span><br><span class="line">    <span class="string">"""计算图像的harris响应函数"""</span></span><br><span class="line">    <span class="comment">#计算导数</span></span><br><span class="line">    imx = zeros(im.shape)</span><br><span class="line">    imx = filters.gaussian_filter(im,(sigma,sigma),(<span class="number">0</span>,<span class="number">1</span>),imx)</span><br><span class="line">    imy = zeros(im.shape)</span><br><span class="line">    imy = filters.gaussian_filter(im, (sigma, sigma), (<span class="number">1</span>, <span class="number">0</span>), imy)</span><br><span class="line">    <span class="comment">#计算Harris的各个分量</span></span><br><span class="line">    wxx = filters.gaussian_filter(imx*imx,sigma)</span><br><span class="line">    wxy = filters.gaussian_filter(imx*imy,sigma)</span><br><span class="line">    wyy = filters.gaussian_filter(imy*imy,sigma)</span><br><span class="line">    <span class="comment">#计算像素的角点响应函数</span></span><br><span class="line">    <span class="keyword">return</span> (wxx*wyy - <span class="number">2</span>*wxy)/(wxx + wyy)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_harris_points</span><span class="params">(harrism,min_dist = <span class="number">10</span>,thresold = <span class="number">0.1</span>)</span>:</span></span><br><span class="line">    <span class="string">"""从一幅Harrisim响应中返回角点，min_dist为分割角点和图像边界的最少像素数目"""</span></span><br><span class="line">    corner_thsold = harrism.max()*thresold</span><br><span class="line">    harrism_t = (harrism > corner_thsold) * <span class="number">1</span></span><br><span class="line">    <span class="comment">#得到候选点的坐标</span></span><br><span class="line">    coords = array(harrism_t.nonzero()).T<span class="comment">#返回非零值的坐标的矩阵</span></span><br><span class="line">    <span class="comment">#他们的Harris响应值</span></span><br><span class="line">    candidate_values = [harrism[c[<span class="number">0</span>],c[<span class="number">1</span>]] <span class="keyword">for</span> c <span class="keyword">in</span> coords]</span><br><span class="line">    <span class="comment">#对候选点进行harris响应值进行排序</span></span><br><span class="line">    index = argsort(candidate_values)[::<span class="number">-1</span>]<span class="comment">#将x中的元素从小到大排列，提取其对应的index(索引)，然后输出到y</span></span><br><span class="line">    <span class="comment">#将可行点的位置保存在数组里</span></span><br><span class="line">    allowed_locations = zeros(harrism.shape)</span><br><span class="line">    allowed_locations[min_dist:-min_dist,min_dist:-min_dist] = <span class="number">1</span></span><br><span class="line">    <span class="comment">#按照min_distance原则，选择最佳harris点</span></span><br><span class="line">    filters_coords = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> index:</span><br><span class="line">            <span class="keyword">if</span> allowed_locations[coords[i,<span class="number">0</span>],coords[i,<span class="number">1</span>]] == <span class="number">1</span>:</span><br><span class="line">                filters_coords.append(coords[i])</span><br><span class="line">                allowed_locations[(coords[i,<span class="number">0</span>]-min_dist):(coords[i,<span class="number">0</span>]+min_dist),(coords[i,<span class="number">1</span>]-min_dist):coords[i,<span class="number">1</span>]+min_dist] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> filters_coords</span><br></pre></td></tr></tbody></table></figure><p></p>
-</body></html>]]></content>
+      
+      
+        <tags>
+            
+            <tag> PCA降维 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Harris角点检测</title>
+      <link href="/blog2/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/"/>
+      <url>/blog2/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br><a id="more"></a><br>角点：最直观的印象就是在水平和竖直两个方向变化均较大的两个点，即X,Y方向梯度都较大</p><p>边缘：仅在水平或竖直方向有较大的变化量，即X、Y方向梯度只有一个较大</p><p>平坦区域：在水平和竖直方向的变化量均较小，即X、Y方向梯度都较小</p><p><strong>在特征点检测中经常提出尺度不变、旋转不变、抗噪声影响等，这些是判断特征点是否稳定的指标。</strong></p><p><strong>性能较好的角点：</strong></p><ol><li><strong>检测出图像中“真实”的角点</strong></li><li><strong>准确的定位性能</strong></li><li><strong>很高的重复检测率</strong></li><li><strong>噪声的鲁棒性</strong></li><li><strong>较高的计算效率</strong></li></ol><p>今天看到角点检测的时候真的是一脸蒙蔽，服了，书上直接给出的公式。整的我直接懵了。参考晚上其他大佬写的博客后逐渐明白了一点</p><p>书上给的公式如下：</p><script type="math/tex; mode=display">E(u,v)=\sum_{x,y}w(x,y) \left[] \begin{matrix}  Ix^2 & IxIy\\  IxIy & Iy^2  \end{matrix}  \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p><p><img src="http://q5zz73y15.bkt.clouddn.com/harris5.JPG" alt></p><h2 id="Harris矩阵推导过程"><a href="#Harris矩阵推导过程" class="headerlink" title="Harris矩阵推导过程:"></a>Harris矩阵推导过程:</h2><p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p><p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p><script type="math/tex; mode=display">E(u,v)=\sum_{x,y}w(x,y)[I(x+u,y+v)-I(x,y)]^2</script><p>   高数中将这个式子进行泰勒展开：</p><script type="math/tex; mode=display">f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)</script><script type="math/tex; mode=display">所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2</script><script type="math/tex; mode=display">=\\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\\sum[u,v] \left[ \begin{matrix}  Ix^2 & IxIy\\  IxIy & Iy^2  \end{matrix}  \right] \tag{B}  \left[  \begin{matrix}  u\\  v\\  \end{matrix}  \right]</script><ul><li>[u,v][u,v]是窗口WW的偏移量；</li><li>(x,y)(x,y)是窗口WW所对应的像素坐标位置，窗口有多大，就有多少个位置；</li><li>I(x,y)是像素坐标位置(x,y)的图像灰度值；</li><li>I(x+u,y+v)是像素坐标位置(x+u,y+v)的图像灰度值；</li></ul><p> Ix,Iy分别为窗口内像素点(x,y)在x方向上和y方向上的梯度值。  其中<strong>窗口函数（权重矩阵）</strong>可以是平坦的，通常为高斯滤波器Gσ：</p><p>设:</p><script type="math/tex; mode=display">Mi =\left[ \begin{matrix}  Ix^2 & IxIy\\  IxIy & Iy^2  \end{matrix}  \right]\\  M = \sum_{x,y}w(x,y) * Mi</script><p>所以可以得到卷积：M</p><p>该卷积的目的是得到MI在周围像素上的局部平均。<strong>矩阵M又称为Harris矩阵。</strong>W 的宽度决定了在像素x 周围的感兴趣区域。</p><p>根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。</p><p>接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.</p><p>则有以下三种情况：</p><p><img src="http://q5zz73y15.bkt.clouddn.com/harris1.png" alt></p><p>具体为什么有这三种情况以下就是推导过程：</p><p>我们可以将E(u,v)近似为二项函数：</p><p>​                                                        </p><script type="math/tex; mode=display">E(u,v)=Au^2+2Cuv+Bv^2=\left[ \begin{matrix}  A & C\\  C & A\\  \end{matrix}  \right]\\A=\sum_{x,y}w(x,y)*Ix^2\\B=\sum_{x,y}w(x,y)*Iy^2\\C=\sum_{x,y}w(x,y)*IxIy</script><p>二次项函数本质上就是一个椭圆函数。椭圆的长和宽是由MM的特征值λ1,λ2决定的(椭圆的长短轴正是矩阵MM特征值平方根的倒数)，椭圆的方向是由M的特征向量决定的，椭圆方程为：</p><script type="math/tex; mode=display">\left[ \begin{matrix}  u & v\\  \end{matrix}  \right]*M*\left[ \begin{matrix}   u\\   v\\  \end{matrix}  \right]=1</script><p>虽然我们利用E(u,v)来描述角点的基本思想，然而最终我们仅仅使用的是矩阵M。让我们看看矩阵M形式，是不是跟协方差矩阵形式很像，像归像，但是还是有些不同，哪儿不同？一般协方差矩阵对应维的随机变量需要减去该维随机变量的均值：</p><p>把Ix,Iy看成两个字段，假设窗口内有m个像素点，也就是等价于有m个样本，我们先计算每个字段的均值：</p><script type="math/tex; mode=display">\overline{Ix}=\sum_{i}^mIxi\\\overline{Iy}=\sum_{i}^mIyi</script><p>我们仍然使用(Ixi,Iyi)表示样本(Ixi,Iyi)去均值后的值，则由这m个样本组成的矩阵：</p><script type="math/tex; mode=display">x=\left[ \begin{matrix}   Ix1 & Ix2 & ... & Ixm \\   Iy1 & Iy2 & ... & Iym\\  \end{matrix}  \right]</script><p>则对应协方差矩阵可以写成：</p><script type="math/tex; mode=display">C=\frac{1}{m}*X*X^T=\frac{1}{m}*\sum_{i=1}\left[ \begin{matrix}  Ix^2 & IxIy\\  IxIy & Iy^2  \end{matrix}  \right]</script><p>但矩阵M中并没有这样做，所以在矩阵M里，我们先进行各维的均值化处理，那么各维所对应的随机变量的均值为0，协方差矩阵就大大简化了，简化的最终结果就是矩阵M，是否明白了(注意为了简化运算，我们先假设M矩阵中的权重系数w(x,y)=1，并且省略掉了求均值.我们的目的是分析数据的主要成分</p><p>如果我们对协方差矩阵M进行对角化，很明显，其对角线就是各个字段的方差，这点大家应该明白吧？不明白的话可以复习下PCA原理。</p><ul><li>如果两个字段(Ix,Iy)所对应的特征值都比较大，说明什么？ 像素点的梯度分布比较散，梯度变化程度比较大，符合角点在窗口区域的特点；</li><li>如果是平坦区域，那么像素点的梯度所构成的点集比较集中在原点附近，因为窗口区域内的像素点的梯度幅值非常小，此时矩阵M的对角化的两个特征值比较小；</li><li>如果是边缘区域，在计算像素点的x、y方向上的梯度时，边缘上的像素点的某个方向的梯度幅值变化比较明显，另一个方向上的梯度幅值变化较弱，其余部分的点都还是集中原点附近，这样MM对角化后的两个特征值理论应该是一个比较大，一个比较小，当然对于边缘这种情况，可能是呈45°的边缘，致使计算出的特征值并不是都特别的大，总之跟含有角点的窗口的分布情况还是不同的。</li></ul><p>因此可以得出下列结论：</p><ul><li><p>特征值都比较大时，即窗口中含有角点；</p></li><li><p>特征值一个较大，一个较小，窗口中含有边缘；</p></li><li><p>特征值都比较小，窗口处在平坦区域；</p><p>那么根据书上又提出了一个不用实际计算特征值的方法。也就是度量角点响应：</p><p>对每一个窗口计算得到一个分数R，根据R的大小来判定窗口内是否存在harris特征角。分数R根据下面公式计算得到：</p><script type="math/tex; mode=display">R=det(M)-k(trace(M))^2\\其中：det(M)=\lambda1*\lambda2\\trace(M)=\lambda1+\lambda2\\另外我在别的地方看到简化后的R为：R=[(Ix^2+Iy^2)-(IxIy)^2]/(Ix^2+Iy^2)</script></li></ul><h3 id="得到Harris角点的步骤"><a href="#得到Harris角点的步骤" class="headerlink" title="得到Harris角点的步骤"></a>得到Harris角点的步骤</h3><p>所以得到Harris角点的步骤为：</p><p>1、计算图像I(x,y)I(x,y)在x和y两个方向的梯度Ix,Iy;</p><p>2、计算图像两个方向梯度的乘积;</p><p>3、使用高斯函数对第二步算出的数进行高斯加权，计算中心点为(x,y)的窗口W对应的矩阵M</p><p>4、计算每个像素点(x,y)处的(x,y)处的Harris响应值R；</p><p>5：过滤大于某一阈值t的R值；</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>python代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.ndimage <span class="keyword">import</span> filters</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> imtools <span class="keyword">import</span> imresize</span><br><span class="line">np.set_printoptions(threshold=np.inf)<span class="comment">#解决printf打印矩阵不完全的问题</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">harris_response</span><span class="params">(im,sigma=<span class="number">3</span>)</span>:</span></span><br><span class="line">    <span class="string">"""计算图像的harris响应函数"""</span></span><br><span class="line">    <span class="comment">#计算导数</span></span><br><span class="line">    imx = zeros(im.shape)</span><br><span class="line">    imx = filters.gaussian_filter(im,(sigma,sigma),(<span class="number">0</span>,<span class="number">1</span>),imx)</span><br><span class="line">    imy = zeros(im.shape)</span><br><span class="line">    imy = filters.gaussian_filter(im, (sigma, sigma), (<span class="number">1</span>, <span class="number">0</span>), imy)</span><br><span class="line">    <span class="comment">#计算Harris的各个分量</span></span><br><span class="line">    wxx = filters.gaussian_filter(imx*imx,sigma)</span><br><span class="line">    wxy = filters.gaussian_filter(imx*imy,sigma)</span><br><span class="line">    wyy = filters.gaussian_filter(imy*imy,sigma)</span><br><span class="line">    <span class="comment">#计算像素的角点响应函数</span></span><br><span class="line">    <span class="keyword">return</span> (wxx*wyy - <span class="number">2</span>*wxy)/(wxx + wyy)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_harris_points</span><span class="params">(harrism,min_dist = <span class="number">10</span>,thresold = <span class="number">0.1</span>)</span>:</span></span><br><span class="line">    <span class="string">"""从一幅Harrisim响应中返回角点，min_dist为分割角点和图像边界的最少像素数目"""</span></span><br><span class="line">    corner_thsold = harrism.max()*thresold</span><br><span class="line">    harrism_t = (harrism &gt; corner_thsold) * <span class="number">1</span></span><br><span class="line">    <span class="comment">#得到候选点的坐标</span></span><br><span class="line">    coords = array(harrism_t.nonzero()).T<span class="comment">#返回非零值的坐标的矩阵</span></span><br><span class="line">    <span class="comment">#他们的Harris响应值</span></span><br><span class="line">    candidate_values = [harrism[c[<span class="number">0</span>],c[<span class="number">1</span>]] <span class="keyword">for</span> c <span class="keyword">in</span> coords]</span><br><span class="line">    <span class="comment">#对候选点进行harris响应值进行排序</span></span><br><span class="line">    index = argsort(candidate_values)[::<span class="number">-1</span>]<span class="comment">#将x中的元素从小到大排列，提取其对应的index(索引)，然后输出到y</span></span><br><span class="line">    <span class="comment">#将可行点的位置保存在数组里</span></span><br><span class="line">    allowed_locations = zeros(harrism.shape)</span><br><span class="line">    allowed_locations[min_dist:-min_dist,min_dist:-min_dist] = <span class="number">1</span></span><br><span class="line">    <span class="comment">#按照min_distance原则，选择最佳harris点</span></span><br><span class="line">    filters_coords = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> index:</span><br><span class="line">            <span class="keyword">if</span> allowed_locations[coords[i,<span class="number">0</span>],coords[i,<span class="number">1</span>]] == <span class="number">1</span>:</span><br><span class="line">                filters_coords.append(coords[i])</span><br><span class="line">                allowed_locations[(coords[i,<span class="number">0</span>]-min_dist):(coords[i,<span class="number">0</span>]+min_dist),(coords[i,<span class="number">1</span>]-min_dist):coords[i,<span class="number">1</span>]+min_dist] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> filters_coords</span><br></pre></td></tr></table></figure></p></body></html>]]></content>
+      
+      
       <categories>
-        <category>角点描述</category>
+          
+          <category> 角点描述 </category>
+          
       </categories>
-      <tags>
-        <tag>Harris</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Harris </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
