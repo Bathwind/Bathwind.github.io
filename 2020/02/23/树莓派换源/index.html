@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223185843.png">
 <meta property="og:image" content="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223190736.png">
 <meta property="article:published_time" content="2020-02-23T10:38:00.000Z">
-<meta property="article:modified_time" content="2020-02-23T11:37:32.339Z">
+<meta property="article:modified_time" content="2020-02-23T11:50:39.891Z">
 <meta property="article:author" content="WYW@HD">
 <meta property="article:tag" content="树莓派换源">
 <meta name="twitter:card" content="summary">
@@ -234,7 +234,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-23 18:38:00 / 修改时间：19:37:32" itemprop="dateCreated datePublished" datetime="2020-02-23T18:38:00+08:00">2020-02-23</time>
+              <time title="创建时间：2020-02-23 18:38:00 / 修改时间：19:50:39" itemprop="dateCreated datePublished" datetime="2020-02-23T18:38:00+08:00">2020-02-23</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>525</span>
+              <span>367</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -281,7 +281,10 @@
 
       
         <h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>
-<h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：<br></p><figure class="highlight plain"><figcaption><span>-a     ```<br>如下图所示：<br></span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">![](http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223184416.png)</span><br><span class="line">可以看到codename为buster,所以一会换源的时候一定要记住。</span><br><span class="line">## 更改souces.list软件源</span><br><span class="line">1:nano 编辑/etc/apt/目录下的sources.list</span><br><span class="line">终端输入：sudo nano /etc/apt/sources.list</span><br><span class="line"><br></span><br><span class="line">![](http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223185034.png)</span><br><span class="line">我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。</span><br><span class="line">ctrl + o 保存。回车确认。ctrl + x 退出。</span><br></pre></td></tr></tbody></table></figure><br>deb <a href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main non-free contrib<br>deb-src <a href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main non-free contrib<br><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## 更换系统源</span><br><span class="line">执行命令：</span><br><span class="line">```sudo nano /etc/apt/sources.list.d/raspi.list</span><br></pre></td></tr></tbody></table></figure><br><img src="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223185843.png" alt><br><br>输入以下网址：<br><figure class="highlight plain"><figcaption><span>http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui```</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## pip命令安装Opencv，</span><br><span class="line">由于树莓派上是py3.7.所以使用pip命令安装时候要用pip3.</span><br><span class="line">打开终端：<br>```sudo pip3  install opencv-python</span><br></pre></td></tr></tbody></table></figure><br>这里我已经装完了。<br><img src="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223190736.png" alt>这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。<br><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update #安装依赖库</span><br><span class="line">sudo apt-get install libhdf5-dev</span><br><span class="line">sudo apt-get install libatlas-base-dev</span><br><span class="line">sudo apt-get install libjasper-dev</span><br><span class="line">sudo apt-get install libqt4-test</span><br><span class="line">sudo apt-get install libqtgui4</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></tbody></table></figure><br>之后再pip3，输入import cv2如果没有任何反应就证明好了。<br>安装其他包也是类似的。<p></p>
+<h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：<br></p><figure class="highlight plain"><figcaption><span>-a     ```<br>如下图所示：<br></span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">![](http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223184416.png)</span><br><span class="line">可以看到codename为buster,所以一会换源的时候一定要记住。</span><br><span class="line"></span><br><span class="line">## 更改souces.list软件源</span><br><span class="line"></span><br><span class="line">1:nano 编辑/etc/apt/目录下的sources.list</span><br><span class="line">终端输入：sudo nano /etc/apt/sources.list</span><br><span class="line"><br></span><br><span class="line">![](http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223185034.png)</span><br><span class="line">我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。</span><br><span class="line">ctrl + o 保存。回车确认。ctrl + x 退出。</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="更换系统源"><a href="#更换系统源" class="headerlink" title="更换系统源"></a>更换系统源</h2><p>执行命令：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/apt/sources.list.d/raspi.list</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223185843.png" alt><br><br>输入以下网址：<br></p><figure class="highlight plain"><figcaption><span>http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui```</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## pip命令安装Opencv，</span><br><span class="line"></span><br><span class="line">由于树莓派上是py3.7.所以使用pip命令安装时候要用pip3.</span><br><span class="line">打开终端：<br>```sudo pip3  install opencv-python</span><br></pre></td></tr></tbody></table></figure><br>这里我已经装完了。<br><img src="http://q5zz73y15.bkt.clouddn.com/TIM%E6%88%AA%E5%9B%BE20200223190736.png" alt>这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。<br><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update #安装依赖库</span><br><span class="line">sudo apt-get install libhdf5-dev</span><br><span class="line">sudo apt-get install libatlas-base-dev</span><br><span class="line">sudo apt-get install libjasper-dev</span><br><span class="line">sudo apt-get install libqt4-test</span><br><span class="line">sudo apt-get install libqtgui4</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></tbody></table></figure><br>之后再pip3，输入import cv2如果没有任何反应就证明好了。<br>安装其他包也是类似的。<p></p>
 
     </div>
 
@@ -437,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派换源以及opencv还有opencv-contrib"><span class="nav-number">1.</span> <span class="nav-text">树莓派换源以及opencv还有opencv-contrib</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看自己的系统版本"><span class="nav-number">1.1.</span> <span class="nav-text">查看自己的系统版本</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派换源以及opencv还有opencv-contrib"><span class="nav-number">1.</span> <span class="nav-text">树莓派换源以及opencv还有opencv-contrib</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看自己的系统版本"><span class="nav-number">1.1.</span> <span class="nav-text">查看自己的系统版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换系统源"><span class="nav-number">1.2.</span> <span class="nav-text">更换系统源</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -525,7 +528,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
 <div>
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
