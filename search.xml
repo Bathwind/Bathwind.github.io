@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>齐次坐标</title>
+    <url>/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="齐次坐标的理解："><a href="#齐次坐标的理解：" class="headerlink" title="齐次坐标的理解："></a>齐次坐标的理解：</h1><p>问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以相交，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。  欧氏空间（或者笛卡尔空间）描述2D/3D几何非常适合，但是这种方法却不适合处理透视空间的问题（实际上，欧氏几何是透视几何的一个子集合），2维笛卡尔坐标可以表示为（x,y）。  如果一个点在无穷远处，这个点的坐标将会(∞,∞)，在欧氏空间，这变得没有意义。平行线在透视空间的无穷远处交于一点，但是在欧氏空间却不能，数学家发现了一种方式来解决这个问题。  方法：齐次坐标 简而言之，齐次坐标就是用N+1维来代表N维坐标  我们可以在一个2D笛卡尔坐标末尾加上一个额外的变量w来形成2D齐次坐标，因此，一个点(X,Y)在齐次坐标里面变成了（x,y,w），并且有 </p>
+<p>X = x/w</p>
+<p>Y = y/w</p>
+<p>例如，笛卡尔坐标系下（1，2）的齐次坐标可以表示为（1，2，1），如果点（1，2）移动到无限远处，在笛卡尔坐标下它变为(∞,∞)，然后它的齐次坐标表示为（1，2，0），因为(1/0, 2/0) = (∞,∞)，我们可以不用”∞”来表示一个无穷远处的点了，哈哈。</p>
+<p>为什么叫齐次坐标？</p>
+<p>我们把齐次坐标转化为笛卡尔坐标的方法是前面n-1个坐标分量分别除以最后一个分量即可。</p>
+<script type="math/tex; mode=display">
+(x,y,w)\Leftrightarrow(\frac{x}{w},\frac{y}{w}).</script><p>然后齐次坐标有的一个性质就是齐次坐标的不变性。如：</p>
+<script type="math/tex; mode=display">
+(1,2,3)\Leftrightarrow(\frac{1}{3},\frac{2}{3})\\
+(2,4,6)\Leftrightarrow(\frac{2}{6},\frac{4}{6})\Leftrightarrow(\frac{1}{3},\frac{2}{3})</script><p>所以齐次坐标具有规模不变性、</p>
+</body></html>]]></content>
+  </entry>
+  <entry>
     <title>树莓派换源以及pip安装</title>
     <url>/blog2/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/</url>
     <content><![CDATA[<html><head></head><body><h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>

@@ -135,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog2/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴<span class="badge">4</span></a>
+    <a href="/blog2/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-links">
@@ -200,6 +200,110 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw_hd.gitee.io/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog2/images/avatar.png">
+      <meta itemprop="name" content="WYW@HD">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" class="post-title-link" itemprop="url">齐次坐标</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-24 20:49:10 / 修改时间：21:25:50" itemprop="dateCreated datePublished" datetime="2020-02-24T20:49:10+08:00">2020-02-24</time>
+            </span>
+
+          
+            <span id="/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" class="post-meta-item leancloud_visitors" data-flag-title="齐次坐标" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog2/2020/02/24/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>797</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="齐次坐标的理解："><a href="#齐次坐标的理解：" class="headerlink" title="齐次坐标的理解："></a>齐次坐标的理解：</h1><p>问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以相交，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。  欧氏空间（或者笛卡尔空间）描述2D/3D几何非常适合，但是这种方法却不适合处理透视空间的问题（实际上，欧氏几何是透视几何的一个子集合），2维笛卡尔坐标可以表示为（x,y）。  如果一个点在无穷远处，这个点的坐标将会(∞,∞)，在欧氏空间，这变得没有意义。平行线在透视空间的无穷远处交于一点，但是在欧氏空间却不能，数学家发现了一种方式来解决这个问题。  方法：齐次坐标 简而言之，齐次坐标就是用N+1维来代表N维坐标  我们可以在一个2D笛卡尔坐标末尾加上一个额外的变量w来形成2D齐次坐标，因此，一个点(X,Y)在齐次坐标里面变成了（x,y,w），并且有 </p>
+<p>X = x/w</p>
+<p>Y = y/w</p>
+<p>例如，笛卡尔坐标系下（1，2）的齐次坐标可以表示为（1，2，1），如果点（1，2）移动到无限远处，在笛卡尔坐标下它变为(∞,∞)，然后它的齐次坐标表示为（1，2，0），因为(1/0, 2/0) = (∞,∞)，我们可以不用”∞”来表示一个无穷远处的点了，哈哈。</p>
+<p>为什么叫齐次坐标？</p>
+<p>我们把齐次坐标转化为笛卡尔坐标的方法是前面n-1个坐标分量分别除以最后一个分量即可。</p>
+<script type="math/tex; mode=display">
+(x,y,w)\Leftrightarrow(\frac{x}{w},\frac{y}{w}).</script><p>然后齐次坐标有的一个性质就是齐次坐标的不变性。如：</p>
+<script type="math/tex; mode=display">
+(1,2,3)\Leftrightarrow(\frac{1}{3},\frac{2}{3})\\
+(2,4,6)\Leftrightarrow(\frac{2}{6},\frac{4}{6})\Leftrightarrow(\frac{1}{3},\frac{2}{3})</script><p>所以齐次坐标具有规模不变性、</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -733,7 +837,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog2/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
