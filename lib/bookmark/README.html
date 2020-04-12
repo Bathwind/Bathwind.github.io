@@ -26,7 +26,8 @@
     <script src="/wyw/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/wyw/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -449,18 +450,40 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:  
+                    2020-02-19
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:  
+                    197
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:  
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:  
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 align="center">Bookmark for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
+                <link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/wyw/css/prism-line-numbers.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
+<h1 align="center">Bookmark for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
 
 <h2 align="center">Introduce</h2>
 
@@ -474,20 +497,30 @@
 <h2 align="center">Step 1 → Go to NexT dir</h2>
 
 <p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
-<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span>  <span class="built_in">test</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-lang-sh"><code class="language-lang-sh">$ cd themes/next
+$ ls
+bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  source  test
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 align="center">Step 2 → Get module</h2>
 
 <p>Install module to <code>source/lib</code> directory:</p>
-<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-bookmark.git <span class="built_in">source</span>/lib/bookmark</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-lang-sh"><code class="language-lang-sh">$ git clone https://github.com/theme-next/theme-next-bookmark.git source/lib/bookmark
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 align="center">Step 3 → Set it up</h2>
 
 <p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bookmark:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-lang-yml"><code class="language-lang-yml">bookmark: true
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>And, if you wants to use the CDN, then need to set:</strong></p>
-<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">bookmark:</span> <span class="string">https://cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@latest/bookmark.min.js</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-lang-yml"><code class="language-lang-yml">vendors:
+  ...
+  bookmark: https://cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@latest/bookmark.min.js
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h1 align="center">Update</h1>
 
-<figure class="highlight sh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/bookmark</span><br><span class="line">$ git pull</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-lang-sh"><code class="language-lang-sh">$ cd themes/next/source/lib/bookmark
+$ git pull
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
             </div>
             <hr>
@@ -980,6 +1013,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             | Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
             | Theme <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+             <i class="fas fa-chart-area"></i> 站点总字数: <span class="white-color">12.9k</span> 字
             
             
             
