@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>齐次坐标的理解</title>
-    <url>/wyw/2020/03/01/qi-ci-zuo-biao/</url>
+    <url>/wyw/posts/64390.html</url>
     <content><![CDATA[<html><head></head><body><h1 id="齐次坐标的理解"><a href="#齐次坐标的理解" class="headerlink" title="齐次坐标的理解"></a>齐次坐标的理解</h1><p>齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。<a id="more"></a><br>问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以相交，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。  欧氏空间（或者笛卡尔空间）描述2D/3D几何非常适合，但是这种方法却不适合处理透视空间的问题（实际上，欧氏几何是透视几何的一个子集合），2维笛卡尔坐标可以表示为（x,y）。  如果一个点在无穷远处，这个点的坐标将会(∞,∞)，在欧氏空间，这变得没有意义。平行线在透视空间的无穷远处交于一点，但是在欧氏空间却不能，数学家发现了一种方式来解决这个问题。  方法：齐次坐标 简而言之，齐次坐标就是用N+1维来代表N维坐标  我们可以在一个2D笛卡尔坐标末尾加上一个额外的变量w来形成2D齐次坐标，因此，一个点(X,Y)在齐次坐标里面变成了（x,y,w），并且有 </p>
 <p>X = x/w</p>
 <p>Y = y/w</p>
@@ -24,7 +24,7 @@
   </entry>
   <entry>
     <title>树莓派换源以及pip安装</title>
-    <url>/wyw/2020/02/23/shu-mei-pai-huan-yuan/</url>
+    <url>/wyw/posts/3101.html</url>
     <content><![CDATA[<html><head></head><body><h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>
 <h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">lsb_release  -a
@@ -63,7 +63,7 @@ sudo apt-get update
   </entry>
   <entry>
     <title>汇编语言的学习记录</title>
-    <url>/wyw/2020/02/21/hui-bian-yu-yan-de-xue-xi-bi-ji/</url>
+    <url>/wyw/posts/31290.html</url>
     <content><![CDATA[<html><head></head><body><h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。<a id="more"></a>然后我打算把我每天学习的记录一下。为了日后看的时候方便一点。</p>
 <h2 id="机器语言："><a href="#机器语言：" class="headerlink" title="机器语言："></a>机器语言：</h2><p>机器语言就是0和1，但机器语言实在过于复杂，所以以前的程序猿真的苦逼，要写一堆0和1.所以汇编语言就产生了。与现在的高级语言的效率相比。汇编语言的效率是最快的。</p>
 <h2 id="编译器作用"><a href="#编译器作用" class="headerlink" title="编译器作用"></a>编译器作用</h2><p>编译器的作用就是将汇编指令转换为机器指令。</p>
@@ -85,7 +85,7 @@ sudo apt-get update
   </entry>
   <entry>
     <title>PCA主成分分析：</title>
-    <url>/wyw/2020/02/20/pca-shu-xue-yuan-li-fen-xi-yi-ji-ying-yong/</url>
+    <url>/wyw/posts/53510.html</url>
     <content><![CDATA[<html><head></head><body><h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
 <p><strong>PCA数学原理分析</strong>：</p>
 <p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
@@ -227,7 +227,7 @@ for i in range(9):
   </entry>
   <entry>
     <title>Harris角点检测</title>
-    <url>/wyw/2020/02/19/harris-jiao-dian-suan-fa-li-jie/</url>
+    <url>/wyw/posts/48085.html</url>
     <content><![CDATA[<html><head></head><body><h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br><a id="more"></a><br>角点：最直观的印象就是在水平和竖直两个方向变化均较大的两个点，即X,Y方向梯度都较大</p>
 <p>边缘：仅在水平或竖直方向有较大的变化量，即X、Y方向梯度只有一个较大</p>
 <p>平坦区域：在水平和竖直方向的变化量均较小，即X、Y方向梯度都较小</p>

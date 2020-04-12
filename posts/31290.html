@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Harris角点检测, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="汇编语言的学习记录, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Harris角点检测 | 嵌入式的一只菜鸟</title>
+    <title>汇编语言的学习记录 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/wyw/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/wyw/libs/awesome/css/all.css">
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/wyw/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/wyw/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Harris角点检测</h1>
+                    <h1 class="description center-align post-title">汇编语言的学习记录</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/wyw/tags/Harris/">
-                                <span class="chip bg-color">Harris</span>
+                            <a href="/wyw/tags/%E6%B1%87%E7%BC%96%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                <span class="chip bg-color">汇编知识点</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                图像处理
+                            <a href="/wyw/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="post-category">
+                                汇编语言
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
-                    2020-02-19
+                    2020-02-21
                 </div>
                 
 
@@ -471,14 +471,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    2.6k
+                    961
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:  
-                    10 分
+                    3 分
                 </div>
                 
 
@@ -494,177 +494,17 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-<h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br><a id="more"></a><br>角点：最直观的印象就是在水平和竖直两个方向变化均较大的两个点，即X,Y方向梯度都较大</p>
-<p>边缘：仅在水平或竖直方向有较大的变化量，即X、Y方向梯度只有一个较大</p>
-<p>平坦区域：在水平和竖直方向的变化量均较小，即X、Y方向梯度都较小</p>
-<p><strong>在特征点检测中经常提出尺度不变、旋转不变、抗噪声影响等，这些是判断特征点是否稳定的指标。</strong></p>
-<p><strong>性能较好的角点：</strong></p>
-<ol>
-<li><strong>检测出图像中“真实”的角点</strong></li>
-<li><strong>准确的定位性能</strong></li>
-<li><strong>很高的重复检测率</strong></li>
-<li><strong>噪声的鲁棒性</strong></li>
-<li><strong>较高的计算效率</strong></li>
-</ol>
-<p>今天看到角点检测的时候真的是一脸蒙蔽，服了，书上直接给出的公式。整的我直接懵了。参考晚上其他大佬写的博客后逐渐明白了一点</p>
-<p>书上给的公式如下：</p>
-<script type="math/tex; mode=display">
-E(u,v)=\sum_{x,y}w(x,y) \left[]
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/87HgfK.jpg" alt></p>
-<h2 id="Harris矩阵推导过程"><a href="#Harris矩阵推导过程" class="headerlink" title="Harris矩阵推导过程:"></a>Harris矩阵推导过程:</h2><p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p>
-<p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p>
-<script type="math/tex; mode=display">
-E(u,v)=\sum_{x,y}w(x,y)[I(x+u,y+v)-I(x,y)]^2</script><p>   高数中将这个式子进行泰勒展开：</p>
-<script type="math/tex; mode=display">
-f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)</script><script type="math/tex; mode=display">
-所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2</script><script type="math/tex; mode=display">
-=\\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\\sum[u,v] \left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right] \tag{B}
-  \left[
-  \begin{matrix}
-  u\\
-  v\\
-  \end{matrix}
-  \right]</script><ul>
-<li>[u,v][u,v]是窗口WW的偏移量；</li>
-<li>(x,y)(x,y)是窗口WW所对应的像素坐标位置，窗口有多大，就有多少个位置；</li>
-<li>I(x,y)是像素坐标位置(x,y)的图像灰度值；</li>
-<li>I(x+u,y+v)是像素坐标位置(x+u,y+v)的图像灰度值；</li>
-</ul>
-<p> Ix,Iy分别为窗口内像素点(x,y)在x方向上和y方向上的梯度值。  其中<strong>窗口函数（权重矩阵）</strong>可以是平坦的，通常为高斯滤波器Gσ：</p>
-<p>设:</p>
-<script type="math/tex; mode=display">
-Mi =\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]\\
-  M = \sum_{x,y}w(x,y) * Mi</script><p>所以可以得到卷积：M</p>
-<p>该卷积的目的是得到MI在周围像素上的局部平均。<strong>矩阵M又称为Harris矩阵。</strong>W 的宽度决定了在像素x 周围的感兴趣区域。</p>
-<p>根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。</p>
-<p>接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.</p>
-<p>则有以下三种情况：</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/87HX6g.png" alt></p>
-<p>具体为什么有这三种情况以下就是推导过程：</p>
-<p>我们可以将E(u,v)近似为二项函数：</p>
-<p>​                                                        </p>
-<script type="math/tex; mode=display">
-E(u,v)=Au^2+2Cuv+Bv^2=\left[
- \begin{matrix}
-  A & C\\
-  C & A\\
-  \end{matrix}
-  \right]\\
-A=\sum_{x,y}w(x,y)*Ix^2\\
-B=\sum_{x,y}w(x,y)*Iy^2\\
-C=\sum_{x,y}w(x,y)*IxIy</script><p>二次项函数本质上就是一个椭圆函数。椭圆的长和宽是由MM的特征值λ1,λ2决定的(椭圆的长短轴正是矩阵MM特征值平方根的倒数)，椭圆的方向是由M的特征向量决定的，椭圆方程为：</p>
-<script type="math/tex; mode=display">
-\left[
- \begin{matrix}
-  u & v\\
-  \end{matrix}
-  \right]*M*\left[
- \begin{matrix}
-   u\\
-   v\\
-  \end{matrix}
-  \right]=1</script><p>虽然我们利用E(u,v)来描述角点的基本思想，然而最终我们仅仅使用的是矩阵M。让我们看看矩阵M形式，是不是跟协方差矩阵形式很像，像归像，但是还是有些不同，哪儿不同？一般协方差矩阵对应维的随机变量需要减去该维随机变量的均值：</p>
-<p>把Ix,Iy看成两个字段，假设窗口内有m个像素点，也就是等价于有m个样本，我们先计算每个字段的均值：</p>
-<script type="math/tex; mode=display">
-\overline{Ix}=\sum_{i}^mIxi\\
-\overline{Iy}=\sum_{i}^mIyi</script><p>我们仍然使用(Ixi,Iyi)表示样本(Ixi,Iyi)去均值后的值，则由这m个样本组成的矩阵：</p>
-<script type="math/tex; mode=display">
-x=\left[
- \begin{matrix}
-   Ix1 & Ix2 & ... & Ixm \\
-   Iy1 & Iy2 & ... & Iym\\
-  \end{matrix}
-  \right]</script><p>则对应协方差矩阵可以写成：</p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}*X*X^T=\frac{1}{m}*\sum_{i=1}\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]</script><p>但矩阵M中并没有这样做，所以在矩阵M里，我们先进行各维的均值化处理，那么各维所对应的随机变量的均值为0，协方差矩阵就大大简化了，简化的最终结果就是矩阵M，是否明白了(注意为了简化运算，我们先假设M矩阵中的权重系数w(x,y)=1，并且省略掉了求均值.我们的目的是分析数据的主要成分</p>
-<p>如果我们对协方差矩阵M进行对角化，很明显，其对角线就是各个字段的方差，这点大家应该明白吧？不明白的话可以复习下PCA原理。</p>
-<ul>
-<li>如果两个字段(Ix,Iy)所对应的特征值都比较大，说明什么？ 像素点的梯度分布比较散，梯度变化程度比较大，符合角点在窗口区域的特点；</li>
-<li>如果是平坦区域，那么像素点的梯度所构成的点集比较集中在原点附近，因为窗口区域内的像素点的梯度幅值非常小，此时矩阵M的对角化的两个特征值比较小；</li>
-<li>如果是边缘区域，在计算像素点的x、y方向上的梯度时，边缘上的像素点的某个方向的梯度幅值变化比较明显，另一个方向上的梯度幅值变化较弱，其余部分的点都还是集中原点附近，这样MM对角化后的两个特征值理论应该是一个比较大，一个比较小，当然对于边缘这种情况，可能是呈45°的边缘，致使计算出的特征值并不是都特别的大，总之跟含有角点的窗口的分布情况还是不同的。</li>
-</ul>
-<p>因此可以得出下列结论：</p>
-<ul>
-<li><p>特征值都比较大时，即窗口中含有角点；</p>
-</li>
-<li><p>特征值一个较大，一个较小，窗口中含有边缘；</p>
-</li>
-<li><p>特征值都比较小，窗口处在平坦区域；</p>
-<p>那么根据书上又提出了一个不用实际计算特征值的方法。也就是度量角点响应：</p>
-<p>对每一个窗口计算得到一个分数R，根据R的大小来判定窗口内是否存在harris特征角。分数R根据下面公式计算得到：</p>
-<script type="math/tex; mode=display">
-R=det(M)-k(trace(M))^2\\
-其中：det(M)=\lambda1*\lambda2\\
-trace(M)=\lambda1+\lambda2\\
-另外我在别的地方看到简化后的R为：
-R=[(Ix^2+Iy^2)-(IxIy)^2]/(Ix^2+Iy^2)</script></li>
-</ul>
-<h3 id="得到Harris角点的步骤"><a href="#得到Harris角点的步骤" class="headerlink" title="得到Harris角点的步骤"></a>得到Harris角点的步骤</h3><p>所以得到Harris角点的步骤为：</p>
-<p>1、计算图像I(x,y)I(x,y)在x和y两个方向的梯度Ix,Iy;</p>
-<p>2、计算图像两个方向梯度的乘积;</p>
-<p>3、使用高斯函数对第二步算出的数进行高斯加权，计算中心点为(x,y)的窗口W对应的矩阵M</p>
-<p>4、计算每个像素点(x,y)处的(x,y)处的Harris响应值R；</p>
-<p>5：过滤大于某一阈值t的R值；</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p>python代码如下：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">from scipy.ndimage import filters
-from PIL import Image
-from pylab import *
-from imtools import imresize
-np.set_printoptions(threshold=np.inf)#解决printf打印矩阵不完全的问题
-def harris_response(im,sigma=3):
-    """计算图像的harris响应函数"""
-    #计算导数
-    imx = zeros(im.shape)
-    imx = filters.gaussian_filter(im,(sigma,sigma),(0,1),imx)
-    imy = zeros(im.shape)
-    imy = filters.gaussian_filter(im, (sigma, sigma), (1, 0), imy)
-    #计算Harris的各个分量
-    wxx = filters.gaussian_filter(imx*imx,sigma)
-    wxy = filters.gaussian_filter(imx*imy,sigma)
-    wyy = filters.gaussian_filter(imy*imy,sigma)
-    #计算像素的角点响应函数
-    return (wxx*wyy - 2*wxy)/(wxx + wyy)
-def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
-    """从一幅Harrisim响应中返回角点，min_dist为分割角点和图像边界的最少像素数目"""
-    corner_thsold = harrism.max()*thresold
-    harrism_t = (harrism > corner_thsold) * 1
-    #得到候选点的坐标
-    coords = array(harrism_t.nonzero()).T#返回非零值的坐标的矩阵
-    #他们的Harris响应值
-    candidate_values = [harrism[c[0],c[1]] for c in coords]
-    #对候选点进行harris响应值进行排序
-    index = argsort(candidate_values)[::-1]#将x中的元素从小到大排列，提取其对应的index(索引)，然后输出到y
-    #将可行点的位置保存在数组里
-    allowed_locations = zeros(harrism.shape)
-    allowed_locations[min_dist:-min_dist,min_dist:-min_dist] = 1
-    #按照min_distance原则，选择最佳harris点
-    filters_coords = []
-    for i in index:
-            if allowed_locations[coords[i,0],coords[i,1]] == 1:
-                filters_coords.append(coords[i])
-                allowed_locations[(coords[i,0]-min_dist):(coords[i,0]+min_dist),(coords[i,1]-min_dist):coords[i,1]+min_dist] = 0
-    return filters_coords
-</code></pre>
+<h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。<a id="more"></a>然后我打算把我每天学习的记录一下。为了日后看的时候方便一点。</p>
+<h2 id="机器语言："><a href="#机器语言：" class="headerlink" title="机器语言："></a>机器语言：</h2><p>机器语言就是0和1，但机器语言实在过于复杂，所以以前的程序猿真的苦逼，要写一堆0和1.所以汇编语言就产生了。与现在的高级语言的效率相比。汇编语言的效率是最快的。</p>
+<h2 id="编译器作用"><a href="#编译器作用" class="headerlink" title="编译器作用"></a>编译器作用</h2><p>编译器的作用就是将汇编指令转换为机器指令。</p>
+<h2 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h2><p>汇编语言通常有以下3类指令：</p>
+<p>(1):汇编指令：机器码的助记符，有对应的机器码。<br>(2):伪指令：没有对应的机器码，由编译器执行，计算机并不执行。<br>(3):其他符号：如+，-，*，/等，由编译器识别，没有对应的机器码。</p>
+<h2 id="指令和数据"><a href="#指令和数据" class="headerlink" title="指令和数据"></a>指令和数据</h2><p>指令和数据在内存或者磁盘上存储的时候是一样的。都是二进制信息。但是CPU可以把一串二进制信息看作数据来处理，也可以将其看作指令处理</p>
+<h2 id="存储单元"><a href="#存储单元" class="headerlink" title="存储单元"></a>存储单元</h2><p>这个概念是比较课本的概念。存储器被划分为若干个存储单元。每个存储单元从0开始编号。也就是从0到127.一个存储器有128个存储单元，一个存储单元可以存储一个Byte.即8个二进制位。</p>
+<h2 id="CPU对数据进行读写"><a href="#CPU对数据进行读写" class="headerlink" title="CPU对数据进行读写"></a>CPU对数据进行读写</h2><p>CPU要想进行数据的读写，必须和外部器件进行交互。必须有以下三类信息的交互:<br><br>1：存储单元的地址<br><br>2：器件的选择，读或写的命令。<br><br>3：读或写的数据(数据信息)<br><br>CPU对数据进行读取的过程如下所示：<br><img src="http://q5zz73y15.bkt.clouddn.com/XL%5B%7BX%7B9QVNBE0A%29LW_LP5$V.png" alt><br>(1):cpu通过地址总线将地址信息3发出<br><br>(2):cpu通过控制线发出内存读命令，选中存储器芯片，并通知他。从中读取数据。<br><br>(3):存储器将3号单元的数据8通过数据线送入CPU。写操作也是类似的。</p>
+<h2 id="地址总线"><a href="#地址总线" class="headerlink" title="地址总线"></a>地址总线</h2><p>CPU通过地址总线来指定存储器单元的。假如一个CPU有10根地址总线，那么就是2的10次方个。也就是从0到1023.<br><img src="http://q5zz73y15.bkt.clouddn.com/666.png" alt><br>如上图所示这个就是10根地址线的CPU向内存发出地址信息11时10根地址线上传输的二进制信息。规定从上到下就是从最低位到最高位。</p>
+<h2 id="数据总线"><a href="#数据总线" class="headerlink" title="数据总线"></a>数据总线</h2><p>CPU与内存或其他器件之间的数据传送是通过数据总线来进行的。<br>八根数据总线一次可传送一个八位二进制数据(也就是一个字节)，16根数据总线一次可以传送俩个字节。</p>
+<h2 id="控制总线"><a href="#控制总线" class="headerlink" title="控制总线"></a>控制总线</h2><p>CPU对外部器件的控制是通过控制总线来进行了。在这里控制总线是个总称，控制总线的宽度决定了CPU对外部器件的控制能力。内存读或写命令是由几根控制总线综合发出的。其中有一根叫做“读信号输出”的控制线负责有CPU向外传送读信号，CPU向该控制线上输出低电平表示将要读取数据，有一根称为“写信号输出”的控制线负责传送写信号。</p>
 
             </div>
             <hr>
@@ -690,7 +530,7 @@ def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/wyw/wyw/2020/02/19/harris-jiao-dian-suan-fa-li-jie/">http://wyw1314.gitee.io/wyw/wyw/2020/02/19/harris-jiao-dian-suan-fa-li-jie/</a>
+                    <a href="http://wyw1314.gitee.io/wyw/wyw/posts/31290.html">http://wyw1314.gitee.io/wyw/wyw/posts/31290.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,8 +568,8 @@ def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
                     
                         <div class="article-tag">
                             
-                                <a href="/wyw/tags/Harris/">
-                                    <span class="chip bg-color">Harris</span>
+                                <a href="/wyw/tags/%E6%B1%87%E7%BC%96%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                    <span class="chip bg-color">汇编知识点</span>
                                 </a>
                             
                         </div>
@@ -1164,7 +1004,58 @@ def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i> 上一篇</div>
             <div class="card">
-                <a href="/wyw/2020/02/20/pca-shu-xue-yuan-li-fen-xi-yi-ji-ying-yong/">
+                <a href="/wyw/posts/3101.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/wyw/medias/featureimages/4.jpg" class="responsive-img" alt="树莓派换源以及pip安装">
+                        
+                        <span class="card-title">树莓派换源以及pip安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            树莓派换源以及opencv还有opencv-contrib树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。其实很简单
+查看自己的系统版本一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：
+lsb_rele
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/wyw/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
+                                    树莓派
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/wyw/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
+                        <span class="chip bg-color">树莓派换源</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇 <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/wyw/posts/53510.html">
                     <div class="card-image">
                         
                         
@@ -1180,9 +1071,9 @@ def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1200,56 +1091,6 @@ def get_harris_points(harrism,min_dist = 10,thresold = 0.1):
                     
                     <a href="/wyw/tags/PCA%E9%99%8D%E7%BB%B4/">
                         <span class="chip bg-color">PCA降维</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇 <i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/wyw/2020/02/19/harris-jiao-dian-suan-fa-li-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/wyw/medias/featureimages/3.jpg" class="responsive-img" alt="Harris角点检测">
-                        
-                        <span class="card-title">Harris角点检测</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Harris角点检测角点的定义：角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行任意方向上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/wyw/tags/Harris/">
-                        <span class="chip bg-color">Harris</span>
                     </a>
                     
                 </div>

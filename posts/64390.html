@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
-    <meta name="keywords" content="树莓派换源以及pip安装, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="齐次坐标的理解, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>树莓派换源以及pip安装 | 嵌入式的一只菜鸟</title>
+    <title>齐次坐标的理解 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/wyw/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/wyw/libs/awesome/css/all.css">
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/wyw/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/wyw/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">树莓派换源以及pip安装</h1>
+                    <h1 class="description center-align post-title">齐次坐标的理解</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/wyw/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
-                                <span class="chip bg-color">树莓派换源</span>
+                            <a href="/wyw/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                                <span class="chip bg-color">齐次坐标</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/wyw/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                树莓派
+                            <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
+                                图像处理
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
-                    2020-02-23
+                    2020-03-01
                 </div>
                 
 
@@ -471,14 +471,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    460
+                    583
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:  
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -494,34 +494,17 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-<h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>
-<h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">lsb_release  -a
-</code></pre>
-<p><br>如下图所示：<br><br><img src="https://s1.ax1x.com/2020/03/23/87b5gU.png" alt><br>可以看到codename为buster,所以一会换源的时候一定要记住。</p>
-<h2 id="更改souces-list软件源"><a href="#更改souces-list软件源" class="headerlink" title="更改souces.list软件源"></a>更改souces.list软件源</h2><p>1:nano 编辑/etc/apt/目录下的sources.list<br>终端输入：sudo nano /etc/apt/sources.list<br><br><br><img src="https://s1.ax1x.com/2020/03/23/87bTu4.png" alt><br>我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。<br>ctrl + o 保存。回车确认。ctrl + x 退出。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-</code></pre>
-<h2 id="更换系统源"><a href="#更换系统源" class="headerlink" title="更换系统源"></a>更换系统源</h2><p>执行命令：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo nano /etc/apt/sources.list.d/raspi.list
-</code></pre>
-<p><img src="https://s1.ax1x.com/2020/03/23/87bqER.png" alt><br><br>输入以下网址：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
-</code></pre>
-<h2 id="pip命令安装Opencv"><a href="#pip命令安装Opencv" class="headerlink" title="pip命令安装Opencv"></a>pip命令安装Opencv</h2><p>由于树莓派上是py3.7.所以使用pip命令安装时候要用pip3.<br>打开终端：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo pip3  install opencv-python
-</code></pre>
-<p>这里我已经装完了。<br><img src="https://s1.ax1x.com/2020/03/23/87qJ2T.png" alt>这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo apt-get update #安装依赖库
-sudo apt-get install libhdf5-dev
-sudo apt-get install libatlas-base-dev
-sudo apt-get install libjasper-dev
-sudo apt-get install libqt4-test
-sudo apt-get install libqtgui4
-sudo apt-get update
-</code></pre>
-<p>之后再pip3，输入import cv2如果没有任何反应就证明好了。<br>安装其他包也是类似的。</p>
+<h1 id="齐次坐标的理解"><a href="#齐次坐标的理解" class="headerlink" title="齐次坐标的理解"></a>齐次坐标的理解</h1><p>齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。<a id="more"></a><br>问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以相交，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。  欧氏空间（或者笛卡尔空间）描述2D/3D几何非常适合，但是这种方法却不适合处理透视空间的问题（实际上，欧氏几何是透视几何的一个子集合），2维笛卡尔坐标可以表示为（x,y）。  如果一个点在无穷远处，这个点的坐标将会(∞,∞)，在欧氏空间，这变得没有意义。平行线在透视空间的无穷远处交于一点，但是在欧氏空间却不能，数学家发现了一种方式来解决这个问题。  方法：齐次坐标 简而言之，齐次坐标就是用N+1维来代表N维坐标  我们可以在一个2D笛卡尔坐标末尾加上一个额外的变量w来形成2D齐次坐标，因此，一个点(X,Y)在齐次坐标里面变成了（x,y,w），并且有 </p>
+<p>X = x/w</p>
+<p>Y = y/w</p>
+<p>例如，笛卡尔坐标系下（1，2）的齐次坐标可以表示为（1，2，1），如果点（1，2）移动到无限远处，在笛卡尔坐标下它变为(∞,∞)，然后它的齐次坐标表示为（1，2，0），因为(1/0, 2/0) = (∞,∞)，我们可以不用”∞”来表示一个无穷远处的点了，哈哈。</p>
+<p>为什么叫齐次坐标？</p>
+<p>我们把齐次坐标转化为笛卡尔坐标的方法是前面n-1个坐标分量分别除以最后一个分量即可。</p>
+<script type="math/tex; mode=display">
+(x,y,w)\Leftrightarrow(\frac{x}{w},\frac{y}{w}).</script><p>然后齐次坐标有的一个性质就是齐次坐标的不变性。如：</p>
+<script type="math/tex; mode=display">
+(1,2,3)\Leftrightarrow(\frac{1}{3},\frac{2}{3})\\
+(2,4,6)\Leftrightarrow(\frac{2}{6},\frac{4}{6})\Leftrightarrow(\frac{1}{3},\frac{2}{3})</script><p>所以齐次坐标具有规模不变性、</p>
 
             </div>
             <hr>
@@ -547,7 +530,7 @@ sudo apt-get update
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/wyw/wyw/2020/02/23/shu-mei-pai-huan-yuan/">http://wyw1314.gitee.io/wyw/wyw/2020/02/23/shu-mei-pai-huan-yuan/</a>
+                    <a href="http://wyw1314.gitee.io/wyw/wyw/posts/64390.html">http://wyw1314.gitee.io/wyw/wyw/posts/64390.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,8 +568,8 @@ sudo apt-get update
                     
                         <div class="article-tag">
                             
-                                <a href="/wyw/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
-                                    <span class="chip bg-color">树莓派换源</span>
+                                <a href="/wyw/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                                    <span class="chip bg-color">齐次坐标</span>
                                 </a>
                             
                         </div>
@@ -1019,9 +1002,10 @@ sudo apt-get update
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i> 上一篇</div>
+                <i class="far fa-dot-circle"></i> 本篇
+            </div>
             <div class="card">
-                <a href="/wyw/2020/03/01/qi-ci-zuo-biao/">
+                <a href="/wyw/posts/64390.html">
                     <div class="card-image">
                         
                         
@@ -1037,9 +1021,9 @@ sudo apt-get update
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1052,6 +1036,7 @@ sudo apt-get update
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1070,31 +1055,33 @@ sudo apt-get update
                 下一篇 <i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/wyw/2020/02/21/hui-bian-yu-yan-de-xue-xi-bi-ji/">
+                <a href="/wyw/posts/3101.html">
                     <div class="card-image">
                         
                         
-                        <img src="/wyw/medias/featureimages/23.jpg" class="responsive-img" alt="汇编语言的学习记录">
+                        <img src="/wyw/medias/featureimages/4.jpg" class="responsive-img" alt="树莓派换源以及pip安装">
                         
-                        <span class="card-title">汇编语言的学习记录</span>
+                        <span class="card-title">树莓派换源以及pip安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            汇编语言的学习笔记：汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。链接: https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ 提取码: va7t感觉在看汇编语言的前一部分时候感觉和
+                            树莓派换源以及opencv还有opencv-contrib树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。其实很简单
+查看自己的系统版本一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：
+lsb_rele
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/wyw/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    汇编语言
+                            <a href="/wyw/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
+                                    树莓派
                                 </a>
                             
                             
@@ -1104,8 +1091,8 @@ sudo apt-get update
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/wyw/tags/%E6%B1%87%E7%BC%96%E7%9F%A5%E8%AF%86%E7%82%B9/">
-                        <span class="chip bg-color">汇编知识点</span>
+                    <a href="/wyw/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
+                        <span class="chip bg-color">树莓派换源</span>
                     </a>
                     
                 </div>
