@@ -1,314 +1,479 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
- <!-- 爆炸效果 -->
-</head><body itemscope itemtype="http://schema.org/WebPage"><canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/firework.js"></script>
-<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/post-details.js"></script>
-<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/fold.js"></script>
-<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/tag.js"></script>
-<script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="http://wyw1314.gitee.io/wyw/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="http://wyw1314.gitee.io/wyw/images/favicon-16x16-next.png">
-
-<link rel="stylesheet" href="/wyw/css/main.css">
+    <meta charset="utf-8">
+    <meta name="keywords" content="hexo+next主题配置, 嵌入式的一只菜鸟">
+    <meta name="description" content="永远相信美好的事情即将发生">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-<link rel="stylesheet" href="/wyw/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/wyw/lib/pace/pace-theme-pace-theme-flash.min.css">
-  <script src="/wyw/lib/pace/pace.min.js"></script>
+    <title>hexo+next主题配置 | 嵌入式的一只菜鸟</title>
+    <link rel="icon" type="image/png" href="/wyw/favicon.png">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wyw1314.gitee.io","root":"/wyw/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+    <link rel="stylesheet" type="text/css" href="/wyw/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/wyw/css/my.css">
 
-  <meta name="description" content="Hexo+next主题配置踩的坑下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo+next主题配置">
-<meta property="og:url" content="http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/index.html">
-<meta property="og:site_name" content="嵌入式的一只菜鸟">
-<meta property="og:description" content="Hexo+next主题配置踩的坑下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/23/877J2D.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/23/877Urd.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/23/87HpRO.png">
-<meta property="article:published_time" content="2020-03-04T15:22:00.000Z">
-<meta property="article:modified_time" content="2020-03-23T11:06:17.342Z">
-<meta property="article:author" content="WYW">
-<meta property="article:tag" content="Next主题美化">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/23/877J2D.png">
+    <script src="/wyw/libs/jquery/jquery.min.js"></script>
 
-<link rel="canonical" href="http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
+</head>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true
-  };
-</script>
-
-  <title>hexo+next主题配置 | 嵌入式的一只菜鸟</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-
-
-
-  <div class="container use-motion">
-    <div class="headband"></div>
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <div>
-      <a href="/wyw/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">嵌入式的一只菜鸟</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-right"></div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/wyw/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/wyw/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于作者</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/wyw/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>文章标签<span class="badge">6</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/wyw/categories/" rel="section"><i class="fa fa-fw fa-th"></i>文章分类<span class="badge">4</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/wyw/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴<span class="badge">6</span></a>
-
-  </li>
-        <li class="menu-item menu-item-links">
-
-    <a href="/wyw/links/" rel="section"><i class="fa fa-fw fa-link"></i>友情链接</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-    <!-- badApplePlayer -->
-
-  <!-- Your XlchPlayerKey -->
-  <script>XlchKey="gLR2pP7Qvf";</script>
-  <!-- font-awesome 4.2.0 -->
-  <link href="https://lib.baomitu.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- JQuery-mousewheel 3.1.9 -->
-  <script src="https://lib.baomitu.com/jquery-mousewheel/3.1.9/jquery.mousewheel.min.js"></script>
-  <!-- Scrollbar -->
-  <script src="https://static.https.badapple.top/BadApplePlayer/js/scrollbar.js"></script>
-  <!-- BadApplePlayer -->
-  <script src="https://static.https.badapple.top/BadApplePlayer/Player.js"></script>
-
-    
-  <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
-
-  <a href="https://github.com/wywaihandan" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/wyw/" class="waves-effect waves-light">
+                    
+                    <img src="/wyw/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">嵌入式的一只菜鸟</span>
+                </a>
+            </div>
             
 
-  <div class="posts-expand">
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/" class="waves-effect waves-light">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/wyw/images/avatar.png">
-      <meta itemprop="name" content="WYW">
-      <meta itemprop="description" content="永远相信美好的事情即将发生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="嵌入式的一只菜鸟">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          hexo+next主题配置
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-04 23:22:00" itemprop="dateCreated datePublished" datetime="2020-03-04T23:22:00+08:00">2020-03-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-23 19:06:17" itemprop="dateModified" datetime="2020-03-23T19:06:17+08:00">2020-03-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/wyw/categories/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo博客主题配置</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" class="post-meta-item leancloud_visitors" data-flag-title="hexo+next主题配置" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" itemprop="commentCount"></span>
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
     </a>
-  </span>
+    
+  </li>
   
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 ≈</span>
-              <span>3 分钟</span>
-            </span>
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/wyw/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/wyw/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">嵌入式的一只菜鸟</div>
+        <div class="logo-desc">
+            
+            永远相信美好的事情即将发生
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/wyw/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
 
         </div>
-      </header>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-        <h1 id="Hexo-next主题配置踩的坑"><a href="#Hexo-next主题配置踩的坑" class="headerlink" title="Hexo+next主题配置踩的坑"></a><code>Hexo+next</code>主题配置踩的坑</h1><p>下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。<a id="more"></a>下面开始具体配置：</p>
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/wyw/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo+next主题配置</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/wyw/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/wyw/tags/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
+                                <span class="chip bg-color">Next主题美化</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/wyw/categories/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="post-category">
+                                hexo博客主题配置
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
+                    2020-03-04
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Hexo-next主题配置踩的坑"><a href="#Hexo-next主题配置踩的坑" class="headerlink" title="Hexo+next主题配置踩的坑"></a><code>Hexo+next</code>主题配置踩的坑</h1><p>下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。<a id="more"></a>下面开始具体配置：</p>
 <h2 id="下载安装next主题"><a href="#下载安装next主题" class="headerlink" title="下载安装next主题"></a>下载安装next主题</h2><p>下载next主题，只需输入指令：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></tbody></table></figure>
 <p>但是速度会比较慢。因为众所周知的原因。可以多尝试几下。然后如果要想更新主题的话，可以</p>
@@ -371,7 +536,7 @@
 <p>如果想使用CDN加速的话需要设置</p>
 <figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vendors:</span><br><span class="line">  ...</span><br><span class="line">  canvas_nest: <span class="comment">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js</span></span><br><span class="line">  canvas_nest_nomobile: <span class="comment">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0</span></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h2><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><div></span><br><span class="line"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></span><br><span class="line"><script></span><br><span class="line">    var now = new Date();</span><br><span class="line">    function createtime() {</span><br><span class="line">        var grt= new Date(<span class="string">"03/04/2020 00:00:00"</span>);</span><br><span class="line">        now.setTime(now.getTime()+<span class="number">250</span>);</span><br><span class="line">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = Math.floor(days);</span><br><span class="line">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = Math.floor(hours);</span><br><span class="line">        <span class="keyword">if</span>(String(hnum).length ==<span class="number">1</span> ){hnum = <span class="string">"0"</span> + hnum;} minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum);</span><br><span class="line">        mnum = Math.floor(minutes); <span class="keyword">if</span>(String(mnum).length ==<span class="number">1</span> ){mnum = <span class="string">"0"</span> + mnum;}</span><br><span class="line">        seconds = (now - grt ) / <span class="number">1000</span> - (<span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * <span class="number">60</span> * hnum) - (<span class="number">60</span> * mnum);</span><br><span class="line">        snum = Math.round(seconds); <span class="keyword">if</span>(String(snum).length ==<span class="number">1</span> ){snum = <span class="string">"0"</span> + snum;}</span><br><span class="line">        document.getElementById(<span class="string">"timeDate"</span>).innerHTML = <span class="string">"本站已安全运行 "</span>+dnum+<span class="string">" 天 "</span>;</span><br><span class="line">        document.getElementById(<span class="string">"times"</span>).innerHTML = hnum + <span class="string">" 小时 "</span> + mnum + <span class="string">" 分 "</span> + snum + <span class="string">" 秒"</span>;</span><br><span class="line">    }</span><br><span class="line">setInterval(<span class="string">"createtime()"</span>,<span class="number">250</span>);</span><br><span class="line"></script></span><br><span class="line"></div></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><div><br><span class="line"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></span><br><span class="line"><script></span><br><span class="line">    var now = new Date();</span><br><span class="line">    function createtime() {</span><br><span class="line">        var grt= new Date(<span class="string">"03/04/2020 00:00:00"</span>);</span><br><span class="line">        now.setTime(now.getTime()+<span class="number">250</span>);</span><br><span class="line">        days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = Math.floor(days);</span><br><span class="line">        hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = Math.floor(hours);</span><br><span class="line">        <span class="keyword">if</span>(String(hnum).length ==<span class="number">1</span> ){hnum = <span class="string">"0"</span> + hnum;} minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum);</span><br><span class="line">        mnum = Math.floor(minutes); <span class="keyword">if</span>(String(mnum).length ==<span class="number">1</span> ){mnum = <span class="string">"0"</span> + mnum;}</span><br><span class="line">        seconds = (now - grt ) / <span class="number">1000</span> - (<span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * <span class="number">60</span> * hnum) - (<span class="number">60</span> * mnum);</span><br><span class="line">        snum = Math.round(seconds); <span class="keyword">if</span>(String(snum).length ==<span class="number">1</span> ){snum = <span class="string">"0"</span> + snum;}</span><br><span class="line">        document.getElementById(<span class="string">"timeDate"</span>).innerHTML = <span class="string">"本站已安全运行 "</span>+dnum+<span class="string">" 天 "</span>;</span><br><span class="line">        document.getElementById(<span class="string">"times"</span>).innerHTML = hnum + <span class="string">" 小时 "</span> + mnum + <span class="string">" 分 "</span> + snum + <span class="string">" 秒"</span>;</span><br><span class="line">    }</span><br><span class="line">setInterval(<span class="string">"createtime()"</span>,<span class="number">250</span>);</span><br><span class="line"></script></span><br><span class="line"></span></div></span><br></pre></td></tr></tbody></table></figure>
 <p>上面的代码可以修改为你创建博客的时间，</p>
 <h3 id="访客统计-："><a href="#访客统计-：" class="headerlink" title="访客统计 ："></a>访客统计 ：</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show Views / Visitors of the website / page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi</span></span><br><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></tbody></table></figure>
 <p>next主题中已经内置了访客统计的功能，所以这里我们只需开启就行。</p>
@@ -393,7 +558,7 @@
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo+next主题配置</span><br><span class="line">date: <span class="number">2020</span><span class="number">-03</span><span class="number">-04</span> <span class="number">23</span>:<span class="number">22</span></span><br><span class="line">categories: hexo博客主题配置</span><br><span class="line">tags: Next主题美化</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></tbody></table></figure>
 <p>这样我们就可以查看我们自己文章的分类以及标签了。</p>
 <h3 id="友情链接links"><a href="#友情链接links" class="headerlink" title="友情链接links:"></a>友情链接links:</h3><p>菜单栏中还有一项友情链接。这里可以放上常用的网站。具体设置如下:首先在根目录下\themes\next\layout新建一个<code>links.swig</code>并添加如下内容：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">{% block content %}</span><br><span class="line">  {<span class="comment">######################}</span></span><br><span class="line">  {<span class="comment">### LINKS BLOCK ###}</span></span><br><span class="line">  {<span class="comment">######################}</span></span><br><span class="line"></span><br><span class="line">    <div id=<span class="string">"links"</span>></span><br><span class="line">        <style></span><br><span class="line"></span><br><span class="line">            <span class="comment">#links{</span></span><br><span class="line">               margin-top: <span class="number">5</span>rem;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .links-content{</span><br><span class="line">                margin-top:<span class="number">1</span>rem;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .link-navigation::after {</span><br><span class="line">                content: <span class="string">" "</span>;</span><br><span class="line">                display: block;</span><br><span class="line">                clear: both;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .card {</span><br><span class="line">                width: <span class="number">300</span>px;</span><br><span class="line">                font-size: <span class="number">1</span>rem;</span><br><span class="line">                padding: <span class="number">10</span>px <span class="number">20</span>px;</span><br><span class="line">                border-radius: <span class="number">4</span>px;</span><br><span class="line">                transition-duration: <span class="number">0.15</span>s;</span><br><span class="line">                margin-bottom: <span class="number">1</span>rem;</span><br><span class="line">                display:flex;</span><br><span class="line">            }</span><br><span class="line">            .card:nth-child(odd) {</span><br><span class="line">                float: left;</span><br><span class="line">            }</span><br><span class="line">            .card:nth-child(even) {</span><br><span class="line">                float: right;</span><br><span class="line">            }</span><br><span class="line">            .card:hover {</span><br><span class="line">                transform: scale(<span class="number">1.1</span>);</span><br><span class="line">                box-shadow: <span class="number">0</span> <span class="number">2</span>px <span class="number">6</span>px <span class="number">0</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6</span>px <span class="number">0</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.04</span>);</span><br><span class="line">            }</span><br><span class="line">            .card a {</span><br><span class="line">                border:none;</span><br><span class="line">            }</span><br><span class="line">            .card .ava {</span><br><span class="line">                width: <span class="number">3</span>rem!important;</span><br><span class="line">                height: <span class="number">3</span>rem!important;</span><br><span class="line">                margin:<span class="number">0</span>!important;</span><br><span class="line">                margin-right: <span class="number">1</span>em!important;</span><br><span class="line">                border-radius:<span class="number">4</span>px;</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line">            .card .card-header {</span><br><span class="line">                font-style: italic;</span><br><span class="line">                overflow: hidden;</span><br><span class="line">                width: <span class="number">236</span>px;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header a {</span><br><span class="line">                font-style: normal;</span><br><span class="line">                color: <span class="comment">#2bbc8a;</span></span><br><span class="line">                font-weight: bold;</span><br><span class="line">                text-decoration: none;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header a:hover {</span><br><span class="line">                color: <span class="comment">#d480aa;</span></span><br><span class="line">                text-decoration: none;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header .info {</span><br><span class="line">                font-style:normal;</span><br><span class="line">                color:<span class="comment">#a3a3a3;</span></span><br><span class="line">                font-size:<span class="number">14</span>px;</span><br><span class="line">                min-width: <span class="number">0</span>;</span><br><span class="line">                text-overflow: ellipsis;</span><br><span class="line">                overflow: hidden;</span><br><span class="line">                white-space: nowrap;</span><br><span class="line">            }</span><br><span class="line">        </style></span><br><span class="line">        <div class="links-content"></span><br><span class="line">            <div class="link-navigation"></span><br><span class="line"></span><br><span class="line">                {% <span class="keyword">for</span> link <span class="keyword">in</span> theme.mylinks %}</span><br><span class="line"></span><br><span class="line">                    <div class="card"></span><br><span class="line">                        <img class="ava" src="{{ link.avatar }}"/></span><br><span class="line">                        <div class="card-header"></span><br><span class="line">                           <div></span><br><span class="line">                              <a href="{{ link.site }}" target="_blank"> {{ link.nickname }}</a></span><br><span class="line">                              <a href="{{ link.site }}" target="_blank"><span class="focus-links">关注</span></a></span><br><span class="line">                           </div></span><br><span class="line">                           <div class="info">{{ link.info }}</div></span><br><span class="line">                        </div></span><br><span class="line">                    </div></span><br><span class="line"></span><br><span class="line">                {% endfor %}</span><br><span class="line"></span><br><span class="line">            </div></span><br><span class="line">            {{ page.content }}</span><br><span class="line">            </div></span><br><span class="line">        </div></span><br><span class="line"></span><br><span class="line">  {<span class="comment">##########################}</span></span><br><span class="line">  {<span class="comment">### END LINKS BLOCK ###}</span></span><br><span class="line">  {<span class="comment">##########################}</span></span><br><span class="line">{% endblock %}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">{% block content %}</span><br><span class="line">  {<span class="comment">######################}</span></span><br><span class="line">  {<span class="comment">### LINKS BLOCK ###}</span></span><br><span class="line">  {<span class="comment">######################}</span></span><br><span class="line"></span><br><span class="line">    <div id="<span" class="string">"links"><br><span class="line">        <style></span><br><span class="line"></span><br><span class="line">            <span class="comment">#links{</span></span><br><span class="line">               margin-top: <span class="number">5</span>rem;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .links-content{</span><br><span class="line">                margin-top:<span class="number">1</span>rem;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .link-navigation::after {</span><br><span class="line">                content: <span class="string">" "</span>;</span><br><span class="line">                display: block;</span><br><span class="line">                clear: both;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            .card {</span><br><span class="line">                width: <span class="number">300</span>px;</span><br><span class="line">                font-size: <span class="number">1</span>rem;</span><br><span class="line">                padding: <span class="number">10</span>px <span class="number">20</span>px;</span><br><span class="line">                border-radius: <span class="number">4</span>px;</span><br><span class="line">                transition-duration: <span class="number">0.15</span>s;</span><br><span class="line">                margin-bottom: <span class="number">1</span>rem;</span><br><span class="line">                display:flex;</span><br><span class="line">            }</span><br><span class="line">            .card:nth-child(odd) {</span><br><span class="line">                float: left;</span><br><span class="line">            }</span><br><span class="line">            .card:nth-child(even) {</span><br><span class="line">                float: right;</span><br><span class="line">            }</span><br><span class="line">            .card:hover {</span><br><span class="line">                transform: scale(<span class="number">1.1</span>);</span><br><span class="line">                box-shadow: <span class="number">0</span> <span class="number">2</span>px <span class="number">6</span>px <span class="number">0</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6</span>px <span class="number">0</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.04</span>);</span><br><span class="line">            }</span><br><span class="line">            .card a {</span><br><span class="line">                border:none;</span><br><span class="line">            }</span><br><span class="line">            .card .ava {</span><br><span class="line">                width: <span class="number">3</span>rem!important;</span><br><span class="line">                height: <span class="number">3</span>rem!important;</span><br><span class="line">                margin:<span class="number">0</span>!important;</span><br><span class="line">                margin-right: <span class="number">1</span>em!important;</span><br><span class="line">                border-radius:<span class="number">4</span>px;</span><br><span class="line"></span><br><span class="line">            }</span><br><span class="line">            .card .card-header {</span><br><span class="line">                font-style: italic;</span><br><span class="line">                overflow: hidden;</span><br><span class="line">                width: <span class="number">236</span>px;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header a {</span><br><span class="line">                font-style: normal;</span><br><span class="line">                color: <span class="comment">#2bbc8a;</span></span><br><span class="line">                font-weight: bold;</span><br><span class="line">                text-decoration: none;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header a:hover {</span><br><span class="line">                color: <span class="comment">#d480aa;</span></span><br><span class="line">                text-decoration: none;</span><br><span class="line">            }</span><br><span class="line">            .card .card-header .info {</span><br><span class="line">                font-style:normal;</span><br><span class="line">                color:<span class="comment">#a3a3a3;</span></span><br><span class="line">                font-size:<span class="number">14</span>px;</span><br><span class="line">                min-width: <span class="number">0</span>;</span><br><span class="line">                text-overflow: ellipsis;</span><br><span class="line">                overflow: hidden;</span><br><span class="line">                white-space: nowrap;</span><br><span class="line">            }</span><br><span class="line">        </style></span><br><span class="line">        <div class="links-content"><br><span class="line">            <div class="link-navigation"><br><span class="line"></span><br><span class="line">                {% <span class="keyword">for</span> link <span class="keyword">in</span> theme.mylinks %}</span><br><span class="line"></span><br><span class="line">                    <div class="card"><br><span class="line">                        <img class="ava" src="{{ link.avatar }}"></span><br><span class="line">                        <div class="card-header"><br><span class="line">                           <div><br><span class="line">                              <a href="{{ link.site }}" target="_blank"> {{ link.nickname }}</a></span><br><span class="line">                              <a href="{{ link.site }}" target="_blank"><span class="focus-links">关注</span></a></span><br><span class="line">                           </span></div></span><br><span class="line">                           <div class="info">{{ link.info }}</div></span><br><span class="line">                        </span></div></span><br><span class="line">                    </span></div></span><br><span class="line"></span><br><span class="line">                {% endfor %}</span><br><span class="line"></span><br><span class="line">            </span></div></span><br><span class="line">            {{ page.content }}</span><br><span class="line">            </span></div></span><br><span class="line">        </span></div></span><br><span class="line"></span><br><span class="line">  {<span class="comment">##########################}</span></span><br><span class="line">  {<span class="comment">### END LINKS BLOCK ###}</span></span><br><span class="line">  {<span class="comment">##########################}</span></span><br><span class="line">{% endblock %}</span><br></pre></td></tr></tbody></table></figure>
 <p>然后修改 hexo/themems/next/layout/page.swig 文件，在</p>
 <p>复制</p>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文件位置：hexo/themems/next/layout/page.swig#}{% elif page.type === "tags" and not page.title %}{#</span><br><span class="line">    #}{{ __('title.tag') + page_title_suffix }}{#</span><br></pre></td></tr></tbody></table></figure>
@@ -405,7 +570,7 @@
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><!-- 友情链接--></span><br><span class="line">{% elif page.type === 'links' %}</span><br><span class="line">    {% include 'links.swig' %}</span><br></pre></td></tr></tbody></table></figure>
 <p>这个代码位置可以放到下面</p>
 <p>复制</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    {% elif page.type === 'categories' %}</span><br><span class="line">      <div class="category-all-page"></span><br><span class="line">        <div class="category-all-title"></span><br><span class="line">            {{ _p('counter.categories', site.categories.length) }}</span><br><span class="line">        </div></span><br><span class="line">        <div class="category-all"></span><br><span class="line">          {{ list_categories() }}</span><br><span class="line">        </div></span><br><span class="line">      </div></span><br><span class="line">+      {% elif page.type === 'links' %}</span><br><span class="line">+          {% include 'links.swig' %}</span><br><span class="line">    {% else %}</span><br><span class="line">      {{ page.content }}</span><br><span class="line">    {% endif %}</span><br><span class="line">  </div></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    {% elif page.type === 'categories' %}</span><br><span class="line">      <div class="category-all-page"><br><span class="line">        <div class="category-all-title"><br><span class="line">            {{ _p('counter.categories', site.categories.length) }}</span><br><span class="line">        </span></div></span><br><span class="line">        <div class="category-all"><br><span class="line">          {{ list_categories() }}</span><br><span class="line">        </span></div></span><br><span class="line">      </span></div></span><br><span class="line">+      {% elif page.type === 'links' %}</span><br><span class="line">+          {% include 'links.swig' %}</span><br><span class="line">    {% else %}</span><br><span class="line">      {{ page.content }}</span><br><span class="line">    {% endif %}</span><br><span class="line">  </span><br></pre></td></tr></tbody></table></figure>
 <p>然后我们使用 GitBash 新建一个菜单栏：</p>
 <p>复制</p>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">命令位置：hexo根目录hexo new page "links"</span><br></pre></td></tr></tbody></table></figure>
@@ -427,434 +592,645 @@
 <p>1：<a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">next主题美化</a></p>
 <p>有时间再把这个坑再填下。欢迎来到我的博客<a href="http://wyw_hd.gitee.io/blog2/。会有一些技术类的很菜的个人总结。" target="_blank" rel="noopener">http://wyw_hd.gitee.io/blog2/。会有一些技术类的很菜的个人总结。</a></p>
 
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！.</div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-      
-      <div style="display: inline-block;">
-        <img src="/wyw/images/wechat.jpg" alt="WYW 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div style="display: inline-block;">
-        <img src="/wyw/images/alipay.jpg" alt="WYW 支付宝">
-        <p>支付宝</p>
-      </div>
-
-  </div>
-</div>
-
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>WYW
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" title="hexo+next主题配置">http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next 主题配置踩的坑/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-        
-
-  <div class="followme">
-    <p>欢迎关注我的其它发布渠道</p>
-
-    <div class="social-list">
-
-            <div class="social-item">
-              <a target="_blank" class="social-link" href="http://wyw1314.gitee.io/wyw/images/6.jpg">
-                <span class="icon">
-                  <i class="fa fa-wechat"></i>
-                </span>
-
-                <span class="label">WeChat</span>
-              </a>
             </div>
+            <hr>
 
-            <div class="social-item">
-              <a target="_blank" class="social-link" href="https://space.bilibili.com/390161354?share_medium=android&share_source=copy_link&bbid=XY4332D4EDDC2E23C34503D72EE3B1E71BE02&ts=1582201848748">
-                <span class="icon">
-                  <i class="fa fa-rss"></i>
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
                 </span>
-
-                <span class="label">哔哩哔哩</span>
-              </a>
+                <span class="reprint-info">
+                    <a href="http://wyw1314.gitee.io/wyw" rel="external nofollow noreferrer">WYW</a>
+                </span>
             </div>
-    </div>
-  </div>
-
-      <div>
-  
-    <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-  
-</div>
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/wyw/tags/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" rel="tag"># Next主题美化</a>
-          </div>
-
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://wyw1314.gitee.io/wyw" target="_blank">WYW</a>
+                    !
+                </span>
+            </div>
         
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" rel="prev" title="齐次坐标的理解">
-      <i class="fa fa-chevron-left"></i> 齐次坐标的理解
-    </a></div>
-      <div class="post-nav-item"></div>
     </div>
-      </footer>
-    
-  </article>
-  
-  
-  
 
-  </div>
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
 
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
       }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/wyw/tags/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
+                                    <span class="chip bg-color">Next主题美化</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/wyw/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/wyw/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/wyw/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/wyw/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
     });
-  }
 </script>
 
+            
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+    </div>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+    
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-next主题配置踩的坑"><span class="nav-number">1.</span> <span class="nav-text">Hexo+next主题配置踩的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载安装next主题"><span class="nav-number">1.1.</span> <span class="nav-text">下载安装next主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题下-config-yml的配置"><span class="nav-number">1.2.</span> <span class="nav-text">Next主题下_config.yml的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SITE设置"><span class="nav-number">1.2.1.</span> <span class="nav-text">SITE设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL设置"><span class="nav-number">1.2.2.</span> <span class="nav-text">URL设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻页设置"><span class="nav-number">1.2.3.</span> <span class="nav-text">翻页设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deployment设置"><span class="nav-number">1.2.4.</span> <span class="nav-text">Deployment设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题下的-config-yml的配置。"><span class="nav-number">1.3.</span> <span class="nav-text">Next主题下的_config.yml的配置。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网站logo设置："><span class="nav-number">1.3.1.</span> <span class="nav-text">网站logo设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页脚设置："><span class="nav-number">1.3.2.</span> <span class="nav-text">页脚设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Next主题风格："><span class="nav-number">1.3.3.</span> <span class="nav-text">Next主题风格：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#菜单栏设置："><span class="nav-number">1.3.4.</span> <span class="nav-text">菜单栏设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#侧边栏设置："><span class="nav-number">1.3.5.</span> <span class="nav-text">侧边栏设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#社交链接："><span class="nav-number">1.3.6.</span> <span class="nav-text">社交链接：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打赏设置："><span class="nav-number">1.3.7.</span> <span class="nav-text">打赏设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章底部评论设置："><span class="nav-number">1.3.8.</span> <span class="nav-text">文章底部评论设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github角标"><span class="nav-number">1.3.9.</span> <span class="nav-text">Github角标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回顶部按钮"><span class="nav-number">1.3.10.</span> <span class="nav-text">返回顶部按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章搜索："><span class="nav-number">1.3.11.</span> <span class="nav-text">文章搜索：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态背景"><span class="nav-number">1.4.</span> <span class="nav-text">动态背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas-nest"><span class="nav-number">1.4.1.</span> <span class="nav-text">Canvas-nest</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改配置文件"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">修改配置文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站运行时间"><span class="nav-number">1.5.</span> <span class="nav-text">网站运行时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#访客统计-："><span class="nav-number">1.5.1.</span> <span class="nav-text">访客统计 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章目录："><span class="nav-number">1.5.2.</span> <span class="nav-text">文章目录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站背景："><span class="nav-number">1.5.3.</span> <span class="nav-text">网站背景：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章分类以及标签："><span class="nav-number">1.5.4.</span> <span class="nav-text">文章分类以及标签：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#友情链接links"><span class="nav-number">1.5.5.</span> <span class="nav-text">友情链接links:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读全文按钮开启："><span class="nav-number">1.5.6.</span> <span class="nav-text">阅读全文按钮开启：</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
+    
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="WYW" src="/wyw/images/avatar.png">
-  <p class="site-author-name" itemprop="name">WYW</p>
-  <div class="site-description" itemprop="description">永远相信美好的事情即将发生</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/wyw/archives/">
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
         
-          <span class="site-state-item-count">6</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/wyw/categories/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/wyw/tags/">
-          
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/wywaihandan" title="GitHub → https://github.com/wywaihandan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/wyw/2838177495@qq.com" title="E-Mail → 2838177495@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://me.csdn.net/qq_44219883" title="CSDN → https://me.csdn.net/qq_44219883" rel="noopener" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i>CSDN</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/390161354" title="哔哩哔哩 → https://space.bilibili.com/390161354" rel="noopener" target="_blank"><i class="fa fa-fw fa-skype"></i>哔哩哔哩</a>
-      </span>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/wyw/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-  </div>
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i> 本篇
+            </div>
+            <div class="card">
+                <a href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/wyw/medias/featureimages/0.jpg" class="responsive-img" alt="hexo+next主题配置">
+                        
+                        <span class="card-title">hexo+next主题配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Hexo+next主题配置踩的坑下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/wyw/categories/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    hexo博客主题配置
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
 
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/wyw/tags/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
+                        <span class="chip bg-color">Next主题美化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇 <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/wyw/medias/featureimages/17.jpg" class="responsive-img" alt="齐次坐标的理解">
+                        
+                        <span class="card-title">齐次坐标的理解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            齐次坐标的理解齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
+                                    图像处理
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/wyw/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                        <span class="chip bg-color">齐次坐标</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/wyw/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/wyw/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/wyw/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/wyw/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  © 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">WYW</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    <span title="站点总字数">14k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">13 分钟</span>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>  目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
 </div>
-<div>
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/wyw/libs/tocbot/tocbot.min.js"></script>
 <script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("02/18/2020 00:00:00");
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-    }
-setInterval("createtime()",250);
-</script>
-</div>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
 
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
 
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color="255,255,255" opacity="1" zindex="-1" count="160" src="/wyw/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script size="300" alpha="0.6" zindex="-1" src="/wyw/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  <script src="/wyw/lib/anime.min.js"></script>
-  <script src="/wyw/lib/velocity/velocity.min.js"></script>
-  <script src="/wyw/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/wyw/js/utils.js"></script>
-
-<script src="/wyw/js/motion.js"></script>
-
-
-<script src="/wyw/js/schemes/pisces.js"></script>
-
-
-<script src="/wyw/js/next-boot.js"></script>
-
-<script src="/wyw/js/bookmark.js"></script>
-
-
-  <script defer src="/wyw/lib/three/three.min.js"></script>
-    <script defer src="/wyw/lib/three/three-waves.min.js"></script>
-
-
-  
-
-
-
-
-  
-<script src="/wyw/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-        loader: {
-          load: ['[tex]/mhchem']
-        },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
 
     
 
-  
+</main>
 
 
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : 'NDcEnrSHSdyE836tDDY4dGdX-gzGzoHsz',
-      appKey     : 'DibaPoeEavgXoo8OOWpYa4cL',
-      placeholder: "留下你的评论吧",
-      avatar     : 'mm',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : true,
-      lang       : '' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : true,
-      serverURLs : ''
-    });
-  }, window.Valine);
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/wyw/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class>
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="503838841" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        </meting-js>
+    </div>
+</div>
+
+<script src="/wyw/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright ©
+            <span id="year">2019</span>
+            <a href="http://wyw1314.gitee.io/wyw" target="_blank">WYW</a>
+            | Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+            | Theme <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                | <i class="far fa-eye"></i> 总访问量: <span id="busuanzi_value_site_pv" class="white-color"></span> 次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                | <i class="fas fa-users"></i> 总访问人数: <span id="busuanzi_value_site_uv" class="white-color"></span> 人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/wyw/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>  搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/wyw/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/wyw/search.xml", 'searchInput', 'searchResult');
 });
 </script>
 
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/wyw/libs/materialize/materialize.min.js"></script>
+    <script src="/wyw/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/wyw/libs/aos/aos.js"></script>
+    <script src="/wyw/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/wyw/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/wyw/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/wyw/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/wyw/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/wyw/libs/instantpage/instantpage.js" type="module"></script>
+    
 
 
 
-<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/clicklove.js"></script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html><!-- 页面点击心形 -->
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
