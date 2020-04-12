@@ -26,8 +26,7 @@
     <script src="/wyw/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-<link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/wyw/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -465,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:  
-                    2020-03-23
+                    2020-04-12
                 </div>
                 
 
@@ -494,29 +493,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/wyw/css/prism-line-numbers.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
+                <link rel="stylesheet" href="/wyw/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
 <h1 id="Hexo-next主题配置踩的坑"><a href="#Hexo-next主题配置踩的坑" class="headerlink" title="Hexo+next主题配置踩的坑"></a><code>Hexo+next</code>主题配置踩的坑</h1><p>下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。<a id="more"></a>下面开始具体配置：</p>
 <h2 id="下载安装next主题"><a href="#下载安装next主题" class="headerlink" title="下载安装next主题"></a>下载安装next主题</h2><p>下载next主题，只需输入指令：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">git clone https://github.com/theme-next/hexo-theme-next themes/next
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-lang-python"><code class="language-lang-python">git clone https://github.com/theme-next/hexo-theme-next themes/next
+</code></pre>
 <p>但是速度会比较慢。因为众所周知的原因。可以多尝试几下。然后如果要想更新主题的话，可以</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">cd themes/next
+<pre class=" language-lang-python"><code class="language-lang-python">cd themes/next
 git pull
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</code></pre>
 <p>安装完成后到博客的根目录下的<code>_config.yml</code>文件中更改为next主题即可。</p>
 <h2 id="Next主题下-config-yml的配置"><a href="#Next主题下-config-yml的配置" class="headerlink" title="Next主题下_config.yml的配置"></a>Next主题下<code>_config.yml</code>的配置</h2><h3 id="SITE设置"><a href="#SITE设置" class="headerlink" title="SITE设置"></a>SITE设置</h3><p><code>title:</code> 填写标题<br><code>subtitle:</code> 填写副标题<br><code>description:</code> 简介<br><code>keywords:</code> 关键词<br><code>author:</code> 作者，文章中显示的作者名称<br><code>language:</code> 设置语言，<code>zh-CN</code>是简体中文，<code>en</code>是英语</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Site
+<pre class=" language-lang-python"><code class="language-lang-python"># Site
 title: 嵌入式的一只菜鸟
 subtitle: ''
 description: '永远相信美好的事情即将发生'
 keywords:
-author: WYW@HD
+author: WYW
 language: zh-CN
 timezone: 'Asia/Shanghai'
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h3 id="URL设置"><a href="#URL设置" class="headerlink" title="URL设置"></a>URL设置</h3><p>我用的是国内的码云搭建的博客。<code>url</code>设置的时候一般情况就是设置为你创建的仓库名字。或者就是你博客的网址。root这里的话就写你博客的仓库名字。其余都默认就可以。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># URL
+<pre class=" language-lang-python"><code class="language-lang-python"># URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url:  http://xxxxxx/xxxxx
 root: /blog2
@@ -525,9 +523,9 @@ permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h3 id="翻页设置"><a href="#翻页设置" class="headerlink" title="翻页设置"></a>翻页设置</h3><p>per_page用于控制每页显示多少篇博客文章。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Home page setting
+<pre class=" language-lang-python"><code class="language-lang-python"># Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
@@ -535,25 +533,25 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h3 id="Deployment设置"><a href="#Deployment设置" class="headerlink" title="Deployment设置"></a>Deployment设置</h3><p>这里的设置就是你上传博客内容到你的仓库的方式。也就是git方式。repo替换为你自己的就可以。获取这个repo在各个平台都是大同小异的。分支的话我们这里填写master.因为初始化仓库默认是master分支。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Deployment
+<pre class=" language-lang-python"><code class="language-lang-python"># Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
   repository:  git@gitee.com:yourname/blog2.git
   branch: master
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h2 id="Next主题下的-config-yml的配置。"><a href="#Next主题下的-config-yml的配置。" class="headerlink" title="Next主题下的_config.yml的配置。"></a>Next主题下的<code>_config.yml</code>的配置。</h2><h3 id="网站logo设置："><a href="#网站logo设置：" class="headerlink" title="网站logo设置："></a>网站logo设置：</h3><p>反正我配置Logo就是不好使，图片路径什么都是正确的，结果就是不好使。有毒。你把你要想要的图片放进\themes\next\source\images这个路径下。但是图片尺寸要正确。下面我推荐一个网站，上面的<a href="https://www.easyicon.net/iconsearch/%E6%A0%91%E8%8E%93%E6%B4%BE/?s=addtime_DESC" target="_blank" rel="noopener">图标</a>很多。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">favicon:
+<pre class=" language-lang-python"><code class="language-lang-python">favicon:
   small: http://xxxxxx/xxxxxx/images/favicon-16x16-next.png
   medium: http://xxxxxx/xxxxxx/images/favicon-32x32-next.png
   # apple_touch_icon: /images/apple-touch-icon-next.png
   # safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="页脚设置："><a href="#页脚设置：" class="headerlink" title="页脚设置："></a>页脚设置：</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python">
+</code></pre>
+<h3 id="页脚设置："><a href="#页脚设置：" class="headerlink" title="页脚设置："></a>页脚设置：</h3><pre class=" language-lang-python"><code class="language-lang-python">
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
   since: 2020
@@ -582,20 +580,20 @@ footer:
     enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: false
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>页脚设置就是网页最底下那一部分。鸽了n天后决定接着写。指的是下面图这一部分。</p>
 <p><img src="https://s1.ax1x.com/2020/03/23/877J2D.png" alt></p>
 <p>since指的是你博客开始的年份，icon的话默认的是心形。animated设置为true是显示。false则是关闭。<code>colour</code>指的是Icon的颜色。copyright如果没有提到的话则默认用的是你根目录下<code>_config.yml</code>中设置的作者名字，这里我设置的都是一样的。都是一个名字。powered指的是页面下是否显示<code>hexo</code>和<code>hexo</code>的版本。true就是显示。反之<code>false</code>。<code>theme</code>也是类似的。</p>
-<h3 id="Next主题风格："><a href="#Next主题风格：" class="headerlink" title="Next主题风格："></a>Next主题风格：</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python"># Schemes
+<h3 id="Next主题风格："><a href="#Next主题风格：" class="headerlink" title="Next主题风格："></a>Next主题风格：</h3><pre class=" language-lang-python"><code class="language-lang-python"># Schemes
 #scheme: Muse
 #scheme: Mist
 # scheme: Pisces
 scheme: Gemini
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>next的主题风格一共是有四种，在这里我用的是最后一种： Gemini。其它类型的风格可能配置后略有不同，自己可以尝试一下。</p>
 <h3 id="菜单栏设置："><a href="#菜单栏设置：" class="headerlink" title="菜单栏设置："></a>菜单栏设置：</h3><p>菜单栏的设置刚开始配置文件中都是注释起来的，自己需要哪个把注释取消掉即可。效果如图所示：</p>
 <p><img src="https://s1.ax1x.com/2020/03/23/877Urd.png" alt></p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
+<pre class=" language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
 
@@ -619,9 +617,9 @@ menu:
 menu_settings:
   icons: true
   badges: true
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>举个例子，home对应的就是图片上方的首页。那么这个中文名称是在哪个文件更改呢？下面就是在博客根目录下的\themes\next\languages这个路径下的<code>zh-CN.yml</code>.打开后就可以看到了:</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">menu:
+<pre class=" language-lang-python"><code class="language-lang-python">menu:
   home: 首页
   archives: 时间轴
   categories: 文章分类
@@ -632,9 +630,9 @@ menu_settings:
   links: 友情链接
   sitemap: 站点地图
   commonweal: 公益 404
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p><code>meau_settings</code>下面的俩个参数默认即可。</p>
-<h3 id="侧边栏设置："><a href="#侧边栏设置：" class="headerlink" title="侧边栏设置："></a>侧边栏设置：</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
+<h3 id="侧边栏设置："><a href="#侧边栏设置：" class="headerlink" title="侧边栏设置："></a>侧边栏设置：</h3><pre class=" language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
 # Sidebar Settings
 # See: https://theme-next.org/docs/theme-settings/sidebar
 # ---------------------------------------------------------------
@@ -674,10 +672,10 @@ avatar:
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>position设置的是侧边栏的位置，width设置的是宽度，默认即可，avatar指的头像的具体设置，<code>url</code>指的是你头像的路径，你可以把你想用的图像照片放进博客根目录下的\themes\next\source\images这个路径下，但是头像尺寸大小要符合，大小为512*512.rounded:指的是头像是否以圆形展示，true就是开启。rotated指的是把鼠标放在头像上的时候是否旋转。</p>
 <h3 id="社交链接："><a href="#社交链接：" class="headerlink" title="社交链接："></a>社交链接：</h3><p>社交链接下面需要什么把相应的注释去掉即可。加上自己的链接即可。或者可以将它原来的名字修改为你要的。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Social Links
+<pre class=" language-lang-python"><code class="language-lang-python"># Social Links
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
@@ -699,8 +697,8 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="打赏设置："><a href="#打赏设置：" class="headerlink" title="打赏设置："></a>打赏设置：</h3><pre class="line-numbers language-lang-Python"><code class="language-lang-Python"># Reward (Donate)
+</code></pre>
+<h3 id="打赏设置："><a href="#打赏设置：" class="headerlink" title="打赏设置："></a>打赏设置：</h3><pre class=" language-lang-Python"><code class="language-lang-Python"># Reward (Donate)
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
@@ -723,10 +721,10 @@ follow_me:
   WeChat: http://wyw_hd.gitee.io/blog2/images/6.jpg || wechat
   哔哩哔哩: https://space.bilibili.com/390161354?share_medium=android&share_source=copy_link&bbid=XY4332D4EDDC2E23C34503D72EE3B1E71BE02&ts=1582201848748 || rss
   # RSS: /atom.xml || rss
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>enable设置为true则是开启打赏设置，comment则是显示的一句话，可以换成自己喜欢的，微信和支付宝的照片依旧放在博客根目录下的\themes\next\source\images中。<code>followe_me</code>下面的设置可以设置你的其他发布渠道，<code>wechat</code>我放的是我的公众号，哔哩哔哩的文章也有，只不过我最近太懒了，鸽了好久，具体设置完后的效果图如图所示：</p>
 <p><img src="https://s1.ax1x.com/2020/03/23/87HpRO.png" alt></p>
-<h3 id="文章底部评论设置："><a href="#文章底部评论设置：" class="headerlink" title="文章底部评论设置："></a>文章底部评论设置：</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python"># Valine
+<h3 id="文章底部评论设置："><a href="#文章底部评论设置：" class="headerlink" title="文章底部评论设置："></a>文章底部评论设置：</h3><pre class=" language-lang-python"><code class="language-lang-python"># Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
   enable: true
@@ -744,23 +742,23 @@ valine:
   recordIP: true # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>文章底部评论我刚开始用的<code>github</code>的<code>gittalk</code>，后来由于<code>github</code>的服务器在国外，速度太慢了。而且每次用都要初始化下评论，就放弃了<code>gittalk</code>评论。改用valine评论。使用valine需要先注册下账号然后实名认证。然后创建应用得到<code>appid</code>和<code>appkey</code>.该网站的链接为：<strong><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">https://valine.js.org/quickstart.html</a></strong>。</p>
 <p>之后把<code>appid</code>和<code>appkey</code>填入即可。使能打开即可。</p>
-<h3 id="Github角标"><a href="#Github角标" class="headerlink" title="Github角标"></a>Github角标</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python"># `Follow me on GitHub` banner in the top-right corner.
+<h3 id="Github角标"><a href="#Github角标" class="headerlink" title="Github角标"></a>Github角标</h3><pre class=" language-lang-python"><code class="language-lang-python"># `Follow me on GitHub` banner in the top-right corner.
 github_banner:
   enable: true
   permalink: https://github.com/Siriusq
   title: Follow me on GitHub
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p><code>enable:</code>用于设置是否在页面右上角显示<code>Github</code>三角标<br><code>permalink:</code>后面填写你的<code>Github</code>地址<br><code>title:</code>用于设置鼠标移动到图标后显示的文字</p>
-<h3 id="返回顶部按钮"><a href="#返回顶部按钮" class="headerlink" title="返回顶部按钮"></a>返回顶部按钮</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python">back2top:
+<h3 id="返回顶部按钮"><a href="#返回顶部按钮" class="headerlink" title="返回顶部按钮"></a>返回顶部按钮</h3><pre class=" language-lang-python"><code class="language-lang-python">back2top:
   enable: true
   # Back to top in sidebar.
   sidebar: true
   # Scroll percent label in b2t button.
   scrollpercent: true
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p><code>enable:</code>用于设置是否开启回到顶部按钮<br><code>sidebar:</code>用于设置是否将按钮放到侧边栏中<br><code>scrollpercent:</code>用于设置是否显示阅读进度百分比</p>
 <h3 id="文章搜索："><a href="#文章搜索：" class="headerlink" title="文章搜索："></a>文章搜索：</h3><p>可以方便快捷的搜索文章，但是需要安装插件：</p>
 <p>具体指令：</p>
@@ -790,13 +788,13 @@ local_search:
 </ul>
 <h3 id="Canvas-nest"><a href="#Canvas-nest" class="headerlink" title="Canvas-nest"></a>Canvas-nest</h3><p>这是在网页背景显示的动态效果。</p>
 <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>切换到Next主题文件夹</p>
-<pre class="line-numbers language-lang-dos"><code class="language-lang-dos">cd themes/next
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-lang-dos"><code class="language-lang-dos">cd themes/next
+</code></pre>
 <p>安装模块</p>
-<pre class="line-numbers language-lang-dos"><code class="language-lang-dos">git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-lang-dos"><code class="language-lang-dos">git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest
+</code></pre>
 <h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>打开Next主题路径下的配置文件<code>_config.yml</code>修改下列代码</p>
-<pre class="line-numbers language-lang-js"><code class="language-lang-js"># Canvas-nest
+<pre class=" language-lang-js"><code class="language-lang-js"># Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
   enable: true
@@ -805,15 +803,15 @@ canvas_nest:
   opacity: 0.5 # 线条透明度
   zIndex: -1 # 显示级别
   count: 160 # 线条的数量，越多越卡
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>如果想使用CDN加速的话需要设置</p>
-<pre class="line-numbers language-lang-js"><code class="language-lang-js">vendors:
+<pre class=" language-lang-js"><code class="language-lang-js">vendors:
   ...
   canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js
   canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h2 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h2><p>打开<code>.\themes\next\layout\_partials\footer.swig</code>并添加下列代码</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"><div>
+<pre class=" language-lang-python"><code class="language-lang-python"><div>
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
     var now = new Date();
@@ -832,9 +830,9 @@ canvas_nest:
 setInterval("createtime()",250);
 </script>
 </div>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>上面的代码可以修改为你创建博客的时间，</p>
-<h3 id="访客统计-："><a href="#访客统计-：" class="headerlink" title="访客统计 ："></a>访客统计 ：</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python"># Show Views / Visitors of the website / page with busuanzi.
+<h3 id="访客统计-："><a href="#访客统计-：" class="headerlink" title="访客统计 ："></a>访客统计 ：</h3><pre class=" language-lang-python"><code class="language-lang-python"># Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
   enable: true
@@ -844,10 +842,10 @@ busuanzi_count:
   total_views_icon: eye
   post_views: true
   post_views_icon: eye
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>next主题中已经内置了访客统计的功能，所以这里我们只需开启就行。</p>
 <h3 id="文章目录："><a href="#文章目录：" class="headerlink" title="文章目录："></a>文章目录：</h3><p>文章目录我们用markdown写东西的时候会有一级标题，二级标题，文章目录就是由这些构成的。然后网上有的教程是让修改那个_custom文件。但是那个文件这个版本的next实际是没有的，然后有另外一种方法，就是在根目录下source\data新建一个<code>styles.styl</code>文件。然后找到next主题下的：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Define custom file paths.
+<pre class=" language-lang-python"><code class="language-lang-python"># Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
   #head: source/_data/head.swig
@@ -860,17 +858,17 @@ custom_file_path:
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   style: source/_data/styles.styl
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>将style前的注释取消掉即可。接下来就可以编辑在<code>styles.styl</code>编辑一些东西：比如网页背景以及透明度。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">//文章目录默认展开
+<pre class=" language-lang-python"><code class="language-lang-python">//文章目录默认展开
 .post-toc .nav .nav-child { display: block; }
 .post-toc ol {  
   font-size : 13px;     
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>接下来初始化文章目录我们来到主题配置文件位于<code>themes/next/_config.yml</code>。</p>
 <p>可以找到如下：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># Table of Contents in the Sidebar
+<pre class=" language-lang-python"><code class="language-lang-python"># Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
 toc:
   enable: true
@@ -882,10 +880,10 @@ toc:
   expand_all: true
   # Maximum heading depth of generated toc.
   max_depth: 6
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>按照上面配置即可。</p>
 <h3 id="网站背景："><a href="#网站背景：" class="headerlink" title="网站背景："></a>网站背景：</h3><p>写的我自己要吐了。网站没有背景其实真的很空洞，所以我们可以加上背景并设置透明度………肝不动了。。。。明天再说。接着来写了。关于主题配置的话网上有好多说的仍旧是那个_custom文件。但是这个next主题是没有这个文件的。所以我们仍旧在<code>style.styl</code>文件中配置。配置内容如下：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">body {
+<pre class=" language-lang-python"><code class="language-lang-python">body {
     background:url(http://***********/******/images/bg.jpg);//图片路径
     background-repeat: no-repeat;//是否重复平铺
     background-attachment:fixed;//是否随着网页上下滚动而滚动，fixed为固定
@@ -908,28 +906,28 @@ toc:
   background: #fff;
   opacity: 1;
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>图片的<code>url</code>照着替换为你博客的网址+images即可。</p>
 <h3 id="文章分类以及标签："><a href="#文章分类以及标签：" class="headerlink" title="文章分类以及标签："></a>文章分类以及标签：</h3><p>还记得<code>_config.yml</code>中有关于<code>meau</code>的设置把。我们如果想将文章分类以及添加标签的话。首先在根目录执行 <code>hexo new page categories</code>。之后你会发现在博客根目录下source文件夹会生成一个categories文件夹。我们进入这个文件夹。用VSCODE打开里面的index.md进行编辑，在当中添加type类型。</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">---
+<pre class=" language-lang-python"><code class="language-lang-python">---
 title: categories
 date: 2020-02-19 22:27:43
 type: categories
 ---
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>标签的操作也是类似这样。输入指令 <code>hexo new page  tags</code>。接下来编辑index.md这个文件即可。添加type属性即可。</p>
 <p>以上完成后我们就可以在文章中添加分类以及标签了。类似这样：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">---
+<pre class=" language-lang-python"><code class="language-lang-python">---
 title: hexo+next主题配置
 date: 2020-03-04 23:22
 categories: hexo博客主题配置
 tags: Next主题美化
 mathjax: true
 ---
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>这样我们就可以查看我们自己文章的分类以及标签了。</p>
 <h3 id="友情链接links"><a href="#友情链接links" class="headerlink" title="友情链接links:"></a>友情链接links:</h3><p>菜单栏中还有一项友情链接。这里可以放上常用的网站。具体设置如下:首先在根目录下\themes\next\layout新建一个<code>links.swig</code>并添加如下内容：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">{% block content %}
+<pre class=" language-lang-python"><code class="language-lang-python">{% block content %}
   {######################}
   {### LINKS BLOCK ###}
   {######################}
@@ -1033,7 +1031,7 @@ mathjax: true
   {### END LINKS BLOCK ###}
   {##########################}
 {% endblock %}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>然后修改 hexo/themems/next/layout/page.swig 文件，在</p>
 <p>复制</p>
 <pre><code>文件位置：hexo/themems/next/layout/page.swig#}{% elif page.type === "tags" and not page.title %}{{ __('title.tag') + page_title_suffix }}{% elif page.type === 'links' and not page.title %}{{ __('title.links') + page_title_suffix }}{#
@@ -1078,7 +1076,7 @@ type: "links"
 + comments: false
 ---
 </code></pre><p>最后，我们添加友链的话，需要在主题配置文件根目录下/themes/next/_config.xml 文件末尾添加：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">mylinks:
+<pre class=" language-lang-python"><code class="language-lang-python">mylinks:
 
 - nickname: CSDN
   avatar:  http://wyw_hd.gitee.io/blog2/images/csdn.png
@@ -1099,9 +1097,9 @@ type: "links"
   avatar:  http://wyw_hd.gitee.io/blog2/images/hah.png
   site: https://github.com/
   info: 上面各种开源代码。值得学习
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>然后我们还需要在该配置文件下添加links即可;</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
+<pre class=" language-lang-python"><code class="language-lang-python"># ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
 
@@ -1125,12 +1123,12 @@ menu:
 menu_settings:
   icons: true
   badges: true
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h3 id="阅读全文按钮开启："><a href="#阅读全文按钮开启：" class="headerlink" title="阅读全文按钮开启："></a>阅读全文按钮开启：</h3><p>我们首先找到在next主题下的<code>_config.yml</code>代码：</p>
-<pre class="line-numbers language-lang-python"><code class="language-lang-python">  auto_excerpt:
+<pre class=" language-lang-python"><code class="language-lang-python">  auto_excerpt:
       enable: false
       length: 150
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>然后把false改为true即可。length是显示摘要的长度。然后在文章添加<!--more-->这个标签即可。</p>
 <p>感觉写的差不多了。坑是有点多。踩的多就明白了。希望疫情早日结束，能够开学早点见到她。嘿嘿。</p>
 <p><u><strong>参考博客</strong>：</u></p>
@@ -1161,7 +1159,7 @@ menu_settings:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/</a>
+                    <a href="http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo-next-zhu-ti-pei-zhi/">http://wyw1314.gitee.io/wyw/wyw/2020/03/04/hexo-next-zhu-ti-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1360,6 +1358,269 @@ menu_settings:
     
 
     
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/wyw/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/wyw/libs/valine/av-min.js"></script>
+<script src="/wyw/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'NDcEnrSHSdyE836tDDY4dGdX-gzGzoHsz',
+        appKey: 'DibaPoeEavgXoo8OOWpYa4cL',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '留下你的评论吧'
+    });
+</script>
+
+    
 
     
 
@@ -1373,7 +1634,7 @@ menu_settings:
                 <i class="far fa-dot-circle"></i> 本篇
             </div>
             <div class="card">
-                <a href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">
+                <a href="/wyw/2020/03/04/hexo-next-zhu-ti-pei-zhi/">
                     <div class="card-image">
                         
                         
@@ -1423,7 +1684,7 @@ menu_settings:
                 下一篇 <i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                <a href="/wyw/2020/03/01/qi-ci-zuo-biao/">
                     <div class="card-image">
                         
                         
