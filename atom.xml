@@ -6,7 +6,7 @@
   <link href="/wyw/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/wyw/"/>
-  <updated>2020-04-12T14:26:13.439Z</updated>
+  <updated>2020-04-12T14:04:16.288Z</updated>
   <id>http://wyw1314.gitee.io/wyw/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>hexo+next主题配置</title>
-    <link href="http://wyw1314.gitee.io/wyw/2020/03/04/hexo-next-zhu-ti-pei-zhi/"/>
-    <id>http://wyw1314.gitee.io/wyw/2020/03/04/hexo-next-zhu-ti-pei-zhi/</id>
-    <published>2020-03-04T15:22:00.000Z</published>
-    <updated>2020-04-12T14:26:13.439Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Hexo-next主题配置踩的坑&quot;&gt;&lt;a href=&quot;#Hexo-next主题配置踩的坑&quot; class=&quot;headerlink&quot; title=&quot;Hexo+next主题配置踩的坑&quot;&gt;&lt;/a&gt;&lt;code&gt;Hexo+next&lt;/code&gt;主题配置踩的坑&lt;/h1&gt;&lt;p&gt;下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo博客主题配置" scheme="http://wyw1314.gitee.io/wyw/categories/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
-    
-    
-      <category term="Next主题美化" scheme="http://wyw1314.gitee.io/wyw/tags/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
-    
-  </entry>
   
   <entry>
     <title>齐次坐标的理解</title>
