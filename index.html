@@ -1,6 +1,1233 @@
-<html><head></head><body>extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN"><head>
+ <!-- 爆炸效果 -->
+</head><body itemscope itemtype="http://schema.org/WebPage"><canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/firework.js"></script>
+<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/post-details.js"></script>
+<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/fold.js"></script>
+<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/tag.js"></script>
+<script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://wyw1314.gitee.io/wyw/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://wyw1314.gitee.io/wyw/images/favicon-16x16-next.png">
 
-block content
-  #recent-posts.recent-posts
-    include includes/recent-posts.pug  
-    include includes/pagination.pug<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<link rel="stylesheet" href="/wyw/css/main.css">
+
+
+<link rel="stylesheet" href="/wyw/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/wyw/lib/pace/pace-theme-pace-theme-flash.min.css">
+  <script src="/wyw/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wyw1314.gitee.io","root":"/wyw/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="永远相信美好的事情即将发生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="嵌入式的一只菜鸟">
+<meta property="og:url" content="http://wyw1314.gitee.io/wyw/index.html">
+<meta property="og:site_name" content="嵌入式的一只菜鸟">
+<meta property="og:description" content="永远相信美好的事情即将发生">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="WYW">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://wyw1314.gitee.io/wyw/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>嵌入式的一只菜鸟</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/wyw/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
+
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/wyw/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">嵌入式的一只菜鸟</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/wyw/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/wyw/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于作者</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/wyw/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>文章标签<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/wyw/categories/" rel="section"><i class="fa fa-fw fa-th"></i>文章分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/wyw/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时间轴<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/wyw/links/" rel="section"><i class="fa fa-fw fa-link"></i>友情链接</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+    <!-- badApplePlayer -->
+
+  <!-- Your XlchPlayerKey -->
+  <script>XlchKey="gLR2pP7Qvf";</script>
+  <!-- font-awesome 4.2.0 -->
+  <link href="https://lib.baomitu.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- JQuery-mousewheel 3.1.9 -->
+  <script src="https://lib.baomitu.com/jquery-mousewheel/3.1.9/jquery.mousewheel.min.js"></script>
+  <!-- Scrollbar -->
+  <script src="https://static.https.badapple.top/BadApplePlayer/js/scrollbar.js"></script>
+  <!-- BadApplePlayer -->
+  <script src="https://static.https.badapple.top/BadApplePlayer/Player.js"></script>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/wywaihandan" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" class="post-title-link" itemprop="url">hexo+next主题配置</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-04 23:22:00" itemprop="dateCreated datePublished" datetime="2020-03-04T23:22:00+08:00">2020-03-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-23 19:06:17" itemprop="dateModified" datetime="2020-03-23T19:06:17+08:00">2020-03-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo博客主题配置</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" class="post-meta-item leancloud_visitors" data-flag-title="hexo+next主题配置" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Hexo-next主题配置踩的坑"><a href="#Hexo-next主题配置踩的坑" class="headerlink" title="Hexo+next主题配置踩的坑"></a><code>Hexo+next</code>主题配置踩的坑</h1><p>下载安装完next主题后才发现一堆的坑。由于next的版本不同。所以有的配置文件和网上的教程不大一样。自己踩了N多坑，于是打算记录一下。于是自己试了好几天才差不多配置好。但是网站图标就是显示不出来。我是真哭辽。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/03/04/hexo+next%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E8%B8%A9%E7%9A%84%E5%9D%91/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" class="post-title-link" itemprop="url">齐次坐标的理解</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-01 14:42:00 / 修改时间：14:45:53" itemprop="dateCreated datePublished" datetime="2020-03-01T14:42:00+08:00">2020-03-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" class="post-meta-item leancloud_visitors" data-flag-title="齐次坐标的理解" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>838</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="齐次坐标的理解"><a href="#齐次坐标的理解" class="headerlink" title="齐次坐标的理解"></a>齐次坐标的理解</h1><p>齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/03/01/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/" class="post-title-link" itemprop="url">树莓派换源以及pip安装</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-23 18:38:00" itemprop="dateCreated datePublished" datetime="2020-02-23T18:38:00+08:00">2020-02-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-23 19:18:58" itemprop="dateModified" datetime="2020-03-23T19:18:58+08:00">2020-03-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">树莓派</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/" class="post-meta-item leancloud_visitors" data-flag-title="树莓派换源以及pip安装" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>599</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/02/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" class="post-title-link" itemprop="url">汇编语言的学习记录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-21 21:33:00" itemprop="dateCreated datePublished" datetime="2020-02-21T21:33:00+08:00">2020-02-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-23 18:35:36" itemprop="dateModified" datetime="2020-02-23T18:35:36+08:00">2020-02-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">汇编语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" class="post-meta-item leancloud_visitors" data-flag-title="汇编语言的学习记录" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/02/21/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/" class="post-title-link" itemprop="url">PCA主成分分析：</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-20 18:22:00" itemprop="dateCreated datePublished" datetime="2020-02-20T18:22:00+08:00">2020-02-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-12 19:58:40" itemprop="dateModified" datetime="2020-04-12T19:58:40+08:00">2020-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="PCA主成分分析：" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/02/20/PCA%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wyw1314.gitee.io/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wyw/images/avatar.png">
+      <meta itemprop="name" content="WYW">
+      <meta itemprop="description" content="永远相信美好的事情即将发生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="嵌入式的一只菜鸟">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">Harris角点检测</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-19 22:56:00" itemprop="dateCreated datePublished" datetime="2020-02-19T22:56:00+08:00">2020-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-23 19:09:26" itemprop="dateModified" datetime="2020-03-23T19:09:26+08:00">2020-03-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/wyw/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="Harris角点检测" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/wyw/2020/02/19/Harris%E8%A7%92%E7%82%B9%E7%AE%97%E6%B3%95%E7%90%86%E8%A7%A3/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class>
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="WYW" src="/wyw/images/avatar.png">
+  <p class="site-author-name" itemprop="name">WYW</p>
+  <div class="site-description" itemprop="description">永远相信美好的事情即将发生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/wyw/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/wyw/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/wyw/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wywaihandan" title="GitHub → https://github.com/wywaihandan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/wyw/2838177495@qq.com" title="E-Mail → 2838177495@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://me.csdn.net/qq_44219883" title="CSDN → https://me.csdn.net/qq_44219883" rel="noopener" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/390161354" title="哔哩哔哩 → https://space.bilibili.com/390161354" rel="noopener" target="_blank"><i class="fa fa-fw fa-skype"></i>哔哩哔哩</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/wyw/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  © 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WYW</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">14k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">13 分钟</span>
+</div>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("02/18/2020 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color="255,255,255" opacity="1" zindex="-1" count="160" src="/wyw/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zindex="-1" src="/wyw/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/wyw/lib/anime.min.js"></script>
+  <script src="/wyw/lib/velocity/velocity.min.js"></script>
+  <script src="/wyw/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/wyw/js/utils.js"></script>
+
+<script src="/wyw/js/motion.js"></script>
+
+
+<script src="/wyw/js/schemes/pisces.js"></script>
+
+
+<script src="/wyw/js/next-boot.js"></script>
+
+<script src="/wyw/js/bookmark.js"></script>
+
+
+  <script defer src="/wyw/lib/three/three.min.js"></script>
+    <script defer src="/wyw/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/wyw/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+        loader: {
+          load: ['[tex]/mhchem']
+        },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'NDcEnrSHSdyE836tDDY4dGdX-gzGzoHsz',
+      appKey     : 'DibaPoeEavgXoo8OOWpYa4cL',
+      placeholder: "留下你的评论吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+
+
+<script type="text/javascript" src="http://wyw1314.gitee.io/wyw/js/clicklove.js"></script><script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html><!-- 页面点击心形 -->
