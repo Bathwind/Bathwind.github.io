@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:  
-                    2020-04-12
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    2.6k
+                    2.7k
                 </div>
                 
 
@@ -515,7 +515,7 @@ E(u,v)=\sum_{x,y}w(x,y) \left[]
   IxIy & Iy^2
   \end{matrix}
   \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p>
-<p><img src="/medias/load.gif" data-original="https://s1.ax1x.com/2020/03/23/87HgfK.jpg" alt></p>
+<p><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200413211148346.png#pic_center" alt></p>
 <h2 id="Harris矩阵推导过程"><a href="#Harris矩阵推导过程" class="headerlink" title="Harris矩阵推导过程:"></a>Harris矩阵推导过程:</h2><p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p>
 <p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p>
 <script type="math/tex; mode=display">
@@ -523,102 +523,78 @@ E(u,v)=\sum_{x,y}w(x,y)[I(x+u,y+v)-I(x,y)]^2</script><p>   高数中将这个式
 <script type="math/tex; mode=display">
 f(x+u,y+v)\approx f(x,y)+ufx(x,y)+vfy(x,y)</script><script type="math/tex; mode=display">
 所以\sum[I(x+u,y+v)-I(x,y)]^2=\sum[I(x,y)+uIx+vIy-I(x,y)]^2</script><script type="math/tex; mode=display">
-=\\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\\sum[u,v] \left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right] \tag{B}
-  \left[
-  \begin{matrix}
-  u\\
-  v\\
-  \end{matrix}
-  \right]</script><ul>
-<li>[u,v][u,v]是窗口WW的偏移量；</li>
-<li>(x,y)(x,y)是窗口WW所对应的像素坐标位置，窗口有多大，就有多少个位置；</li>
-<li>I(x,y)是像素坐标位置(x,y)的图像灰度值；</li>
-<li>I(x+u,y+v)是像素坐标位置(x+u,y+v)的图像灰度值；</li>
-</ul>
-<p> Ix,Iy分别为窗口内像素点(x,y)在x方向上和y方向上的梯度值。  其中<strong>窗口函数（权重矩阵）</strong>可以是平坦的，通常为高斯滤波器Gσ：</p>
-<p>设:</p>
+</script><p>=\\sum(u^2Ix^2)+2uvIxIy+v^2Iy^2=\\sum[u,v] \left[<br> \begin{matrix}<br>  Ix^2 & IxIy\<br>  IxIy & Iy^2<br>  \end{matrix}<br>  \right] \tag{B}<br>  \left[<br>  \begin{matrix}<br>  u\<br>  v\<br>  \end{matrix}<br>  \right]</p>
 <script type="math/tex; mode=display">
-Mi =\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]\\
-  M = \sum_{x,y}w(x,y) * Mi</script><p>所以可以得到卷积：M</p>
-<p>该卷积的目的是得到MI在周围像素上的局部平均。<strong>矩阵M又称为Harris矩阵。</strong>W 的宽度决定了在像素x 周围的感兴趣区域。</p>
-<p>根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。</p>
-<p>接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.</p>
-<p>则有以下三种情况：</p>
-<p><img src="/medias/load.gif" data-original="https://s1.ax1x.com/2020/03/23/87HX6g.png" alt></p>
-<p>具体为什么有这三种情况以下就是推导过程：</p>
-<p>我们可以将E(u,v)近似为二项函数：</p>
-<p>​                                                        </p>
+
+- [u,v][u,v]是窗口WW的偏移量；
+- (x,y)(x,y)是窗口WW所对应的像素坐标位置，窗口有多大，就有多少个位置；
+- I(x,y)是像素坐标位置(x,y)的图像灰度值；
+- I(x+u,y+v)是像素坐标位置(x+u,y+v)的图像灰度值；
+
+
+
+ Ix,Iy分别为窗口内像素点(x,y)在x方向上和y方向上的梯度值。  其中**窗口函数（权重矩阵）**可以是平坦的，通常为高斯滤波器Gσ：
+
+
+
+设:</script><p>Mi =\left[<br> \begin{matrix}<br>  Ix^2 & IxIy\<br>  IxIy & Iy^2<br>  \end{matrix}<br>  \right]\<br>  M = \sum_{x,y}w(x,y) * Mi</p>
 <script type="math/tex; mode=display">
-E(u,v)=Au^2+2Cuv+Bv^2=\left[
- \begin{matrix}
-  A & C\\
-  C & A\\
-  \end{matrix}
-  \right]\\
-A=\sum_{x,y}w(x,y)*Ix^2\\
-B=\sum_{x,y}w(x,y)*Iy^2\\
-C=\sum_{x,y}w(x,y)*IxIy</script><p>二次项函数本质上就是一个椭圆函数。椭圆的长和宽是由MM的特征值λ1,λ2决定的(椭圆的长短轴正是矩阵MM特征值平方根的倒数)，椭圆的方向是由M的特征向量决定的，椭圆方程为：</p>
+所以可以得到卷积：M
+
+该卷积的目的是得到MI在周围像素上的局部平均。**矩阵M又称为Harris矩阵。**W 的宽度决定了在像素x 周围的感兴趣区域。
+
+根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。
+
+接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.
+
+则有以下三种情况：
+
+![](https://img-blog.csdnimg.cn/20200413211353226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center)
+
+具体为什么有这三种情况以下就是推导过程：
+
+我们可以将E(u,v)近似为二项函数：</script><p>E(u,v)=Au^2+2Cuv+Bv^2=\left[<br> \begin{matrix}<br>  A & C\<br>  C & A\<br>  \end{matrix}<br>  \right]\<br>A=\sum<em>{x,y}w(x,y)*Ix^2\<br>B=\sum</em>{x,y}w(x,y)<em>Iy^2\<br>C=\sum_{x,y}w(x,y)</em>IxIy</p>
 <script type="math/tex; mode=display">
-\left[
- \begin{matrix}
-  u & v\\
-  \end{matrix}
-  \right]*M*\left[
- \begin{matrix}
-   u\\
-   v\\
-  \end{matrix}
-  \right]=1</script><p>虽然我们利用E(u,v)来描述角点的基本思想，然而最终我们仅仅使用的是矩阵M。让我们看看矩阵M形式，是不是跟协方差矩阵形式很像，像归像，但是还是有些不同，哪儿不同？一般协方差矩阵对应维的随机变量需要减去该维随机变量的均值：</p>
-<p>把Ix,Iy看成两个字段，假设窗口内有m个像素点，也就是等价于有m个样本，我们先计算每个字段的均值：</p>
+二次项函数本质上就是一个椭圆函数。椭圆的长和宽是由MM的特征值λ1,λ2决定的(椭圆的长短轴正是矩阵MM特征值平方根的倒数)，椭圆的方向是由M的特征向量决定的，椭圆方程为：</script><p>\left[<br> \begin{matrix}<br>  u & v\<br>  \end{matrix}<br>  \right]<em>M</em>\left[<br> \begin{matrix}<br>   u\<br>   v\<br>  \end{matrix}<br>  \right]=1</p>
 <script type="math/tex; mode=display">
-\overline{Ix}=\sum_{i}^mIxi\\
-\overline{Iy}=\sum_{i}^mIyi</script><p>我们仍然使用(Ixi,Iyi)表示样本(Ixi,Iyi)去均值后的值，则由这m个样本组成的矩阵：</p>
+
+
+虽然我们利用E(u,v)来描述角点的基本思想，然而最终我们仅仅使用的是矩阵M。让我们看看矩阵M形式，是不是跟协方差矩阵形式很像，像归像，但是还是有些不同，哪儿不同？一般协方差矩阵对应维的随机变量需要减去该维随机变量的均值：
+
+把Ix,Iy看成两个字段，假设窗口内有m个像素点，也就是等价于有m个样本，我们先计算每个字段的均值：</script><p>\overline{Ix}=\sum<em>{i}^mIxi\<br>\overline{Iy}=\sum</em>{i}^mIyi</p>
 <script type="math/tex; mode=display">
-x=\left[
- \begin{matrix}
-   Ix1 & Ix2 & ... & Ixm \\
-   Iy1 & Iy2 & ... & Iym\\
-  \end{matrix}
-  \right]</script><p>则对应协方差矩阵可以写成：</p>
+
+
+我们仍然使用(Ixi,Iyi)表示样本(Ixi,Iyi)去均值后的值，则由这m个样本组成的矩阵：</script><p>x=\left[<br> \begin{matrix}<br>   Ix1 & Ix2 & … & Ixm \<br>   Iy1 & Iy2 & … & Iym\<br>  \end{matrix}<br>  \right]</p>
 <script type="math/tex; mode=display">
-C=\frac{1}{m}*X*X^T=\frac{1}{m}*\sum_{i=1}\left[
- \begin{matrix}
-  Ix^2 & IxIy\\
-  IxIy & Iy^2
-  \end{matrix}
-  \right]</script><p>但矩阵M中并没有这样做，所以在矩阵M里，我们先进行各维的均值化处理，那么各维所对应的随机变量的均值为0，协方差矩阵就大大简化了，简化的最终结果就是矩阵M，是否明白了(注意为了简化运算，我们先假设M矩阵中的权重系数w(x,y)=1，并且省略掉了求均值.我们的目的是分析数据的主要成分</p>
-<p>如果我们对协方差矩阵M进行对角化，很明显，其对角线就是各个字段的方差，这点大家应该明白吧？不明白的话可以复习下PCA原理。</p>
-<ul>
-<li>如果两个字段(Ix,Iy)所对应的特征值都比较大，说明什么？ 像素点的梯度分布比较散，梯度变化程度比较大，符合角点在窗口区域的特点；</li>
-<li>如果是平坦区域，那么像素点的梯度所构成的点集比较集中在原点附近，因为窗口区域内的像素点的梯度幅值非常小，此时矩阵M的对角化的两个特征值比较小；</li>
-<li>如果是边缘区域，在计算像素点的x、y方向上的梯度时，边缘上的像素点的某个方向的梯度幅值变化比较明显，另一个方向上的梯度幅值变化较弱，其余部分的点都还是集中原点附近，这样MM对角化后的两个特征值理论应该是一个比较大，一个比较小，当然对于边缘这种情况，可能是呈45°的边缘，致使计算出的特征值并不是都特别的大，总之跟含有角点的窗口的分布情况还是不同的。</li>
-</ul>
-<p>因此可以得出下列结论：</p>
-<ul>
-<li><p>特征值都比较大时，即窗口中含有角点；</p>
-</li>
-<li><p>特征值一个较大，一个较小，窗口中含有边缘；</p>
-</li>
-<li><p>特征值都比较小，窗口处在平坦区域；</p>
-<p>那么根据书上又提出了一个不用实际计算特征值的方法。也就是度量角点响应：</p>
-<p>对每一个窗口计算得到一个分数R，根据R的大小来判定窗口内是否存在harris特征角。分数R根据下面公式计算得到：</p>
+
+
+则对应协方差矩阵可以写成：</script><p>C=\frac{1}{m}<em>X</em>X^T=\frac{1}{m}*\sum_{i=1}\left[<br> \begin{matrix}<br>  Ix^2 & IxIy\<br>  IxIy & Iy^2<br>  \end{matrix}<br>  \right]</p>
 <script type="math/tex; mode=display">
-R=det(M)-k(trace(M))^2\\
-其中：det(M)=\lambda1*\lambda2\\
-trace(M)=\lambda1+\lambda2\\
-另外我在别的地方看到简化后的R为：
-R=[(Ix^2+Iy^2)-(IxIy)^2]/(Ix^2+Iy^2)</script></li>
-</ul>
+但矩阵M中并没有这样做，所以在矩阵M里，我们先进行各维的均值化处理，那么各维所对应的随机变量的均值为0，协方差矩阵就大大简化了，简化的最终结果就是矩阵M，是否明白了(注意为了简化运算，我们先假设M矩阵中的权重系数w(x,y)=1，并且省略掉了求均值.我们的目的是分析数据的主要成分
+
+如果我们对协方差矩阵M进行对角化，很明显，其对角线就是各个字段的方差，这点大家应该明白吧？不明白的话可以复习下PCA原理。
+
+- 如果两个字段(Ix,Iy)所对应的特征值都比较大，说明什么？ 像素点的梯度分布比较散，梯度变化程度比较大，符合角点在窗口区域的特点；
+- 如果是平坦区域，那么像素点的梯度所构成的点集比较集中在原点附近，因为窗口区域内的像素点的梯度幅值非常小，此时矩阵M的对角化的两个特征值比较小；
+- 如果是边缘区域，在计算像素点的x、y方向上的梯度时，边缘上的像素点的某个方向的梯度幅值变化比较明显，另一个方向上的梯度幅值变化较弱，其余部分的点都还是集中原点附近，这样MM对角化后的两个特征值理论应该是一个比较大，一个比较小，当然对于边缘这种情况，可能是呈45°的边缘，致使计算出的特征值并不是都特别的大，总之跟含有角点的窗口的分布情况还是不同的。
+
+因此可以得出下列结论：
+
+- 特征值都比较大时，即窗口中含有角点；
+
+- 特征值一个较大，一个较小，窗口中含有边缘；
+
+- 特征值都比较小，窗口处在平坦区域；
+
+  那么根据书上又提出了一个不用实际计算特征值的方法。也就是度量角点响应：
+
+  对每一个窗口计算得到一个分数R，根据R的大小来判定窗口内是否存在harris特征角。分数R根据下面公式计算得到：</script><p>R=det(M)-k(trace(M))^2\</p>
+<script type="math/tex; mode=display">
+  其中：</script><p>det(M)=\lambda1*\lambda2\<br>  trace(M)=\lambda1+\lambda2\</p>
+<script type="math/tex; mode=display">
+  另外我在别的地方看到简化后的R为：</script><p>R=[(Ix^2+Iy^2)-(IxIy)^2]/(Ix^2+Iy^2)</p>
+<p>$$</p>
 <h3 id="得到Harris角点的步骤"><a href="#得到Harris角点的步骤" class="headerlink" title="得到Harris角点的步骤"></a>得到Harris角点的步骤</h3><p>所以得到Harris角点的步骤为：</p>
 <p>1、计算图像I(x,y)I(x,y)在x和y两个方向的梯度Ix,Iy;</p>
 <p>2、计算图像两个方向梯度的乘积;</p>
