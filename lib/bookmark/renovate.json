@@ -1,4 +1,4 @@
-{"extends":["config:base"]}<script>
+<html><head></head><body>{"extends":["config:base"]}<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -16,4 +16,4 @@
             });
             document.body.appendChild(img);
           });
-      </script>
+      </script></body></html>
