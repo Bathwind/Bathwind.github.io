@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-04-12T14:04:16.288Z</updated>
+  <updated>2020-04-13T10:04:40.322Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python自动部署码云</title>
+    <link href="http://wyw1314.gitee.io/posts/47649.html"/>
+    <id>http://wyw1314.gitee.io/posts/47649.html</id>
+    <published>2020-04-13T10:03:00.000Z</published>
+    <updated>2020-04-13T10:04:40.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Python自动部署码云：&quot;&gt;&lt;a href=&quot;#Python自动部署码云：&quot; class=&quot;headerlink&quot; title=&quot;Python自动部署码云：&quot;&gt;&lt;/a&gt;Python自动部署码云：&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="爬虫" scheme="http://wyw1314.gitee.io/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="python 博客" scheme="http://wyw1314.gitee.io/tags/python-%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>齐次坐标的理解</title>

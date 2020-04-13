@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PCA主成分分析：, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="Python自动部署码云, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>PCA主成分分析： | 嵌入式的一只菜鸟</title>
+    <title>Python自动部署码云 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">PCA主成分分析：</h1>
+                    <h1 class="description center-align post-title">Python自动部署码云</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/PCA%E9%99%8D%E7%BB%B4/">
-                                <span class="chip bg-color">PCA降维</span>
+                            <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">python 博客</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                图像处理
+                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                爬虫
                             </a>
                         
                     </div>
@@ -457,28 +457,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
-                    2020-02-20
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:  
-                    2020-04-12
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    3.6k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:  
-                    13 分
+                    4 分
                 </div>
                 
 
@@ -494,137 +494,74 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <link rel="stylesheet" href="/WYW1314/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/WYW1314/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-<h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
-<p><strong>PCA数学原理分析</strong>：</p>
-<p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
-<p>分析这篇文章写的很好：可以参考这篇文章。</p>
-<p>我们生活所面对的数据都可以完全被抽象为一组向量。</p>
-<h2 id="内积和-投影："><a href="#内积和-投影：" class="headerlink" title="内积和 投影："></a>内积和 投影：</h2><p>两个维数相同的向量的内积被定义为：</p>
-<script type="math/tex; mode=display">
-(a_1,a_2 ... a_n)*(b_1,b_2...b_n)=a_1b_1+a_2b_2+...+a_nb_n</script><p><img src="https://s1.ax1x.com/2020/03/23/87TuAP.png" alt></p>
-<p>设A=(x1,y1),B=(x2,y2).好，现在我们从A点向B所在直线引一条垂线。我们知道垂线与B的交点叫做A在B上的投影，再设A与B的夹角是a，则投影的矢量长度为</p>
-<script type="math/tex; mode=display">
-|A|cosa</script><p>接下来内积还有另外一种表示方法：</p>
-<script type="math/tex; mode=display">
-A*B=|A|*|B|*cosa</script><p>也就是说，<strong>设向量B的模为1，则A与B的内积值等于A向B所在直线投影的矢量长度</strong>！</p>
-<h2 id="基："><a href="#基：" class="headerlink" title="基："></a>基：</h2><p><img src="https://s1.ax1x.com/2020/03/23/87TDc4.png" alt></p>
-<p>这个红色线段的向量我们通常都直接认为是(3,2).但实际上这样说只是相对于当前的这个坐标系来说。所以来说并不是特别准确。</p>
-<p>实际要准确表示这个向量的话，应该按照下面的去表示：</p>
-<script type="math/tex; mode=display">
-3(1,0)^T+2(0,1)^T</script><p>此处(1,0)和(0,1)叫做二维空间中的一组基。所以，<strong>要准确描述向量，首先要确定一组基，然后给出在基所在的各个直线上的投影值，就可以了</strong>。只不过我们经常省略第一步，而默认以(1,0)和(0,1)为基。我们之所以默认选择(1,0)和(0,1)为基，当然是比较方便，因为它们分别是x和y轴正方向上的单位向量，因此就使得二维平面上点坐标和向量一一对应，非常方便。但实际上任何两个线性无关的二维向量都可以成为一组基，所谓线性无关在二维平面内可以直观认为是两个不在一条直线上的向量。</p>
-<p>，(1,1)和(-1,1)也可以成为一组基。一般来说，我们希望基的模是1，因为从内积的意义可以看到，如果基的模是1，那么就可以方便的用向量点乘基而直接获得其在新基上的坐标了！实际上，对应任何一个向量我们总可以找到其同方向上模为1的向量，只要让两个分量分别除以模就好了。这一步通常在线性代数也叫做单位化。所以上面的基可以变为：</p>
-<script type="math/tex; mode=display">
-(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})和(-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}）</script><p>现在我们要想获得(3,2)在新的基上的坐标，我们只需要分别计算(3,2)与新的基的内积即可，</p>
-<p>所以可以得到：</p>
-<script type="math/tex; mode=display">
-(\frac{5}{\sqrt{2}},\frac{-1}{\sqrt{2}})</script><p><img src="https://s1.ax1x.com/2020/03/23/87TcH1.png" alt></p>
-<p>我们所选的大多数情况下选的基都是正交的。</p>
-<h2 id="基变换的矩阵表示"><a href="#基变换的矩阵表示" class="headerlink" title="基变换的矩阵表示"></a>基变换的矩阵表示</h2><p>因为进行基变换的方法坐标分别与基做内积运算。所以我们可以用矩阵去表示这种变换，我们写的时候通常将原来的坐标写为列向量的形式。</p>
-<script type="math/tex; mode=display">
-\begin{pmatrix} 1/\sqrt{2} & 1/\sqrt{2} \\ -1/\sqrt{2} & 1/\sqrt{2} \end{pmatrix} \begin{pmatrix} 3 \\ 2 \end{pmatrix} = \begin{pmatrix} 5/\sqrt{2} \\ -1/\sqrt{2} \end{pmatrix}</script><p>如果我们有m个二维向量，只要将二维向量按列排成一个两行m列矩阵，然后用“基矩阵”乘以这个矩阵，就得到了所有这些向量在新基下的值。</p>
-<p><strong>一般的，如果我们有M个N维向量，想将其变换为由R个N维向量表示的新空间中，那么首先将R个基按行组成矩阵A，然后将向量按列组成矩阵B，那么两矩阵的乘积AB就是变换结果，其中AB的第m列为A中第m列变换后的结果</strong>。</p>
-<p>矩阵的相乘在看完那篇博客后好像明白他们的意义。其实矩阵变换无非就是<strong>两个矩阵相乘的意义是将右边矩阵中的每一列列向量变换到左边矩阵中每一行行向量为基所表示的空间中去</strong>。</p>
-<h2 id="协方差矩阵及其表示："><a href="#协方差矩阵及其表示：" class="headerlink" title="协方差矩阵及其表示："></a>协方差矩阵及其表示：</h2><p>如果进行<strong>矩阵变换的时候基的数量少于向量本身的维数的时候我们就达到了降维的目的</strong>。但是如何选取基又是一个问题。看了别人的博客写的后感觉这种变换的思想真的巧妙。</p>
-<p>选取一个合适的基的意思是变换后的坐标尽量分散。而分散的程度我们在数学上通常使用方差来表示，一个字段的方差可以看做是每个元素与字段均值的差的平方和的均值，</p>
-<script type="math/tex; mode=display">
-Var(a)=\frac{1}{m}\sum_{i=1}^m{(a_i-\mu)^2}</script><p>在这里为了<strong>简化运算我们通常提前对数据进行处理，每个数据减去这个字段的均值。</strong></p>
-<p>处理过程很简单。举个例子：</p>
-<script type="math/tex; mode=display">
-1,2,3,4,5这五个数据的均值为15/5=3所以每个数据都减去3.所以处理后的数据为：-2，-1,0，1,2.这五个数据均值一定为0.</script><p>这样处理后，</p>
-<script type="math/tex; mode=display">
-这样\mu可以为0了。</script><p><strong><em>所以寻找一个基，使得所有数据变换为这个基上的坐标表示后，方差值最大。</em></strong></p>
-<p>对于上面二维降成一维的问题来说，找到那个使得方差最大的方向就可以了。不过对于更高维，还有一个问题需要解决。考虑三维降到二维问题。与之前相同，首先我们希望找到一个方向使得投影后方差最大，这样就完成了第一个方向的选择，继而我们选择第二个投影方向。</p>
-<p>如果我们还是单纯只选择方差最大的方向，很明显，这个方向与第一个方向应该是“几乎重合在一起”，显然这样的维度是没有用的，因此，应该有其他约束条件。从直观上说，让两个字段尽可能表示更多的原始信息，我们是不希望它们之间存在（线性）相关性的，因为相关性意味着两个字段不是完全独立，必然存在重复表示的信息。</p>
-<p>数学上可以用两个字段的协方差表示其相关性，由于已经让每个字段均值为0，协方差原始公式为：<img src="https://s1.ax1x.com/2020/03/23/87L8wd.png" alt></p>
-<p>则协方差的公式如下：</p>
-<script type="math/tex; mode=display">
-Cov(a,b)=\frac{1}{m}\sum_{i=1}^m{a_ib_i}</script><p>可以看到，在字段均值为0的情况下，两个字段的协方差简洁的表示为其内积除以元素数m。当协方差为0时，表示两个字段完全独立。为了让协方差为0，我们选择第二个基时只能在与第一个基正交的方向上选择。因此最终选择的两个方向一定是正交的。为什么正交的话？因为线性代数里面也说正交的话内积为0，所以协方差就为0.</p>
-<p><strong>将一组N维向量降为K维（K大于0，小于N），其目标是选择K个单位（模为1）正交基，使得原始数据变换到这组基上后，各字段两两间协方差为0，而字段的方差则尽可能大（在正交的约束下，取最大的K个方差）</strong></p>
-<p>上面就是我们要得到的目标，但是就是上面的这个结论并不能告诉我们要具体怎么去做。所以说数学的思想真的巧妙。</p>
-<p>我们设有a和b俩个字段。</p>
-<script type="math/tex; mode=display">
-X=\begin{pmatrix} a_1 & a_2 & \cdots & a_m \\ b_1 & b_2 & \cdots & b_m \end{pmatrix}</script><p>然后我们用X乘以X的转置，并乘上系数1/m：</p>
-<script type="math/tex; mode=display">
-\frac{1}{m}XX^\mathsf{T}=\begin{pmatrix} \frac{1}{m}\sum_{i=1}^m{a_i^2} & \frac{1}{m}\sum_{i=1}^m{a_ib_i} \\ \frac{1}{m}\sum_{i=1}^m{a_ib_i} & \frac{1}{m}\sum_{i=1}^m{b_i^2} \end{pmatrix}</script><p>然后神奇的事情发生了，主对角线上是方差，斜对角线是协方差。</p>
-<p><strong>设我们有m个n维数据记录，将其按列排成n乘m的矩阵X，设</strong></p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}XX^\mathsf{T}</script><p><strong>，则C是一个对称矩阵，其对角线分别个各个字段的方差，而第i行j列和j行i列元素相同，表示i和j两个字段的协方差</strong></p>
-<h2 id="协方差矩阵对角化："><a href="#协方差矩阵对角化：" class="headerlink" title="协方差矩阵对角化："></a>协方差矩阵对角化：</h2><p>为什么要将协方差矩阵对角化呢。首先我们了解一下相似矩阵。设A和B为n阶矩阵如果存在n阶可逆矩阵P，使得：</p>
-<script type="math/tex; mode=display">
-P^{-1}AP=B</script><p>我们就称A相似于B，或者说A和B相似。矩阵相似具有非常多好用的性质：</p>
-<p><strong>A和B有相等的行列式。A和B有相等的迹。</strong></p>
-<p>相似矩阵具有许多共同的性质，对于N阶矩阵。我们希望与A相似的矩阵中寻找一个较简单的矩阵。所以我们考虑n阶矩阵是否与一个对角矩阵相似的问题的时候。这时候就用到了矩阵对角化。</p>
-<p>设原始数据矩阵X对应的协方差矩阵为C，而P是一组基按行组成的矩阵，设Y=PX，则Y为X对P做基变换后的数据。设Y的协方差矩阵为D，我们推导一下D与C的关系：</p>
-<script type="math/tex; mode=display">
-\begin{array}{l l l} D & = & \frac{1}{m}YY^\mathsf{T} \\ & = & \frac{1}{m}(PX)(PX)^\mathsf{T} \\ & = & \frac{1}{m}PXX^\mathsf{T}P^\mathsf{T} \\ & = & P(\frac{1}{m}XX^\mathsf{T})P^\mathsf{T} \\ & = & PCP^\mathsf{T} \end{array}</script><p>现在事情很明白了！我们要找的P不是别的，而是能让原始协方差矩阵对角化的P。换句话说，优化目标变成了<strong>寻找一个矩阵P，满足</strong></p>
-<script type="math/tex; mode=display">
-PCP^\mathsf{T}</script><hr>
-<p><strong>是一个对角矩阵，并且对角元素按从大到小依次排列，那么P的前K行就是要寻找的基，用P的前K行组成的矩阵乘以X就使得X从N维降到了K维并满足上述优化条件</strong>。</p>
-<p>，在线性代数上，实对称矩阵有一系列非常好的性质：</p>
-<p>1）实对称矩阵不同特征值对应的特征向量必然正交。</p>
-<script type="math/tex; mode=display">
-2）设特征向量\lambda重数为r，则必然存在r个线性无关的特征向量对应于\lambda\\
-
-因此可以将这r个特征向量单位正交化。</script><p>一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量，设这n个特征向量为:</p>
-<script type="math/tex; mode=display">
-e_1,e_2,\cdots,e_n</script><p>则对协方差矩阵C有如下结论：</p>
-<script type="math/tex; mode=display">
-E^\mathsf{T}CE=\Lambda=\begin{pmatrix} \lambda_1 & & & \\ & \lambda_2 & & \\ & & \ddots & \\ & & & \lambda_n \end{pmatrix}</script><script type="math/tex; mode=display">
-P=E^\mathsf{T}</script><p>矩阵P就已经得到了。</p>
-<p>P是协方差矩阵的特征向量单位化后按行排列出的矩阵，其中每一行都是C的一个特征向量。如果设P按照特征值的从大到小，将特征向量从上到下排列，则用P的前K行组成的矩阵乘以原始数据矩阵X，就得到了我们需要的降维后的数据矩阵Y。</p>
-<h2 id="PCA算法"><a href="#PCA算法" class="headerlink" title="PCA算法"></a>PCA算法</h2><p>总结一下PCA的算法步骤：</p>
-<p>设有m条n维数据。</p>
-<p>1）将原始数据按列组成n行m列矩阵X</p>
-<p>2）将X的每一行（代表一个属性字段）进行零均值化，即减去这一行的均值</p>
-<p>3）求出协方差矩阵</p>
-<script type="math/tex; mode=display">
-C=\frac{1}{m}XX^\mathsf{T}</script><p>4）求出协方差矩阵的特征值及对应的特征向量</p>
-<p>5）将特征向量按对应特征值大小从上到下按行排列成矩阵，取前k行组成矩阵P</p>
-<p>6）Y=PX即为降维到k维后的数据</p>
-<p>代码如下：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">from PIL import Image
-from numpy import *
-from pylab import *
-from imtools import get_imlist
-import pickle
-def pca(X):
-    """主成分分析
-    输入：矩阵X其中该矩阵中存储训练数据，每一行为一条训练数据
-    返回：投影矩阵（按照维度的重要性排序），方差和均值
-    """
-    num_data,dim = X.shape#获取维数
-    #数据中心化
-    mean_x = X.mean(axis=0)#axis = 0：压缩行，对各列求均值，返回 1* n 矩阵axis =1 ：压缩列，对各行求均值，返回 m *1 矩阵
-    X = X - mean_x
-    if dim > num_data:
-        M = dot(X,X.T) #PCA-使用紧致技巧得到协方差矩阵
-        e,EV = linalg.eigh(M)#计算特征值和特征向量
-        tmp = dot(X.T,EV).T#这就是紧致技巧
-        V  = tmp[::-1]#由于最后的特征向量就是我们需要的，所以将其逆转
-        S = sqrt(e)[::-1]#由于特征值是按照递增顺序排列的，所以需要将其逆转。
-        for i in range(V.shape[1]):
-            V[:,i] /= S
-    else:
-        U,S,V = linalg.svd(X)
-        V = V[:num_data]#仅仅返回num_data维的数据才合理
-    return V,S,mean_x#返回投影矩阵，方差和均值
-imlist = get_imlist(r'..\image\1.jpg','.jpg')
-im = array(Image.open(imlist[0]))#打开一幅图像，获得其大小
-m,n = im.shape[0:2]
-imnum = len(imlist)
-#创建矩阵，保存所有压平后的图像数据
-immatrix = array([array(Image.open(im)).flatten() for im in imlist],'f')
-#执行PCA操作
-V,S,immean = pca(immatrix)
-#显示一些图像（均值图像和前10个模式）
-figure()
-gray()
-subplot(2,5,1)#m和n代表在一个图像窗口中显示m行n列个图像
-imshow(immean.reshape(m,n))
-for i in range(9):
-    subplot(2,5,i+2)
-    imshow(V[i].reshape(m,n))
+<h1 id="Python自动部署码云："><a href="#Python自动部署码云：" class="headerlink" title="Python自动部署码云："></a>Python自动部署码云：</h1><h2 id="1：大概思路："><a href="#1：大概思路：" class="headerlink" title="1：大概思路："></a>1：大概思路：</h2><p>其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。</p>
+<h2 id="2-下载chromedriver-exe文件："><a href="#2-下载chromedriver-exe文件：" class="headerlink" title="2:下载chromedriver.exe文件："></a>2:下载chromedriver.exe文件：</h2><p>首先打开你的谷歌浏览器。直接在地址栏输入：<a href="chrome://settings/help">chrome://settings/help</a>.这样会出来和你浏览器相对应的版本。如下图所示：<img src="https://s1.ax1x.com/2020/04/13/GjxI78.png" alt></p>
+<p>我的浏览器版本是81.0.4044.9.我下载的版本只要是81.0.4044.xxx就可以。下载文件的链接是：<a href="http://chromedriver.storage.googleapis.com/index.html。" target="_blank" rel="noopener">http://chromedriver.storage.googleapis.com/index.html。</a><br>下载完文件后把这个exe文件当到谷歌浏览器的路径下：我的路径为：<strong>E:\Chrome\Application</strong>。同时还要把这个文件放到你电脑上python的安装根目录下。</p>
+<h2 id="3：开始编写程序："><a href="#3：开始编写程序：" class="headerlink" title="3：开始编写程序："></a>3：开始编写程序：</h2><p>这里我们用到的是python的以下这些库：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">from selenium import webdriver
+from selenium.webdriver.common.alert import Alert
 </code></pre>
+<p>selenium是一个自动化测试工具，支持Firefox，Chrome等众多浏览器.</p>
+<p>在爬虫中的应用主要是用来解决JS渲染的问题。</p>
+<p>1.使用前需要安装这个第三方库，CMD下：</p>
+<p>pip install selenium</p>
+<p>安装完这个库就可以开始写代码了。</p>
+<h3 id="1：模拟浏览器来到码云的登录界面，代码如下："><a href="#1：模拟浏览器来到码云的登录界面，代码如下：" class="headerlink" title="1：模拟浏览器来到码云的登录界面，代码如下："></a>1：模拟浏览器来到码云的登录界面，代码如下：</h3><pre class=" language-lang-python"><code class="language-lang-python"># 模拟浏览器打开到gitee登录界面
+driver = webdriver.Chrome()
+driver.get('https://gitee.com/login')
+# 将窗口最大化
+driver.maximize_window()
+time.sleep(2)
+</code></pre>
+<p>这时候我们打开这个界面后需要输入账号和密码登录。<img src="https://s1.ax1x.com/2020/04/13/GjzQ9H.png" alt></p>
+<p>这时候我们会有一个疑惑，如何定位输入账号的地方的和输入密码的地方，这时候我们需要一点html的知识。就是如何让python定位到账号和密码的输入框。这个时候我们就可以谷歌浏览器的开发者工具来分析：</p>
+<p>html输入框坑定是放在一个div里的。而且通过Id号很方便，来确定的可以从id号去确认。<u><del>我的html学的很垃圾。可能有些专业术语表达不清楚。</del></u></p>
+<p>这里我们鼠标定位到输入框，右键，点击检查。<img src="https://s1.ax1x.com/2020/04/13/GjzBgs.png" alt></p>
+<p>然后就会发现出现以下：</p>
+<p><img src="https://s1.ax1x.com/2020/04/13/GvSHQs.png" alt></p>
+<p>获得密码输入框的id也是和上面一样。我们得到了就可以用库里面的函数来定位到这个位置并且把你的账号和密码自动填入。代码如下：</p>
+<pre class=" language-lang-python"><code class="language-lang-python"># 输入账号--通过html的id属性定位输入位置--改为你的账号
+user_login = driver.find_element_by_id('user_login')
+user_login.send_keys("你的账号")
+# 输入密码--通过html的id属性定位输入位置--改为你的密码
+driver.find_element_by_id('user_password').send_keys("你的密码")
+</code></pre>
+<p>接下来就是写程序点击登录这个按钮。那么这个按钮的位置如何确定呢。我们这里是采用<code>Xpath</code>来确定的。获取xpath也有一个快捷的方法。</p>
+<p><img src="https://s1.ax1x.com/2020/04/13/GvSPVf.png" alt></p>
+<p>依旧按上面的方法选中这一块，右键选择检查，定位到这一块的html代码。然后右键这一块。选择<code>copy full xpath.</code></p>
+<p>如下图所示：<img src="https://s1.ax1x.com/2020/04/13/GvS3iF.png" alt></p>
+<p>得到了<code>xpath</code>,接着写代码：</p>
+<pre class=" language-lang-python"><code class="language-lang-python"># 点击登录按钮--通过xpath确定点击位置
+driver.find_element_by_xpath(
+    '/html/body/div[2]/div[2]/div[1]/div/div[2]/div/form[1]/div[2]/div/div/div[4]/input').click()
+time.sleep(2)
+</code></pre>
+<p>Python方便的地方就是有相应的库函数。这里也是。</p>
+<p>登陆完后，我们需要来到部署静态网页的页面：一般情况下，这个页面的URL链接为：’<a href="https://gitee.com/xxxxx/xxxxx/pages" target="_blank" rel="noopener">https://gitee.com/xxxxx/xxxxx/pages</a>‘</p>
+<p>这时候我们从登录后的界面跳转到以上的URL链接界面。之后写程序点击部署那个按钮。代码如下：</p>
+<pre class=" language-lang-python"><code class="language-lang-python"># 切换到gitee pages界面--改为you_gitee_id
+driver.get('https://gitee.com/你项目的个人地址/项目名称/pages')
+# 点击更新按钮--通过xpath确定点击位置
+driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[2]/div[1]/form/div[7]').click()
+# 确认更新提示框--这个函数的作用是确认提示框
+Alert(driver).accept()
+</code></pre>
+<p>之后等待部署，这里可以生成一个文件去记录你更新时间，代码如下;</p>
+<pre class=" language-lang-Python"><code class="language-lang-Python"># 等待5秒更新
+time.sleep(5)
+
+# 这个print
+print("成功")
+
+# 脚本运行成功,退出浏览器
+driver.quit()
+
+fp = open("F:\log.txt", "a+")
+now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+fp.write("auto update time:{0}\n".format(now_time))
+fp.close()
+</code></pre>
+<p>这样就完成想象中的自动部署把。当然氪金一年99块钱也是能自动推送后部署的，但是贫穷限制了我的想象力。只有出此下策。哈哈哈。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -668,7 +605,7 @@ for i in range(9):
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/WYW1314/posts/53510.html">http://wyw1314.gitee.io/WYW1314/posts/53510.html</a>
+                    <a href="http://wyw1314.gitee.io/WYW1314/posts/47649.html">http://wyw1314.gitee.io/WYW1314/posts/47649.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -706,8 +643,8 @@ for i in range(9):
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/PCA%E9%99%8D%E7%BB%B4/">
-                                    <span class="chip bg-color">PCA降维</span>
+                                <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">python 博客</span>
                                 </a>
                             
                         </div>
@@ -1140,44 +1077,47 @@ for i in range(9):
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i> 上一篇</div>
+                <i class="far fa-dot-circle"></i> 本篇
+            </div>
             <div class="card">
-                <a href="/WYW1314/posts/31290.html">
+                <a href="/WYW1314/posts/47649.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/23.jpg" class="responsive-img" alt="汇编语言的学习记录">
+                        <img src="/WYW1314/medias/featureimages/12.jpg" class="responsive-img" alt="Python自动部署码云">
                         
-                        <span class="card-title">汇编语言的学习记录</span>
+                        <span class="card-title">Python自动部署码云</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            汇编语言的学习笔记：汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。链接: https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ 提取码: va7t感觉在看汇编语言的前一部分时候感觉和
+                            Python自动部署码云：1：大概思路：其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。
+2:下载chromedriver.exe文件：首先打开你的
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    汇编语言
+                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E6%B1%87%E7%BC%96%E7%9F%A5%E8%AF%86%E7%82%B9/">
-                        <span class="chip bg-color">汇编知识点</span>
+                    <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">python 博客</span>
                     </a>
                     
                 </div>
@@ -1191,24 +1131,24 @@ for i in range(9):
                 下一篇 <i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/48085.html">
+                <a href="/WYW1314/posts/64390.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/3.jpg" class="responsive-img" alt="Harris角点检测">
+                        <img src="/WYW1314/medias/featureimages/17.jpg" class="responsive-img" alt="齐次坐标的理解">
                         
-                        <span class="card-title">Harris角点检测</span>
+                        <span class="card-title">齐次坐标的理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Harris角点检测角点的定义：角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行任意方向上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以
+                            齐次坐标的理解齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
                             </span>
                         <span class="publish-author">
                             
@@ -1225,8 +1165,8 @@ for i in range(9):
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/Harris/">
-                        <span class="chip bg-color">Harris</span>
+                    <a href="/WYW1314/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
+                        <span class="chip bg-color">齐次坐标</span>
                     </a>
                     
                 </div>
