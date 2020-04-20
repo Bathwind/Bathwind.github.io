@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="utf-8">
-    <meta name="keywords" content="树莓派换源以及pip安装, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="Python导入qtdesigner和pyuic, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>树莓派换源以及pip安装 | 嵌入式的一只菜鸟</title>
+    <title>Python导入qtdesigner和pyuic | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">树莓派换源以及pip安装</h1>
+                    <h1 class="description center-align post-title">Python导入qtdesigner和pyuic</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
-                                <span class="chip bg-color">树莓派换源</span>
+                            <a href="/WYW1314/tags/qtdesigner/">
+                                <span class="chip bg-color">qtdesigner</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/WYW1314/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="post-category">
-                                树莓派
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                qt界面
                             </a>
                         
                     </div>
@@ -457,28 +457,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:  
-                    2020-02-23
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:  
-                    2020-04-13
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:  
-                    512
+                    411
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:  
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -494,34 +494,24 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <link rel="stylesheet" href="/WYW1314/css/prism-tomorrow.css" type="text/css"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/WYW1314/atom.xml" title="嵌入式的一只菜鸟" type="application/atom+xml">
-<h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>
-<h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">lsb_release  -a
+<h1 id="Python导入qtdesigner和pyuic"><a href="#Python导入qtdesigner和pyuic" class="headerlink" title="Python导入qtdesigner和pyuic"></a>Python导入qtdesigner和pyuic</h1><h2 id="1：cmd安装qtsdesigner和pyuic："><a href="#1：cmd安装qtsdesigner和pyuic：" class="headerlink" title="1：cmd安装qtsdesigner和pyuic："></a>1：cmd安装qtsdesigner和pyuic：</h2><pre class=" language-lang-python"><code class="language-lang-python">pip install pyqt5
+pip install pyqt5_tools
 </code></pre>
-<p><br>如下图所示：<br><br><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200413213727373.jpg#pic_center" alt><br>可以看到codename为buster,所以一会换源的时候一定要记住。</p>
-<h2 id="更改souces-list软件源"><a href="#更改souces-list软件源" class="headerlink" title="更改souces.list软件源"></a>更改souces.list软件源</h2><p>1:nano 编辑/etc/apt/目录下的sources.list<br>终端输入：sudo nano /etc/apt/sources.list<br><br><br><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200413213852306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt><br>我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。<br>ctrl + o 保存。回车确认。ctrl + x 退出。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
-</code></pre>
-<h2 id="更换系统源"><a href="#更换系统源" class="headerlink" title="更换系统源"></a>更换系统源</h2><p>执行命令：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo nano /etc/apt/sources.list.d/raspi.list
-</code></pre>
-<p><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200413214127463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt><br><br>输入以下网址：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
-</code></pre>
-<h2 id="pip命令安装Opencv"><a href="#pip命令安装Opencv" class="headerlink" title="pip命令安装Opencv"></a>pip命令安装Opencv</h2><p>由于树莓派上是py3.7.所以使用pip命令安装时候要用pip3.<br>打开终端：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo pip3  install opencv-python
-</code></pre>
-<p>这里我已经装完了。<br><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200413214258552.png#pic_center" alt>这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">sudo apt-get update #安装依赖库
-sudo apt-get install libhdf5-dev
-sudo apt-get install libatlas-base-dev
-sudo apt-get install libjasper-dev
-sudo apt-get install libqt4-test
-sudo apt-get install libqtgui4
-sudo apt-get update
-</code></pre>
-<p>之后再pip3，输入import cv2如果没有任何反应就证明好了。<br>安装其他包也是类似的。</p>
+<h2 id="2-通过Pycharm导入pyqt5："><a href="#2-通过Pycharm导入pyqt5：" class="headerlink" title="2:通过Pycharm导入pyqt5："></a>2:通过Pycharm导入pyqt5：</h2><p>我的Pycharm是汉化过的，所以找到设置-外部工具：点击加号添加：</p>
+<p><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200420224710879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221334912"></p>
+<p>会出来以下的对话框：</p>
+<p><img src="/medias/load.gif" data-original="https://img-blog.csdnimg.cn/20200420224609811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221742615"></p>
+<p>name自定义，最好能是你自己定义的跟这个外部工具有关的。program为designer.exe所在的路径,通常情况为：你安装的python目录下的：\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe。剩下不用管即可，</p>
+<p>将保存的ui文件转换为py文件可以添加另外一个脚本，也就是pyuic.py.</p>
+<p>Name：和上面一样，随便填。这里填PyUIC</p>
+<p>Program：填自己的<strong>python路径</strong>，不知道的在(cmd)终端输入命令where python 查询。</p>
+<p>Parameters：首先放入自己的pyuic.py的路径。以后文件路径不知道的在我的电脑搜，我就不再重复了。<strong>空一个格</strong>后直接粘贴我的这个就行。<strong>$FileName$ -o $FileNameWithoutExtension$.py</strong> 这一行命令的意思应该是用pyuic.py 将文件名.ui文件转换成文件名.py文件。</p>
+<p>Working directory：$ProjectFileDir$。</p>
+<p>完成后转换可能会报错误，这里只需要修改俩个地方即可：</p>
+<p>1）主义在pyuic.py文件路径和$FileName$ -o $FileNameWithoutExtension$.py之间<strong>加空格</strong>。不然会报错。</p>
+<p>2）from .driver import Driver 报错，将此行改成 <strong>from PyQt5.uic.driver import Driver</strong></p>
+<p>同理将下面那个报错也修改成   <strong>from PyQt5.uic.exceptions import NoSuchClassError, NoSuchWidgetError</strong></p>
+<p>以上就完成了。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -565,7 +555,7 @@ sudo apt-get update
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/WYW1314/posts/3101.html">http://wyw1314.gitee.io/WYW1314/posts/3101.html</a>
+                    <a href="http://wyw1314.gitee.io/WYW1314/posts/37573.html">http://wyw1314.gitee.io/WYW1314/posts/37573.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,8 +593,8 @@ sudo apt-get update
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%8D%A2%E6%BA%90/">
-                                    <span class="chip bg-color">树莓派换源</span>
+                                <a href="/WYW1314/tags/qtdesigner/">
+                                    <span class="chip bg-color">qtdesigner</span>
                                 </a>
                             
                         </div>
@@ -1037,44 +1027,49 @@ sudo apt-get update
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i> 上一篇</div>
+                <i class="far fa-dot-circle"></i> 本篇
+            </div>
             <div class="card">
-                <a href="/WYW1314/posts/64390.html">
+                <a href="/WYW1314/posts/37573.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/17.jpg" class="responsive-img" alt="齐次坐标的理解">
+                        <img src="/WYW1314/medias/featureimages/11.jpg" class="responsive-img" alt="Python导入qtdesigner和pyuic">
                         
-                        <span class="card-title">齐次坐标的理解</span>
+                        <span class="card-title">Python导入qtdesigner和pyuic</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            齐次坐标的理解齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以
+                            Python导入qtdesigner和pyuic1：cmd安装qtsdesigner和pyuic：pip install pyqt5
+pip install pyqt5_tools
+
+2:通过Pycharm导入pyqt5：我的Pycharm
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                    qt界面
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
-                        <span class="chip bg-color">齐次坐标</span>
+                    <a href="/WYW1314/tags/qtdesigner/">
+                        <span class="chip bg-color">qtdesigner</span>
                     </a>
                     
                 </div>
@@ -1088,31 +1083,32 @@ sudo apt-get update
                 下一篇 <i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/31290.html">
+                <a href="/WYW1314/posts/47649.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/23.jpg" class="responsive-img" alt="汇编语言的学习记录">
+                        <img src="/WYW1314/medias/featureimages/12.jpg" class="responsive-img" alt="Python自动部署码云">
                         
-                        <span class="card-title">汇编语言的学习记录</span>
+                        <span class="card-title">Python自动部署码云</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            汇编语言的学习笔记：汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。链接: https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ 提取码: va7t感觉在看汇编语言的前一部分时候感觉和
+                            Python自动部署码云：1：大概思路：其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。
+2:下载chromedriver.exe文件：首先打开你的
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" class="post-category">
-                                    汇编语言
+                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
                                 </a>
                             
                             
@@ -1122,8 +1118,8 @@ sudo apt-get update
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E6%B1%87%E7%BC%96%E7%9F%A5%E8%AF%86%E7%82%B9/">
-                        <span class="chip bg-color">汇编知识点</span>
+                    <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">python 博客</span>
                     </a>
                     
                 </div>

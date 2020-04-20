@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-04-13T12:59:25.876Z</updated>
+  <updated>2020-04-20T14:57:58.818Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python导入qtdesigner和pyuic</title>
+    <link href="http://wyw1314.gitee.io/posts/37573.html"/>
+    <id>http://wyw1314.gitee.io/posts/37573.html</id>
+    <published>2020-04-20T14:05:00.000Z</published>
+    <updated>2020-04-20T14:57:58.818Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Python导入qtdesigner和pyuic&quot;&gt;&lt;a href=&quot;#Python导入qtdesigner和pyuic&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="qt界面" scheme="http://wyw1314.gitee.io/categories/qt%E7%95%8C%E9%9D%A2/"/>
+    
+    
+      <category term="qtdesigner" scheme="http://wyw1314.gitee.io/tags/qtdesigner/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python自动部署码云</title>
     <link href="http://wyw1314.gitee.io/posts/47649.html"/>
     <id>http://wyw1314.gitee.io/posts/47649.html</id>
     <published>2020-04-13T10:03:00.000Z</published>
-    <updated>2020-04-13T12:59:25.876Z</updated>
+    <updated>2020-04-20T14:58:12.868Z</updated>
     
     <summary type="html">
     
