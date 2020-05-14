@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="钢铁表面缺陷检测, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="Python导入qtdesigner和pyuic, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>钢铁表面缺陷检测 | 嵌入式的一只菜鸟</title>
+    <title>Python导入qtdesigner和pyuic | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">钢铁表面缺陷检测</h1>
+                    <h1 class="description center-align post-title">Python导入qtdesigner和pyuic</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                                <span class="chip bg-color">缺陷检测</span>
+                            <a href="/WYW1314/tags/qtdesigner/">
+                                <span class="chip bg-color">qtdesigner</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                图像处理
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                qt界面
                             </a>
                         
                     </div>
@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-14
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    411
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -500,28 +500,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="钢铁表面缺陷检测"><a href="#钢铁表面缺陷检测" class="headerlink" title="钢铁表面缺陷检测"></a>钢铁表面缺陷检测</h1><p><u><del><strong>勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。</strong></del></u></p>
-<p>4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路，自己去找了找网上相关的论文。其中有一篇挺好的。照着里面的思路慢慢去做。发现识别出来的效果还行。</p>
-<h2 id="主要方法："><a href="#主要方法：" class="headerlink" title="主要方法："></a>主要方法：</h2><h3 id="1对图片进行top-hat变换："><a href="#1对图片进行top-hat变换：" class="headerlink" title="1对图片进行top-hat变换："></a>1对图片进行top-hat变换：</h3><p>Top-hat 去光照不均图像增强方法 数学形态学是在集合的层次上来描述和分析图像，着重研究图像的几何结构。<br>腐蚀和膨胀是形态学的两种最基本的运算，从数学角度来说，就是将图像与结构元素进行卷积。常见的数学形态学有二值形态学和灰度形态学。灰度形态学就是直接对灰度图像进行形态操作，二值形态学是对二值化的图像进行形态操作。形<br>态学运算在图像处理领域常被用来进行图像分割，特征提取，有的文献也介绍了用形态学运算对图像进行滤波处理，而且效果很好。二值形态学是在集合理论的基础上定义的。<strong>二值形态学最基本的运算腐蚀和膨胀。膨胀和腐蚀是相反的一对操作，膨胀就是求局部最大值的操作，腐蚀就是求局部最小值的操作</strong>。这里需要先介绍结构元素的概念。结构元素也被称为核元素，是进行形态学运算的模板。在腐蚀或者膨胀的时候，通过结构元素在图像区域按约定的规则进行运算，然后将变换结果输出，最后就得到形态运算后的结果。常见的结构元素是扁平型的，即结构元素高度为 0，也有非扁平型结构元素。结构元素的形状也有很多种，比如矩形的，十字交叉形的，菱形的，圆形的和椭圆形的。在选择结构元素时，需要<br>根据具体的目的来选择。结构元素一个重要的参考点，也称为锚点，决定了对图像进行形态操作时，以哪一个点为基准点。结构元素的大小也对最后的形态运算结果有很大影响。比如 3×3 的和 5×5 的结构元素。在进行形态学操作时，较大<br>的结构元素可以获得更好的处理效果，但是通常会耗时很多，相反，较小的结构元素处理起来会很快，但是处理效果欠佳。实际运用中需要通过一定的实验来确定灰度图像的腐蚀和膨胀过程可通过灰度图像和结构元素的二元函数关系计算出<br>来。Top-hat 则是灰度图像与灰度腐蚀、膨胀相结合的一种复合运算。设 F(x, y) 表示输入图像的二元函数，S(x, y) 为结构元素，SD 表示结构元素的定义域，则 S 对F 的腐蚀（ FS ）和膨胀（ F S ）运算定义如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514085632902.png#pic_center" alt="image-20200505213016934"></p>
-<p>另外，灰度图像的开运算、闭运算是灰度腐蚀、膨胀相结合的复合运算，定义如下，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514085841495.png#pic_center" alt="image-20200505213413691"></p>
-<p>灰度图像的开运算是结构元素对灰度图像先腐蚀再膨胀，该运算常可用来去除灰度图像中相对于结构元素较小的高灰度区域，而对较大的亮区域则不做响应；灰度图像闭运算即结构元素对灰度图像先膨胀再腐蚀。基于上述灰度图像的一些<br>基本运算，Top-hat 变换定义为</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090141491.png#pic_center" alt="image-20200505213848350"></p>
-<p>从上式中可知，Top-hat 的基本原理是先通过结构元素 S 对图像 F 进行开运算，以此提取出图像背景区域的灰度图像，然后将原图像与开运算的结果作差后得到Top-hat 运算的结果。因为开运算带来的结果是放大了局部低亮度的区域，因此，<br>从原图中减去开运算后的图，得到的效果图突出了比原图轮廓周围的区域更明亮的区域。 </p>
-<p>采用 Top-hat 变换后的图像使光照不均图像得到了适当的灰度校正，有效地改善了缺陷图像的质量，便于后续图像处理。</p>
-<h3 id="2：图像滤波："><a href="#2：图像滤波：" class="headerlink" title="2：图像滤波："></a>2：图像滤波：</h3><p>带钢图像采集、传输阶段以及现场环境中的某些干扰因素（如粉尘、水雾）等都会给采集到的图像带来一定程度的噪声因此采集到的图像需进行滤波处理。图像滤波根据操作空间的不同分为空域滤波和频域滤波。空域滤波是在图像所在像素空间进行的。频域滤波是把图像看成二维信号，在频域进行操作。</p>
-<h4 id="1：均值滤波："><a href="#1：均值滤波：" class="headerlink" title="1：均值滤波："></a>1：均值滤波：</h4><p>均值滤波是一种领域增强算法，即用一个窗口在图像上滑动，然后求出该窗口覆盖区域内各个像素的灰度平均值，最后窗口中心位置的灰度值用图像区域的各个像素的均值来代替，常用的滤波窗口有 33、55，根据实际要处理的图像的要求选择不同的窗口模板。均值滤波用公式表示为：</p>
-<script type="math/tex; mode=display">
-g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度值， f(k,l) 为处理前模板内像素的灰度值，m为模板中包含当前像素在内的像素总个数。均值滤波不能很好的保护图像的细节，其在平滑消除噪声的同时将会使图像变得模糊，从而将严重改变缺陷区域的边缘灰度值，因此均值滤波往往应用在对图像处理要求不高的场合。 </p>
-<h4 id="2中值滤波："><a href="#2中值滤波：" class="headerlink" title="2中值滤波："></a>2中值滤波：</h4><p>中值滤波是一种基于排序统计理论的有效抑制噪声的非线性滤波方法，具体操作过程是采用一个滑动窗口在图像上依次滑动，将窗口内各点的灰度值按大小顺序排列，用平滑模板邻域内各点的中值来代替模板中心像素点的灰度值用公式表示如下：<img src="https://img-blog.csdnimg.cn/20200514090221324.png#pic_center" alt="image-20200505223915851"></p>
-<p>中值滤波在一定条件下能有效过滤掉脉冲噪声，但不适合细节太多的图像.</p>
-<h4 id="3-双边滤波："><a href="#3-双边滤波：" class="headerlink" title="3 双边滤波："></a>3 双边滤波：</h4><p>双边滤波是一种非线性滤波方法。该滤波方法考虑空域信息和灰度相似性，达到保边缘和去噪的目的。在双边滤波器中，输出像素的值依赖于邻域像素值的加权值组合，公式如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090341954.png#pic_center" alt="image-20200505225242495"></p>
-<p>而加权系数 lkjiw),,,( 取决于定义域核和值域核的乘积。两者相乘后，就会生产依赖于数据的双边滤波权重函数，如下所示</p>
-<p>：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090356402.png#pic_center" alt="image-20200505225311070"></p>
-<h3 id="3对缺陷进行分割："><a href="#3对缺陷进行分割：" class="headerlink" title="3对缺陷进行分割："></a>3对缺陷进行分割：</h3><h4 id="4-1-边缘检测"><a href="#4-1-边缘检测" class="headerlink" title="4.1 边缘检测"></a>4.1 边缘检测</h4><p>边缘检测是提取图像中灰度变化明显的部分，并据此确定缺陷区域的位置边缘检测首先检测出图像局部特征的不连续性，然后进行边缘连接，并通过封闭的边界实现缺陷区域的分割。 常用的边缘检测算子如 Sobel 算子、Roberts 算子、Prewitt 算子等。等有时间继续写，本人不善于进行时间管理。<br><img src="https://img-blog.csdnimg.cn/20200514090628429.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+                <h1 id="Python导入qtdesigner和pyuic"><a href="#Python导入qtdesigner和pyuic" class="headerlink" title="Python导入qtdesigner和pyuic"></a>Python导入qtdesigner和pyuic</h1><h2 id="1：cmd安装qtsdesigner和pyuic："><a href="#1：cmd安装qtsdesigner和pyuic：" class="headerlink" title="1：cmd安装qtsdesigner和pyuic："></a>1：cmd安装qtsdesigner和pyuic：</h2><pre class=" language-lang-python"><code class="language-lang-python">pip install pyqt5
+pip install pyqt5_tools
+</code></pre>
+<h2 id="2-通过Pycharm导入pyqt5："><a href="#2-通过Pycharm导入pyqt5：" class="headerlink" title="2:通过Pycharm导入pyqt5："></a>2:通过Pycharm导入pyqt5：</h2><p>我的Pycharm是汉化过的，所以找到设置-外部工具：点击加号添加：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200420224710879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221334912"></p>
+<p>会出来以下的对话框：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200420224609811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221742615"></p>
+<p>name自定义，最好能是你自己定义的跟这个外部工具有关的。program为designer.exe所在的路径,通常情况为：你安装的python目录下的：\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe。剩下不用管即可，</p>
+<p>将保存的ui文件转换为py文件可以添加另外一个脚本，也就是pyuic.py.</p>
+<p>Name：和上面一样，随便填。这里填PyUIC</p>
+<p>Program：填自己的<strong>python路径</strong>，不知道的在(cmd)终端输入命令where python 查询。</p>
+<p>Parameters：首先放入自己的pyuic.py的路径。以后文件路径不知道的在我的电脑搜，我就不再重复了。<strong>空一个格</strong>后直接粘贴我的这个就行。<strong>$FileName$ -o $FileNameWithoutExtension$.py</strong> 这一行命令的意思应该是用pyuic.py 将文件名.ui文件转换成文件名.py文件。</p>
+<p>Working directory：$ProjectFileDir$。</p>
+<p>完成后转换可能会报错误，这里只需要修改俩个地方即可：</p>
+<p>1）主义在pyuic.py文件路径和$FileName$ -o $FileNameWithoutExtension$.py之间<strong>加空格</strong>。不然会报错。</p>
+<p>2）from .driver import Driver 报错，将此行改成 <strong>from PyQt5.uic.driver import Driver</strong></p>
+<p>同理将下面那个报错也修改成   <strong>from PyQt5.uic.exceptions import NoSuchClassError, NoSuchWidgetError</strong></p>
+<p>以上就完成了。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -603,8 +599,8 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                                    <span class="chip bg-color">缺陷检测</span>
+                                <a href="/WYW1314/tags/qtdesigner/">
+                                    <span class="chip bg-color">qtdesigner</span>
                                 </a>
                             
                         </div>
@@ -1039,34 +1035,31 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/WYW1314/posts/37573.html">
+                <a href="/WYW1314/posts/63933.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/11.jpg" class="responsive-img" alt="Python导入qtdesigner和pyuic">
+                        <img src="/WYW1314/medias/featureimages/20.jpg" class="responsive-img" alt="心情Note">
                         
-                        <span class="card-title">Python导入qtdesigner和pyuic</span>
+                        <span class="card-title">心情Note</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python导入qtdesigner和pyuic1：cmd安装qtsdesigner和pyuic：pip install pyqt5
-pip install pyqt5_tools
-
-2:通过Pycharm导入pyqt5：我的Pycharm
+                            心情Note：疫情这段期间发生了太多事情，这半年。先是四月初被女朋友分手，好不容易从里面走出来，接下来因为项目的事情得罪了俩个老师。接下来自己刚开始从大一开始呆的社团感觉变味了，想着想要离开社团。终于在前天晚上开会后坚定了这个想法。自己也算
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-09
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
-                                    qt界面
+                            <a href="/WYW1314/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    生活随笔
                                 </a>
                             
                             
@@ -1076,8 +1069,8 @@ pip install pyqt5_tools
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/qtdesigner/">
-                        <span class="chip bg-color">qtdesigner</span>
+                    <a href="/WYW1314/tags/%E5%BF%83%E6%83%85/">
+                        <span class="chip bg-color">心情</span>
                     </a>
                     
                 </div>
@@ -1091,32 +1084,32 @@ pip install pyqt5_tools
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/47649.html">
+                <a href="/WYW1314/posts/32968.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/12.jpg" class="responsive-img" alt="Python自动部署码云">
+                        <img src="/WYW1314/medias/featureimages/1.jpg" class="responsive-img" alt="钢铁表面缺陷检测">
                         
-                        <span class="card-title">Python自动部署码云</span>
+                        <span class="card-title">钢铁表面缺陷检测</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python自动部署码云：1：大概思路：其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。
-2:下载chromedriver.exe文件：首先打开你的
+                            钢铁表面缺陷检测勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。
+4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
+                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
+                                    图像处理
                                 </a>
                             
                             
@@ -1126,8 +1119,8 @@ pip install pyqt5_tools
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">python 博客</span>
+                    <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
+                        <span class="chip bg-color">缺陷检测</span>
                     </a>
                     
                 </div>
