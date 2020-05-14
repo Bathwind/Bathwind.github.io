@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-05-14T01:08:37.319Z</updated>
+  <updated>2020-05-14T13:44:14.950Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>梯度下降理解</title>
-    <link href="http://wyw1314.gitee.io/posts/7214.html"/>
-    <id>http://wyw1314.gitee.io/posts/7214.html</id>
-    <published>2020-05-14T00:23:14.232Z</published>
-    <updated>2020-05-14T01:08:37.319Z</updated>
+    <title>钢铁表面缺陷检测</title>
+    <link href="http://wyw1314.gitee.io/posts/32968.html"/>
+    <id>http://wyw1314.gitee.io/posts/32968.html</id>
+    <published>2020-05-14T13:44:00.000Z</published>
+    <updated>2020-05-14T13:44:14.950Z</updated>
     
     <summary type="html">
     
@@ -29,15 +29,17 @@
       
         
         
-          &lt;h1 id=&quot;梯度下降理解&quot;&gt;&lt;a href=&quot;#梯度下降理解&quot; class=&quot;headerlink&quot; title=&quot;梯度下降理解:&quot;&gt;&lt;/a&gt;梯度下降理解:&lt;/h1&gt;&lt;p&gt;首先超级感谢在知乎看到了这篇大佬的帖子。看完后对这个梯度下降有了更深的了解&lt;/p&gt;
-&lt;script&gt;
-
+          &lt;h1 id=&quot;梯度下降法理解&quot;&gt;&lt;a href=&quot;#梯度下降法理解&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
+      <category term="机器学习" scheme="http://wyw1314.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="梯度下降" scheme="http://wyw1314.gitee.io/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"/>
     
   </entry>
   
@@ -100,7 +102,7 @@
     <link href="http://wyw1314.gitee.io/posts/32968.html"/>
     <id>http://wyw1314.gitee.io/posts/32968.html</id>
     <published>2020-04-20T14:05:00.000Z</published>
-    <updated>2020-05-14T01:12:32.550Z</updated>
+    <updated>2020-05-14T01:24:14.384Z</updated>
     
     <summary type="html">
     
