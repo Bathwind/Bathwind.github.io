@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-04-20T14:57:58.818Z</updated>
+  <updated>2020-05-14T00:23:14.232Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python导入qtdesigner和pyuic</title>
-    <link href="http://wyw1314.gitee.io/posts/37573.html"/>
-    <id>http://wyw1314.gitee.io/posts/37573.html</id>
-    <published>2020-04-20T14:05:00.000Z</published>
-    <updated>2020-04-20T14:57:58.818Z</updated>
+    <title>梯度下降理解</title>
+    <link href="http://wyw1314.gitee.io/posts/7214.html"/>
+    <id>http://wyw1314.gitee.io/posts/7214.html</id>
+    <published>2020-05-14T00:23:14.232Z</published>
+    <updated>2020-05-14T00:23:14.232Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,59 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Python导入qtdesigner和pyuic&quot;&gt;&lt;a href=&quot;#Python导入qtdesigner和pyuic&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;梯度下降理解&quot;&gt;&lt;a href=&quot;#梯度下降理解&quot; class=&quot;headerlink&quot; title=&quot;梯度下降理解:&quot;&gt;&lt;/a&gt;梯度下降理解:&lt;/h1&gt;&lt;p&gt;首先超级感谢在知乎看到了这篇大佬的帖子。看完后对这个梯度下降有了更深的了解&lt;/p&gt;
+&lt;script&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>心情Note</title>
+    <link href="http://wyw1314.gitee.io/posts/63933.html"/>
+    <id>http://wyw1314.gitee.io/posts/63933.html</id>
+    <published>2020-05-09T01:01:00.000Z</published>
+    <updated>2020-05-14T00:54:05.845Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;心情Note：&quot;&gt;&lt;a href=&quot;#心情Note：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活随笔" scheme="http://wyw1314.gitee.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="心情" scheme="http://wyw1314.gitee.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python导入qtdesigner和pyuic</title>
+    <link href="http://wyw1314.gitee.io/posts/37573.html"/>
+    <id>http://wyw1314.gitee.io/posts/37573.html</id>
+    <published>2020-04-20T14:05:00.000Z</published>
+    <updated>2020-04-20T15:09:42.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Python导入qtdesigner和pyuic&quot;&gt;&lt;a href=&quot;#Python导入qtdesigner和pyuic&quot; class=&quot;headerlink&quot;
         
       
     
@@ -40,6 +92,33 @@
     
     
       <category term="qtdesigner" scheme="http://wyw1314.gitee.io/tags/qtdesigner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>钢铁表面缺陷检测</title>
+    <link href="http://wyw1314.gitee.io/posts/37573.html"/>
+    <id>http://wyw1314.gitee.io/posts/37573.html</id>
+    <published>2020-04-20T14:05:00.000Z</published>
+    <updated>2020-05-14T01:07:02.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;钢铁表面缺陷检测&quot;&gt;&lt;a href=&quot;#钢铁表面缺陷检测&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="http://wyw1314.gitee.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="缺陷检测" scheme="http://wyw1314.gitee.io/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/"/>
     
   </entry>
   
@@ -56,7 +135,7 @@
       
         
         
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;Python自动部署码云：&quot;&gt;&lt;a href=&quot;#Python自动部署码云：&quot; class=&quot;headerlink&quot; title=&quot;Python自动部署码云：&quot;&gt;&lt;/a&gt;Python自动部署码云：&lt;/h1&gt;&lt;h2
+          &lt;h1 id=&quot;Python自动部署码云：&quot;&gt;&lt;a href=&quot;#Python自动部署码云：&quot; class=&quot;headerlink&quot; title=&quot;Python自动部署码云：&quot;&gt;&lt;/a&gt;Python自动部署码云：&lt;/h1&gt;&lt;h2 id=&quot;1：大概思路：&quot;&gt;&lt;a
         
       
     
