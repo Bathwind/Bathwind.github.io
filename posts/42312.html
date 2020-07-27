@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python导入qtdesigner和pyuic, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="Pyinstaller将Py文件打包为EXE可执行文件, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python导入qtdesigner和pyuic | 嵌入式的一只菜鸟</title>
+    <title>Pyinstaller将Py文件打包为EXE可执行文件 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python导入qtdesigner和pyuic</h1>
+                    <h1 class="description center-align post-title">Pyinstaller将Py文件打包为EXE可执行文件</h1>
                 </div>
             </div>
         </div>
@@ -461,8 +461,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/qtdesigner/">
-                                <span class="chip bg-color">qtdesigner</span>
+                            <a href="/WYW1314/tags/pyinstaller/">
+                                <span class="chip bg-color">pyinstaller</span>
                             </a>
                         
                     </div>
@@ -486,28 +486,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-07-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-26
+                    2020-07-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    411
+                    582
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -522,24 +522,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Python导入qtdesigner和pyuic"><a href="#Python导入qtdesigner和pyuic" class="headerlink" title="Python导入qtdesigner和pyuic"></a>Python导入qtdesigner和pyuic</h1><h2 id="1：cmd安装qtsdesigner和pyuic："><a href="#1：cmd安装qtsdesigner和pyuic：" class="headerlink" title="1：cmd安装qtsdesigner和pyuic："></a>1：cmd安装qtsdesigner和pyuic：</h2><pre class=" language-lang-python"><code class="language-lang-python">pip install pyqt5
-pip install pyqt5_tools
-</code></pre>
-<h2 id="2-通过Pycharm导入pyqt5："><a href="#2-通过Pycharm导入pyqt5：" class="headerlink" title="2:通过Pycharm导入pyqt5："></a>2:通过Pycharm导入pyqt5：</h2><p>我的Pycharm是汉化过的，所以找到设置-外部工具：点击加号添加：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200420224710879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221334912"></p>
-<p>会出来以下的对话框：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200420224609811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200420221742615"></p>
-<p>name自定义，最好能是你自己定义的跟这个外部工具有关的。program为designer.exe所在的路径,通常情况为：你安装的python目录下的：\Lib\site-packages\pyqt5_tools\Qt\bin\designer.exe。剩下不用管即可，</p>
-<p>将保存的ui文件转换为py文件可以添加另外一个脚本，也就是pyuic.py.</p>
-<p>Name：和上面一样，随便填。这里填PyUIC</p>
-<p>Program：填自己的<strong>python路径</strong>，不知道的在(cmd)终端输入命令where python 查询。</p>
-<p>Parameters：首先放入自己的pyuic.py的路径。以后文件路径不知道的在我的电脑搜，我就不再重复了。<strong>空一个格</strong>后直接粘贴我的这个就行。<strong>$FileName$ -o $FileNameWithoutExtension$.py</strong> 这一行命令的意思应该是用pyuic.py 将文件名.ui文件转换成文件名.py文件。</p>
-<p>Working directory：$ProjectFileDir$。</p>
-<p>完成后转换可能会报错误，这里只需要修改俩个地方即可：</p>
-<p>1）主义在pyuic.py文件路径和$FileName$ -o $FileNameWithoutExtension$.py之间<strong>加空格</strong>。不然会报错。</p>
-<p>2）from .driver import Driver 报错，将此行改成 <strong>from PyQt5.uic.driver import Driver</strong></p>
-<p>同理将下面那个报错也修改成   <strong>from PyQt5.uic.exceptions import NoSuchClassError, NoSuchWidgetError</strong></p>
-<p>以上就完成了。</p>
+                <h1 id="Pyinstaller将Py文件打包为EXE可执行文件"><a href="#Pyinstaller将Py文件打包为EXE可执行文件" class="headerlink" title="Pyinstaller将Py文件打包为EXE可执行文件"></a>Pyinstaller将Py文件打包为EXE可执行文件</h1><h2 id="1-python作为一门解释型脚本语言，它有三种发布方式"><a href="#1-python作为一门解释型脚本语言，它有三种发布方式" class="headerlink" title="1:python作为一门解释型脚本语言，它有三种发布方式"></a>1:python作为一门解释型脚本语言，它有三种发布方式</h2><ol>
+<li>.py文件 : 源码文件，运行需要使用者安装Python环境并且安装依赖的各种库</li>
+<li>.pyc文件：pyc文件是Python解释器可以识别的二进制码，可跨平台的，需要使用者安装相应版本的Python和依赖库。</li>
+<li>可执行文件：不需要安装python环境和依赖库,可针对不同平台需要打包不同的可执行文件（Windows,Linux,Mac,…）</li>
+</ol>
+<h2 id="2-pyinstaller原理详解"><a href="#2-pyinstaller原理详解" class="headerlink" title="2:pyinstaller原理详解"></a>2:pyinstaller原理详解</h2><ol>
+<li>PyInstaller工具可以把python解析器和脚本打包成一个可执行的文件，并不是编译成真正的机器码，打包成一个可执行文件后运行效率可能会降低，好处就是在使用者的机器上可以不用安装python和你的脚本依赖的库。 2. 利用PyInstaller对指定的的脚本打包时，会先分析脚本所依赖的其他脚本，然后根据导包路径去查找，把所有相关的脚本收集起来，包括Python解析器，然后根据你的命令参数可分别生成文件夹，或者打包成一个可执行文件。 3. 无论是生成的文件夹里的可执行文件或者只打包成一个可执行文件都可以直接运行，前者需要把整个文件夹都给别人。</li>
+</ol>
+<h2 id="3：pyinstaller库的安装："><a href="#3：pyinstaller库的安装：" class="headerlink" title="3：pyinstaller库的安装："></a>3：pyinstaller库的安装：</h2><h3 id="1-PyInstaller在windows下的安装"><a href="#1-PyInstaller在windows下的安装" class="headerlink" title="1. PyInstaller在windows下的安装"></a>1. PyInstaller在windows下的安装</h3><p>我安装的pip命令比较奇葩，明明电脑上只有一个Python3.7，但是单独用pip命令安装的时候安装的包自动安装到anaconda下的目录下，贼头大，暂且没找到什么原因，一般直接用pip命令安装就可以了，</p>
+<p><code>pip install PyInstaller</code> ,window上还需要pywin32的支持。一般以上这条指令后，电脑会自动安装pywin32依赖库。</p>
+<h2 id="4：pyinstaller命令参数详解"><a href="#4：pyinstaller命令参数详解" class="headerlink" title="4：pyinstaller命令参数详解"></a>4：pyinstaller命令参数详解</h2><p><img src="https://img-blog.csdnimg.cn/20200727094426266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>与生成结果有关参数：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200727094716542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>window下特有的参数：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200727095155971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>基本语法指令：</p>
+<p><code>PyInstaller -F -w -i  xxx.ico dev.py --hidden-import=pandas._libs.tslibs.timedeltas</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -583,7 +582,7 @@ pip install pyqt5_tools
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/WYW1314/posts/37573.html">http://wyw1314.gitee.io/WYW1314/posts/37573.html</a>
+                    <a href="http://wyw1314.gitee.io/WYW1314/posts/42312.html">http://wyw1314.gitee.io/WYW1314/posts/42312.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,8 +620,8 @@ pip install pyqt5_tools
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/qtdesigner/">
-                                    <span class="chip bg-color">qtdesigner</span>
+                                <a href="/WYW1314/tags/pyinstaller/">
+                                    <span class="chip bg-color">pyinstaller</span>
                                 </a>
                             
                         </div>
@@ -1053,46 +1052,50 @@ pip install pyqt5_tools
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/WYW1314/posts/63933.html">
+                <a href="/WYW1314/posts/42312.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/20.jpg" class="responsive-img" alt="心情Note">
+                        <img src="/WYW1314/medias/featureimages/2.jpg" class="responsive-img" alt="Pyinstaller将Py文件打包为EXE可执行文件">
                         
-                        <span class="card-title">心情Note</span>
+                        <span class="card-title">Pyinstaller将Py文件打包为EXE可执行文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            心情Note：疫情这段期间发生了太多事情，这半年。先是四月初被女朋友分手，好不容易从里面走出来，接下来因为项目的事情得罪了俩个老师。接下来自己刚开始从大一开始呆的社团感觉变味了，想着想要离开社团。终于在前天晚上开会后坚定了这个想法。自己也算
+                            Pyinstaller将Py文件打包为EXE可执行文件1:python作为一门解释型脚本语言，它有三种发布方式
+.py文件 : 源码文件，运行需要使用者安装Python环境并且安装依赖的各种库
+.pyc文件：pyc文件是Python解释器可
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                    qt界面
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E5%BF%83%E6%83%85/">
-                        <span class="chip bg-color">心情</span>
+                    <a href="/WYW1314/tags/pyinstaller/">
+                        <span class="chip bg-color">pyinstaller</span>
                     </a>
                     
                 </div>
@@ -1106,32 +1109,32 @@ pip install pyqt5_tools
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/32968.html">
+                <a href="/WYW1314/posts/11865.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/1.jpg" class="responsive-img" alt="钢铁表面缺陷检测">
+                        <img src="/WYW1314/medias/featureimages/20.jpg" class="responsive-img" alt="解决Pyqt5每次修改Ui界面对应的Py文件都要改变">
                         
-                        <span class="card-title">钢铁表面缺陷检测</span>
+                        <span class="card-title">解决Pyqt5每次修改Ui界面对应的Py文件都要改变</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            钢铁表面缺陷检测勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。
-4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路
+                            鸽王回来了自己的博客也不知道鸽了多久，只记得从六月份打完数学建模后就接着期末考试。期末考试完然后就去接着学车，考驾照，这个月终于要把驾照的事情给忙完了，哈哈哈，开心:happy:，可以接着在家安心宅着写程序了。
+一直以来使用pyqt5时候会
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                    qt界面
                                 </a>
                             
                             
@@ -1141,8 +1144,8 @@ pip install pyqt5_tools
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                        <span class="chip bg-color">缺陷检测</span>
+                    <a href="/WYW1314/tags/qtdesigner/">
+                        <span class="chip bg-color">qtdesigner</span>
                     </a>
                     
                 </div>

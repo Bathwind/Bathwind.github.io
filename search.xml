@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Pyinstaller将Py文件打包为EXE可执行文件</title>
+    <url>/WYW1314/posts/42312.html</url>
+    <content><![CDATA[<h1 id="Pyinstaller将Py文件打包为EXE可执行文件"><a href="#Pyinstaller将Py文件打包为EXE可执行文件" class="headerlink" title="Pyinstaller将Py文件打包为EXE可执行文件"></a>Pyinstaller将Py文件打包为EXE可执行文件</h1><h2 id="1-python作为一门解释型脚本语言，它有三种发布方式"><a href="#1-python作为一门解释型脚本语言，它有三种发布方式" class="headerlink" title="1:python作为一门解释型脚本语言，它有三种发布方式"></a>1:python作为一门解释型脚本语言，它有三种发布方式</h2><ol>
+<li>.py文件 : 源码文件，运行需要使用者安装Python环境并且安装依赖的各种库</li>
+<li>.pyc文件：pyc文件是Python解释器可以识别的二进制码，可跨平台的，需要使用者安装相应版本的Python和依赖库。</li>
+<li>可执行文件：不需要安装python环境和依赖库,可针对不同平台需要打包不同的可执行文件（Windows,Linux,Mac,…）</li>
+</ol>
+<h2 id="2-pyinstaller原理详解"><a href="#2-pyinstaller原理详解" class="headerlink" title="2:pyinstaller原理详解"></a>2:pyinstaller原理详解</h2><ol>
+<li>PyInstaller工具可以把python解析器和脚本打包成一个可执行的文件，并不是编译成真正的机器码，打包成一个可执行文件后运行效率可能会降低，好处就是在使用者的机器上可以不用安装python和你的脚本依赖的库。 2. 利用PyInstaller对指定的的脚本打包时，会先分析脚本所依赖的其他脚本，然后根据导包路径去查找，把所有相关的脚本收集起来，包括Python解析器，然后根据你的命令参数可分别生成文件夹，或者打包成一个可执行文件。 3. 无论是生成的文件夹里的可执行文件或者只打包成一个可执行文件都可以直接运行，前者需要把整个文件夹都给别人。</li>
+</ol>
+<h2 id="3：pyinstaller库的安装："><a href="#3：pyinstaller库的安装：" class="headerlink" title="3：pyinstaller库的安装："></a>3：pyinstaller库的安装：</h2><h3 id="1-PyInstaller在windows下的安装"><a href="#1-PyInstaller在windows下的安装" class="headerlink" title="1. PyInstaller在windows下的安装"></a>1. PyInstaller在windows下的安装</h3><p>我安装的pip命令比较奇葩，明明电脑上只有一个Python3.7，但是单独用pip命令安装的时候安装的包自动安装到anaconda下的目录下，贼头大，暂且没找到什么原因，一般直接用pip命令安装就可以了，</p>
+<p><code>pip install PyInstaller</code> ,window上还需要pywin32的支持。一般以上这条指令后，电脑会自动安装pywin32依赖库。</p>
+<h2 id="4：pyinstaller命令参数详解"><a href="#4：pyinstaller命令参数详解" class="headerlink" title="4：pyinstaller命令参数详解"></a>4：pyinstaller命令参数详解</h2><p><img src="https://img-blog.csdnimg.cn/20200727094426266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>与生成结果有关参数：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200727094716542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>window下特有的参数：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200727095155971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<p>基本语法指令：</p>
+<p><code>PyInstaller -F -w -i  xxx.ico dev.py --hidden-import=pandas._libs.tslibs.timedeltas</code></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>qt界面</category>
+      </categories>
+      <tags>
+        <tag>pyinstaller</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决Pyqt5每次修改Ui界面对应的Py文件都要改变</title>
     <url>/WYW1314/posts/11865.html</url>
     <content><![CDATA[<h1 id="鸽王回来了"><a href="#鸽王回来了" class="headerlink" title="鸽王回来了"></a>鸽王回来了</h1><p>自己的博客也不知道鸽了多久，只记得从六月份打完数学建模后就接着期末考试。期末考试完然后就去接着学车，考驾照，这个月终于要把驾照的事情给忙完了，哈哈哈，开心:happy:，可以接着在家安心宅着写程序了。</p>
