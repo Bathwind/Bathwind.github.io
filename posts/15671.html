@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="钢铁表面缺陷检测, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="控制台信息转移到textedit控件上显示, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>钢铁表面缺陷检测 | 嵌入式的一只菜鸟</title>
+    <title>控制台信息转移到textedit控件上显示 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">钢铁表面缺陷检测</h1>
+                    <h1 class="description center-align post-title">控制台信息转移到textedit控件上显示</h1>
                 </div>
             </div>
         </div>
@@ -461,8 +461,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                                <span class="chip bg-color">缺陷检测</span>
+                            <a href="/WYW1314/tags/qtdesigner/">
+                                <span class="chip bg-color">qtdesigner</span>
                             </a>
                         
                     </div>
@@ -473,8 +473,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                图像处理
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                qt界面
                             </a>
                         
                     </div>
@@ -486,28 +486,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-07-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-14
+                    2020-07-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    6 分
                 </div>
                 
 
@@ -522,28 +522,70 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="钢铁表面缺陷检测"><a href="#钢铁表面缺陷检测" class="headerlink" title="钢铁表面缺陷检测"></a>钢铁表面缺陷检测</h1><p><u><del><strong>勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。</strong></del></u></p>
-<p>4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路，自己去找了找网上相关的论文。其中有一篇挺好的。照着里面的思路慢慢去做。发现识别出来的效果还行。</p>
-<h2 id="主要方法："><a href="#主要方法：" class="headerlink" title="主要方法："></a>主要方法：</h2><h3 id="1对图片进行top-hat变换："><a href="#1对图片进行top-hat变换：" class="headerlink" title="1对图片进行top-hat变换："></a>1对图片进行top-hat变换：</h3><p>Top-hat 去光照不均图像增强方法 数学形态学是在集合的层次上来描述和分析图像，着重研究图像的几何结构。<br>腐蚀和膨胀是形态学的两种最基本的运算，从数学角度来说，就是将图像与结构元素进行卷积。常见的数学形态学有二值形态学和灰度形态学。灰度形态学就是直接对灰度图像进行形态操作，二值形态学是对二值化的图像进行形态操作。形<br>态学运算在图像处理领域常被用来进行图像分割，特征提取，有的文献也介绍了用形态学运算对图像进行滤波处理，而且效果很好。二值形态学是在集合理论的基础上定义的。<strong>二值形态学最基本的运算腐蚀和膨胀。膨胀和腐蚀是相反的一对操作，膨胀就是求局部最大值的操作，腐蚀就是求局部最小值的操作</strong>。这里需要先介绍结构元素的概念。结构元素也被称为核元素，是进行形态学运算的模板。在腐蚀或者膨胀的时候，通过结构元素在图像区域按约定的规则进行运算，然后将变换结果输出，最后就得到形态运算后的结果。常见的结构元素是扁平型的，即结构元素高度为 0，也有非扁平型结构元素。结构元素的形状也有很多种，比如矩形的，十字交叉形的，菱形的，圆形的和椭圆形的。在选择结构元素时，需要<br>根据具体的目的来选择。结构元素一个重要的参考点，也称为锚点，决定了对图像进行形态操作时，以哪一个点为基准点。结构元素的大小也对最后的形态运算结果有很大影响。比如 3×3 的和 5×5 的结构元素。在进行形态学操作时，较大<br>的结构元素可以获得更好的处理效果，但是通常会耗时很多，相反，较小的结构元素处理起来会很快，但是处理效果欠佳。实际运用中需要通过一定的实验来确定灰度图像的腐蚀和膨胀过程可通过灰度图像和结构元素的二元函数关系计算出<br>来。Top-hat 则是灰度图像与灰度腐蚀、膨胀相结合的一种复合运算。设 F(x, y) 表示输入图像的二元函数，S(x, y) 为结构元素，SD 表示结构元素的定义域，则 S 对F 的腐蚀（ FS ）和膨胀（ F S ）运算定义如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514085632902.png#pic_center" alt="image-20200505213016934"></p>
-<p>另外，灰度图像的开运算、闭运算是灰度腐蚀、膨胀相结合的复合运算，定义如下，</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514085841495.png#pic_center" alt="image-20200505213413691"></p>
-<p>灰度图像的开运算是结构元素对灰度图像先腐蚀再膨胀，该运算常可用来去除灰度图像中相对于结构元素较小的高灰度区域，而对较大的亮区域则不做响应；灰度图像闭运算即结构元素对灰度图像先膨胀再腐蚀。基于上述灰度图像的一些<br>基本运算，Top-hat 变换定义为</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090141491.png#pic_center" alt="image-20200505213848350"></p>
-<p>从上式中可知，Top-hat 的基本原理是先通过结构元素 S 对图像 F 进行开运算，以此提取出图像背景区域的灰度图像，然后将原图像与开运算的结果作差后得到Top-hat 运算的结果。因为开运算带来的结果是放大了局部低亮度的区域，因此，<br>从原图中减去开运算后的图，得到的效果图突出了比原图轮廓周围的区域更明亮的区域。 </p>
-<p>采用 Top-hat 变换后的图像使光照不均图像得到了适当的灰度校正，有效地改善了缺陷图像的质量，便于后续图像处理。</p>
-<h3 id="2：图像滤波："><a href="#2：图像滤波：" class="headerlink" title="2：图像滤波："></a>2：图像滤波：</h3><p>带钢图像采集、传输阶段以及现场环境中的某些干扰因素（如粉尘、水雾）等都会给采集到的图像带来一定程度的噪声因此采集到的图像需进行滤波处理。图像滤波根据操作空间的不同分为空域滤波和频域滤波。空域滤波是在图像所在像素空间进行的。频域滤波是把图像看成二维信号，在频域进行操作。</p>
-<h4 id="1：均值滤波："><a href="#1：均值滤波：" class="headerlink" title="1：均值滤波："></a>1：均值滤波：</h4><p>均值滤波是一种领域增强算法，即用一个窗口在图像上滑动，然后求出该窗口覆盖区域内各个像素的灰度平均值，最后窗口中心位置的灰度值用图像区域的各个像素的均值来代替，常用的滤波窗口有 33、55，根据实际要处理的图像的要求选择不同的窗口模板。均值滤波用公式表示为：</p>
-<script type="math/tex; mode=display">
-g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度值， f(k,l) 为处理前模板内像素的灰度值，m为模板中包含当前像素在内的像素总个数。均值滤波不能很好的保护图像的细节，其在平滑消除噪声的同时将会使图像变得模糊，从而将严重改变缺陷区域的边缘灰度值，因此均值滤波往往应用在对图像处理要求不高的场合。 </p>
-<h4 id="2中值滤波："><a href="#2中值滤波：" class="headerlink" title="2中值滤波："></a>2中值滤波：</h4><p>中值滤波是一种基于排序统计理论的有效抑制噪声的非线性滤波方法，具体操作过程是采用一个滑动窗口在图像上依次滑动，将窗口内各点的灰度值按大小顺序排列，用平滑模板邻域内各点的中值来代替模板中心像素点的灰度值用公式表示如下：<img src="https://img-blog.csdnimg.cn/20200514090221324.png#pic_center" alt="image-20200505223915851"></p>
-<p>中值滤波在一定条件下能有效过滤掉脉冲噪声，但不适合细节太多的图像.</p>
-<h4 id="3-双边滤波："><a href="#3-双边滤波：" class="headerlink" title="3 双边滤波："></a>3 双边滤波：</h4><p>双边滤波是一种非线性滤波方法。该滤波方法考虑空域信息和灰度相似性，达到保边缘和去噪的目的。在双边滤波器中，输出像素的值依赖于邻域像素值的加权值组合，公式如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090341954.png#pic_center" alt="image-20200505225242495"></p>
-<p>而加权系数 lkjiw),,,( 取决于定义域核和值域核的乘积。两者相乘后，就会生产依赖于数据的双边滤波权重函数，如下所示</p>
-<p>：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200514090356402.png#pic_center" alt="image-20200505225311070"></p>
-<h3 id="3对缺陷进行分割："><a href="#3对缺陷进行分割：" class="headerlink" title="3对缺陷进行分割："></a>3对缺陷进行分割：</h3><h4 id="4-1-边缘检测"><a href="#4-1-边缘检测" class="headerlink" title="4.1 边缘检测"></a>4.1 边缘检测</h4><p>边缘检测是提取图像中灰度变化明显的部分，并据此确定缺陷区域的位置边缘检测首先检测出图像局部特征的不连续性，然后进行边缘连接，并通过封闭的边界实现缺陷区域的分割。 常用的边缘检测算子如 Sobel 算子、Roberts 算子、Prewitt 算子等。等有时间继续写，本人不善于进行时间管理。<br><img src="https://img-blog.csdnimg.cn/20200514090628429.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+                <h1 id="控制台信息转移到textedit控件上显示"><a href="#控制台信息转移到textedit控件上显示" class="headerlink" title="控制台信息转移到textedit控件上显示"></a>控制台信息转移到textedit控件上显示</h1><p>因为大创要做一个人脸测温的项目部署到树莓派上，所以界面是必须的，<code>pyqt5</code>比较幸运的之前我也接触过，由于需要将控制台输出的结果转移到界面上便于调试和观察，实现的具体效果为：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200730192343636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>实现的具体效果大概就是这个样子，实际在程序里面写的时候还是用<code>printf()</code>语句去打印，只不过相当于把<code>printf</code>打印的地方换了一个地方输出。<br>程序里面涉及到了sys模块,sys这个模块是python中一个很重要的模块。下面是sys比较常用的函数列表：</p>
+<p><code>sys.argv: 实现从程序外部向程序传递参数。</code><br><code>sys.exit([arg]): 程序中间的退出，arg=0为正常退出。</code><br><code>sys.getdefaultencoding(): 获取系统当前编码，一般默认为ascii。</code><br><code>sys.setdefaultencoding(): 设置系统默认编码，执行dir（sys）时不会看到这个方法，在解释器中执行不通过，可以先执行reload(sys)，在执行 setdefaultencoding('utf8')，此时将系统默认编码设置为utf8。（见设置系统默认编码 ）</code><br><code>sys.getfilesystemencoding(): 获取文件系统使用编码方式，Windows下返回'mbcs'，mac下返回'utf-8'.</code><br><code>sys.path: 获取指定模块搜索路径的字符串集合，可以将写好的模块放在得到的某个路径下，就可以在程序中import时正确找到。</code><br><code>sys.platform: 获取当前系统平台。</code><br><code>sys.stdin,sys.stdout,sys.stderr: stdin , stdout , 以及stderr 变量包含与标准I/O 流对应的流对象. 如果需要更好地控制输出,而print 不能满足你的要求, 它们就是你所需要的. 你也可以替换它们, 这时候你就可以重定向输出和输入到其它设备( device ), 或者以非标准的方式处理它们</code></p>
+<p>思路的话参考的网上其他大佬的程序，</p>
+<h2 id="1：定义一个类和定义一个信号和槽"><a href="#1：定义一个类和定义一个信号和槽" class="headerlink" title="1：定义一个类和定义一个信号和槽"></a>1：定义一个类和定义一个信号和槽</h2><p>具体思路是首先定义一个类，程序具体为：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">class EmittingStr(QtCore.QObject):
+        textWritten = QtCore.pyqtSignal(str)  # 定义一个str的信号
+        def write(self, text):
+            self.textWritten.emit(str(text))
+            loop = QEventLoop()
+            QTimer.singleShot(1000, loop.quit)
+            loop.exec_()
+</code></pre>
+<p><code>QtCore.pyqtSignal</code>的作用是创建一个<code>str</code>的信号，之后就对这个创建的信号进行操作，这部分又涉及到了<code>Pyqt5</code>中的信号与槽的机制的知识，<u><del>莫名觉得又挖了一个坑进去</del></u>。下面可能废话比较多，主要讲讲信号与槽的机制原理：</p>
+<p>下面是信号与槽机制的示意图：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200730205314124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>当事件或者状态发生改变时，就会发出信号，同时的话，信号也会触发所有与这个事件(信号)相关的函数(槽)，信号与槽的话可以多对多的关系，一个信号可以连接多个槽，一个槽也可以监听多个信号。</p>
+<p>由于<code>Pyqt</code>的内置信号是自动定义的。使用<code>QtCore.pyqtSignal()</code>函数可以为<code>Qobject</code>创建一个信号，使用这个函数可以自定义信号的属性，使用这个函数创建信号时候，信号可以传递多个参数，并指定信号传递参数的类型，参数类型必须是标准的Python数据类型(字符串，日期，布尔类型，数字，列表，元组和字典)。信号与槽的运用我打算单独再写出一篇。又挖了一个大坑，啊哈哈哈哈，o(<em>￣︶￣</em>)o。</p>
+<p>程序下面一句自定义了一个write函数，第一句emit函数的作用就是可以发射一个信号，这个步骤也是信号与槽的必须的一个步骤。</p>
+<p><code>QEventLoop</code>这个函数的作用就是创建一个局部的循环。</p>
+<ul>
+<li><p>创建事件循环</p>
+</li>
+<li><p>启动定时器，让其<code>100ms</code>后触发事件循环的quit()槽</p>
+</li>
+<li><p>启动事件循环</p>
+</li>
+</ul>
+<h2 id="2：写一个关于操控textedit控件的函数："><a href="#2：写一个关于操控textedit控件的函数：" class="headerlink" title="2：写一个关于操控textedit控件的函数："></a>2：写一个关于操控<code>textedit</code>控件的函数：</h2><pre class=" language-lang-python"><code class="language-lang-python">   def outputWritten(self, text):
+        # self.textEdit.clear()
+        cursor = self.textEdit.textCursor()
+        cursor.movePosition(QtGui.QTextCursor.End)
+        cursor.insertText(text)
+        self.textEdit.setTextCursor(cursor)
+        self.textEdit.ensureCursorVisible()
+</code></pre>
+<p>这一段程序主要是对<code>texteidt</code>这个控件进行文本操作。这里涉及到了光标操作(我自己给自己又挖了一个坑，一会这篇写完专门写一篇来介绍这个光标位置的使用，这一段程序可以理解为对文本的操作。</p>
+<p>3：最后在你的类里面添加这俩句程序即可：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">        sys.stdout = EmittingStr(textWritten=self.outputWritten)
+        sys.stderr = EmittingStr(textWritten=self.outputWritten)
+</code></pre>
+<p><code>sys.stdout</code>和<code>sys.stderr</code>这俩个就要划重点了。</p>
+<p><code>sys.stdout</code> 与 print的作用基本类似，可以看作print就是<code>sys.stdout</code>的进一步封装，们在 Python 中打印对象调用 print obj 时候，事实上是调用了 <code>sys.stdout.write(obj+'\n')</code>，print 将你需要的内容打印到了控制台，然后追加了一个换行符<br>print 会调用 <code>sys.stdout</code> 的 write 方法以下两行在事实上等价：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">sys.stdout.write('hello'+'\n') 
+print 'hello'
+</code></pre>
+<p>咱们的目的是把控制台信息重定向到<code>Textedit</code>上，下面有一个网上的例子很好理解，就是把控制台的信息同时定向到文件和控制台输出。</p>
+<p>具体代码：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">f_handler=open('out.log', 'w') 
+sys.stdout=f_handler 
+print("Hello World")
+</code></pre>
+<p>这个就是把控制台输出的信息存储到文件当中，也就是<code>out.log</code>这个文件中。看完这个例子是不是有了想法，咱们把是不是只要把控制<code>Textedit</code>的赋值给<code>sys.stdout</code>,这样不就可以了。</p>
+<p>是不是非常的amazing！！！。<code>sys.stderr</code>这个东东我百度说的是用<code>sys.stderr</code> 目的就是返回错误信息,但是我在界面里面的程序尝试写了一个1%0的bug，发现<code>Textedit</code>里面并没有显示相应的错误。莫非<code>pyqt5</code>界面和这个有冲突。</p>
+<p>抱着试一试的态度，我单独写了一个程序实验，发现单独用是好使的：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">f_handler=open('out.log', 'w')
+sys.stderr=f_handler
+a = 1%0
+print(a)
+</code></pre>
+<p>这很明显有错误，对吧。然后我打开生成的<code>out.log</code>,发现错误内容被记录了进去，就说明该程序没有错误。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200731143159910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>至于为啥那个界面不显示，暂且没找到原因。以上就大概完成这个功能。另外俩个坑很快就会填上.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -587,7 +629,7 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/WYW1314/posts/32968.html">http://wyw1314.gitee.io/WYW1314/posts/32968.html</a>
+                    <a href="http://wyw1314.gitee.io/WYW1314/posts/15671.html">http://wyw1314.gitee.io/WYW1314/posts/15671.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -625,8 +667,8 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                                    <span class="chip bg-color">缺陷检测</span>
+                                <a href="/WYW1314/tags/qtdesigner/">
+                                    <span class="chip bg-color">qtdesigner</span>
                                 </a>
                             
                         </div>
@@ -1057,32 +1099,32 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/WYW1314/posts/37573.html">
+                <a href="/WYW1314/posts/15671.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/11.jpg" class="responsive-img" alt="Python导入qtdesigner和pyuic">
+                        <img src="/WYW1314/medias/featureimages/14.jpg" class="responsive-img" alt="控制台信息转移到textedit控件上显示">
                         
-                        <span class="card-title">Python导入qtdesigner和pyuic</span>
+                        <span class="card-title">控制台信息转移到textedit控件上显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python导入qtdesigner和pyuic1：cmd安装qtsdesigner和pyuic：pip install pyqt5
-pip install pyqt5_tools
+                            控制台信息转移到textedit控件上显示因为大创要做一个人脸测温的项目部署到树莓派上，所以界面是必须的，pyqt5比较幸运的之前我也接触过，由于需要将控制台输出的结果转移到界面上便于调试和观察，实现的具体效果为：
 
-2:通过Pycharm导入pyqt5：我的Pycharm
+实现的具体效果大概就是
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1095,6 +1137,7 @@ pip install pyqt5_tools
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1113,32 +1156,33 @@ pip install pyqt5_tools
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/47649.html">
+                <a href="/WYW1314/posts/42312.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/12.jpg" class="responsive-img" alt="Python自动部署码云">
+                        <img src="/WYW1314/medias/featureimages/2.jpg" class="responsive-img" alt="Pyinstaller将Py文件打包为EXE可执行文件">
                         
-                        <span class="card-title">Python自动部署码云</span>
+                        <span class="card-title">Pyinstaller将Py文件打包为EXE可执行文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python自动部署码云：1：大概思路：其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。
-2:下载chromedriver.exe文件：首先打开你的
+                            Pyinstaller将Py文件打包为EXE可执行文件1:python作为一门解释型脚本语言，它有三种发布方式
+.py文件 : 源码文件，运行需要使用者安装Python环境并且安装依赖的各种库
+.pyc文件：pyc文件是Python解释器可
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
+                            <a href="/WYW1314/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
+                                    qt界面
                                 </a>
                             
                             
@@ -1148,8 +1192,8 @@ pip install pyqt5_tools
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">python 博客</span>
+                    <a href="/WYW1314/tags/pyinstaller/">
+                        <span class="chip bg-color">pyinstaller</span>
                     </a>
                     
                 </div>

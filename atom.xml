@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-07-27T04:12:26.723Z</updated>
+  <updated>2020-07-31T06:40:04.311Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>控制台信息转移到textedit控件上显示</title>
+    <link href="http://wyw1314.gitee.io/posts/15671.html"/>
+    <id>http://wyw1314.gitee.io/posts/15671.html</id>
+    <published>2020-07-31T06:39:00.000Z</published>
+    <updated>2020-07-31T06:40:04.311Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;控制台信息转移到textedit控件上显示&quot;&gt;&lt;a href=&quot;#控制台信息转移到textedit控件上显示&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="qt界面" scheme="http://wyw1314.gitee.io/categories/qt%E7%95%8C%E9%9D%A2/"/>
+    
+    
+      <category term="qtdesigner" scheme="http://wyw1314.gitee.io/tags/qtdesigner/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Pyinstaller将Py文件打包为EXE可执行文件</title>
     <link href="http://wyw1314.gitee.io/posts/42312.html"/>
     <id>http://wyw1314.gitee.io/posts/42312.html</id>
     <published>2020-07-27T02:20:00.000Z</published>
-    <updated>2020-07-27T04:12:26.723Z</updated>
+    <updated>2020-07-27T04:13:21.688Z</updated>
     
     <summary type="html">
     
