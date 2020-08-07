@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-07-31T06:40:04.311Z</updated>
+  <updated>2020-08-07T04:52:24.261Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Manjoro kde双系统的踩坑之路</title>
+    <link href="http://wyw1314.gitee.io/posts/27692.html"/>
+    <id>http://wyw1314.gitee.io/posts/27692.html</id>
+    <published>2020-08-07T04:50:00.000Z</published>
+    <updated>2020-08-07T04:52:24.261Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Manjoro-kde双系统的踩坑之路&quot;&gt;&lt;a href=&quot;#Manjoro-kde双系统的踩坑之路&quot; class=&quot;headerlink&quot; title=&quot;Manjoro kde双系统的踩坑之路&quot;&gt;&lt;/a&gt;Manjoro
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://wyw1314.gitee.io/categories/Linux/"/>
+    
+    
+      <category term="manjoro" scheme="http://wyw1314.gitee.io/tags/manjoro/"/>
+    
+  </entry>
+  
+  <entry>
     <title>控制台信息转移到textedit控件上显示</title>
     <link href="http://wyw1314.gitee.io/posts/15671.html"/>
     <id>http://wyw1314.gitee.io/posts/15671.html</id>
     <published>2020-07-31T06:39:00.000Z</published>
-    <updated>2020-07-31T06:40:04.311Z</updated>
+    <updated>2020-07-31T06:52:41.551Z</updated>
     
     <summary type="html">
     
