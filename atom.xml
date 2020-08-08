@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-08-07T04:52:24.261Z</updated>
+  <updated>2020-08-08T15:01:32.539Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VScode配置Python运行环境</title>
+    <link href="http://wyw1314.gitee.io/posts/10987.html"/>
+    <id>http://wyw1314.gitee.io/posts/10987.html</id>
+    <published>2020-08-08T15:00:00.000Z</published>
+    <updated>2020-08-08T15:01:32.539Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VScode配置Python运行环境&quot;&gt;&lt;a href=&quot;#VScode配置Python运行环境&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="VScode" scheme="http://wyw1314.gitee.io/categories/VScode/"/>
+    
+    
+      <category term="python" scheme="http://wyw1314.gitee.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Manjoro kde双系统的踩坑之路</title>
     <link href="http://wyw1314.gitee.io/posts/27692.html"/>
     <id>http://wyw1314.gitee.io/posts/27692.html</id>
     <published>2020-08-07T04:50:00.000Z</published>
-    <updated>2020-08-07T04:52:24.261Z</updated>
+    <updated>2020-08-07T04:53:25.272Z</updated>
     
     <summary type="html">
     

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python自动部署码云, 嵌入式的一只菜鸟">
+    <meta name="keywords" content="VScode配置Python运行环境, 嵌入式的一只菜鸟">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python自动部署码云 | 嵌入式的一只菜鸟</title>
+    <title>VScode配置Python运行环境 | 嵌入式的一只菜鸟</title>
     <link rel="icon" type="image/png" href="/WYW1314/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/WYW1314/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/WYW1314/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python自动部署码云</h1>
+                    <h1 class="description center-align post-title">VScode配置Python运行环境</h1>
                 </div>
             </div>
         </div>
@@ -461,8 +461,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">python 博客</span>
+                            <a href="/WYW1314/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -473,8 +473,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/WYW1314/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                爬虫
+                            <a href="/WYW1314/categories/VScode/" class="post-category">
+                                VScode
                             </a>
                         
                     </div>
@@ -486,28 +486,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-08-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-08-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    898
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -522,74 +522,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Python自动部署码云："><a href="#Python自动部署码云：" class="headerlink" title="Python自动部署码云："></a>Python自动部署码云：</h1><h2 id="1：大概思路："><a href="#1：大概思路：" class="headerlink" title="1：大概思路："></a>1：大概思路：</h2><p>其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。</p>
-<h2 id="2-下载chromedriver-exe文件："><a href="#2-下载chromedriver-exe文件：" class="headerlink" title="2:下载chromedriver.exe文件："></a>2:下载chromedriver.exe文件：</h2><p>首先打开你的谷歌浏览器。直接在地址栏输入：<a href="chrome://settings/help">chrome://settings/help</a>.这样会出来和你浏览器相对应的版本。如下图所示：<img src="https://img-blog.csdnimg.cn/20200413205439163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>我的浏览器版本是81.0.4044.9.我下载的版本只要是81.0.4044.xxx就可以。下载文件的链接是：<a href="http://chromedriver.storage.googleapis.com/index.html。" target="_blank" rel="noopener">http://chromedriver.storage.googleapis.com/index.html。</a><br>下载完文件后把这个exe文件当到谷歌浏览器的路径下：我的路径为：<strong>E:\Chrome\Application</strong>。同时还要把这个文件放到你电脑上python的安装根目录下。</p>
-<h2 id="3：开始编写程序："><a href="#3：开始编写程序：" class="headerlink" title="3：开始编写程序："></a>3：开始编写程序：</h2><p>这里我们用到的是python的以下这些库：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">from selenium import webdriver
-from selenium.webdriver.common.alert import Alert
+                <h1 id="VScode配置Python运行环境"><a href="#VScode配置Python运行环境" class="headerlink" title="VScode配置Python运行环境"></a>VScode配置Python运行环境</h1><p>最近打算用python做一个东西，但是感觉用Pycharm不是特别舒服把，于是自己就打算用万能的VScode配置下环境，然后去找帖子，发现大部分网上的帖子真的水的一批，找了半天配置Python运行环境的帖子，都长得一样还不好使。本地原本安装python的库都识别不出来。最后自己试了半天才好使，把这个过程记录一下。</p>
+<p>首先确认你电脑本地已经安装了Python和VScode。这俩个软件的安装就不在赘述。直接进入正题。</p>
+<p>首先进入命令行，先安装俩个插件，分别是flake8和yapf.这俩个插件的作用分别是flake8会检查编写代码时的不规范的地方和语法错误。yapf可以把你写的代码不规范的地方给格式化。</p>
+<p>命令分别是：<code>pip install flake</code> 和 <code>pip install yapf</code>.安装完成后进入VScode安装插件：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200808104848775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>这个插件的作用并不是就是Python这个解释器，</p>
+<ol>
+<li>第一：这个插件不是python语言的解释器，vscode想要运行python代码，必须另外指定在windows上安装的python解释器路径才可以。</li>
+<li>第二：这个插件被安装上后，vscode就具有了调用python解释器的功能。其实就是在setting.json和launch.json这两个配置文件中，可以添加python相关的配置了，比如通过python.pythonPath的值找到python解释器的位置等等。</li>
+<li>第三：可以通过按下ctrl键，点击函数，打开函数的所在文件和定义位置。</li>
+<li>第四：具有代码提示功能。</li>
+</ol>
+<p>接下来就可以愉快的写代码了。首先创建一个文件夹存放你的程序。这里我新建一个mysocket文件夹存放程序，记得这里一定要以Vscode右键打开文件夹，</p>
+<p><img src="https://img-blog.csdnimg.cn/2020080821294839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>打开之后，ctrl+shift+P调出命令面板，在命令行输入第一行的内容，Python:Select Interpreter.</p>
+<p><img src="https://img-blog.csdnimg.cn/20200808213948790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p>接下来就会出来你电脑上所有的python环境，如图所示：<br><img src="https://img-blog.csdnimg.cn/2020080822095490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这里选择好你要的环境之后，然后你创建的文件下就会出现一个.vscode文件夹，然后文件夹里面有一个setting.json.这个时候你打开setting.json,这个时候里面只有一句:python的路径设置。<br><img src="https://img-blog.csdnimg.cn/20200808221539556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>然后接下来添加几条语句： </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "python.linting.flake8Args": ["--max-line-length=248"],
+    "python.linting.pylintEnabled": false
 </code></pre>
-<p>selenium是一个自动化测试工具，支持Firefox，Chrome等众多浏览器.</p>
-<p>在爬虫中的应用主要是用来解决JS渲染的问题。</p>
-<p>1.使用前需要安装这个第三方库，CMD下：</p>
-<p>pip install selenium</p>
-<p>安装完这个库就可以开始写代码了。</p>
-<h3 id="1：模拟浏览器来到码云的登录界面，代码如下："><a href="#1：模拟浏览器来到码云的登录界面，代码如下：" class="headerlink" title="1：模拟浏览器来到码云的登录界面，代码如下："></a>1：模拟浏览器来到码云的登录界面，代码如下：</h3><pre class=" language-lang-python"><code class="language-lang-python"># 模拟浏览器打开到gitee登录界面
-driver = webdriver.Chrome()
-driver.get('https://gitee.com/login')
-# 将窗口最大化
-driver.maximize_window()
-time.sleep(2)
-</code></pre>
-<p>这时候我们打开这个界面后需要输入账号和密码登录。<img src="https://img-blog.csdnimg.cn/20200413205549874.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>这时候我们会有一个疑惑，如何定位输入账号的地方的和输入密码的地方，这时候我们需要一点html的知识。就是如何让python定位到账号和密码的输入框。这个时候我们就可以谷歌浏览器的开发者工具来分析：</p>
-<p>html输入框坑定是放在一个div里的。而且通过Id号很方便，来确定的可以从id号去确认。<u><del>我的html学的很垃圾。可能有些专业术语表达不清楚。</del></u></p>
-<p>这里我们鼠标定位到输入框，右键，点击检查。<img src="https://img-blog.csdnimg.cn/20200413205638506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>然后就会发现出现以下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200413205731510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>获得密码输入框的id也是和上面一样。我们得到了就可以用库里面的函数来定位到这个位置并且把你的账号和密码自动填入。代码如下：</p>
-<pre class=" language-lang-python"><code class="language-lang-python"># 输入账号--通过html的id属性定位输入位置--改为你的账号
-user_login = driver.find_element_by_id('user_login')
-user_login.send_keys("你的账号")
-# 输入密码--通过html的id属性定位输入位置--改为你的密码
-driver.find_element_by_id('user_password').send_keys("你的密码")
-</code></pre>
-<p>接下来就是写程序点击登录这个按钮。那么这个按钮的位置如何确定呢。我们这里是采用<code>Xpath</code>来确定的。获取xpath也有一个快捷的方法。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200413205818923.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>依旧按上面的方法选中这一块，右键选择检查，定位到这一块的html代码。然后右键这一块。选择<code>copy full xpath.</code></p>
-<p>如下图所示：<img src="https://img-blog.csdnimg.cn/20200413205859677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
-<p>得到了<code>xpath</code>,接着写代码：</p>
-<pre class=" language-lang-python"><code class="language-lang-python"># 点击登录按钮--通过xpath确定点击位置
-driver.find_element_by_xpath(
-    '/html/body/div[2]/div[2]/div[1]/div/div[2]/div/form[1]/div[2]/div/div/div[4]/input').click()
-time.sleep(2)
-</code></pre>
-<p>Python方便的地方就是有相应的库函数。这里也是。</p>
-<p>登陆完后，我们需要来到部署静态网页的页面：一般情况下，这个页面的URL链接为：’<a href="https://gitee.com/xxxxx/xxxxx/pages" target="_blank" rel="noopener">https://gitee.com/xxxxx/xxxxx/pages</a>‘</p>
-<p>这时候我们从登录后的界面跳转到以上的URL链接界面。之后写程序点击部署那个按钮。代码如下：</p>
-<pre class=" language-lang-python"><code class="language-lang-python"># 切换到gitee pages界面--改为you_gitee_id
-driver.get('https://gitee.com/你项目的个人地址/项目名称/pages')
-# 点击更新按钮--通过xpath确定点击位置
-driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div[2]/div[1]/form/div[7]').click()
-# 确认更新提示框--这个函数的作用是确认提示框
-Alert(driver).accept()
-</code></pre>
-<p>之后等待部署，这里可以生成一个文件去记录你更新时间，代码如下;</p>
-<pre class=" language-lang-Python"><code class="language-lang-Python"># 等待5秒更新
-time.sleep(5)
-
-# 这个print
-print("成功")
-
-# 脚本运行成功,退出浏览器
-driver.quit()
-
-fp = open("F:\log.txt", "a+")
-now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-fp.write("auto update time:{0}\n".format(now_time))
-fp.close()
-</code></pre>
-<p>这样就完成想象中的自动部署把。当然氪金一年99块钱也是能自动推送后部署的，但是贫穷限制了我的想象力。只有出此下策。哈哈哈。</p>
+<p>以上语句分别是对flake8和yapf的应用。</p>
+<p>以上语句分别是对flake8和yapf的应用。之后还要创建一个launch.json来配置输出在哪里。<br><img src="https://img-blog.csdnimg.cn/20200808224506250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>点击之后，会出来一个让你选择的窗口，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200808224655614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这里选择python file。然后就会自动生成一个配置。如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200808224834768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>然后就可以写程序试验了。这里我随便写一句：<img src="https://img-blog.csdnimg.cn/20200808224914992.png#pic_center" alt="在这里插入图片描述"></p>
+<p>然后按F5运行，一般情况底下会自动弹出你运行的结果。<br><img src="https://img-blog.csdnimg.cn/2020080822504546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>我们可以看到出现了hello world。但是这里还显示其余和程序运行无关的东西，看起来很碍眼，所以我们可以将程序输出换下地方：<br>在launch.json中将 “console”: “integratedTerminal”换为 “console”:”internalConsole”即可，这时候我们在运行下看看：<br><img src="https://img-blog.csdnimg.cn/20200808225435107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>到此配置就基本结束了。OK！！！</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -633,7 +594,7 @@ fp.close()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wyw1314.gitee.io/WYW1314/posts/47649.html">http://wyw1314.gitee.io/WYW1314/posts/47649.html</a>
+                    <a href="http://wyw1314.gitee.io/WYW1314/posts/10987.html">http://wyw1314.gitee.io/WYW1314/posts/10987.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -671,8 +632,8 @@ fp.close()
                     
                         <div class="article-tag">
                             
-                                <a href="/WYW1314/tags/python-%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">python 博客</span>
+                                <a href="/WYW1314/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -1103,47 +1064,48 @@ fp.close()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/WYW1314/posts/32968.html">
+                <a href="/WYW1314/posts/10987.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/1.jpg" class="responsive-img" alt="钢铁表面缺陷检测">
+                        <img src="/WYW1314/medias/featureimages/7.jpg" class="responsive-img" alt="VScode配置Python运行环境">
                         
-                        <span class="card-title">钢铁表面缺陷检测</span>
+                        <span class="card-title">VScode配置Python运行环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            钢铁表面缺陷检测勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。
-4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路
+                            VScode配置Python运行环境最近打算用python做一个东西，但是感觉用Pycharm不是特别舒服把，于是自己就打算用万能的VScode配置下环境，然后去找帖子，发现大部分网上的帖子真的水的一批，找了半天配置Python运行环境的帖
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
+                            <a href="/WYW1314/categories/VScode/" class="post-category">
+                                    VScode
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B/">
-                        <span class="chip bg-color">缺陷检测</span>
+                    <a href="/WYW1314/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -1157,31 +1119,31 @@ fp.close()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/WYW1314/posts/64390.html">
+                <a href="/WYW1314/posts/27692.html">
                     <div class="card-image">
                         
                         
-                        <img src="/WYW1314/medias/featureimages/17.jpg" class="responsive-img" alt="齐次坐标的理解">
+                        <img src="/WYW1314/medias/featureimages/16.jpg" class="responsive-img" alt="Manjoro kde双系统的踩坑之路">
                         
-                        <span class="card-title">齐次坐标的理解</span>
+                        <span class="card-title">Manjoro kde双系统的踩坑之路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            齐次坐标的理解齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以
+                            Manjoro kde双系统的踩坑之路本来打算是想在虚拟机里面玩玩这个系统，但是觉得虚拟机玩着没那个意思。于是自己就打算搞个双系统。这几天在这里面踩了好多坑。唉，搞到最后，发现其实还不如在windows上，做开发用真的足够了，但是我挺烦这个
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/WYW1314/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-category">
-                                    图像处理
+                            <a href="/WYW1314/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
@@ -1191,8 +1153,8 @@ fp.close()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/WYW1314/tags/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87/">
-                        <span class="chip bg-color">齐次坐标</span>
+                    <a href="/WYW1314/tags/manjoro/">
+                        <span class="chip bg-color">manjoro</span>
                     </a>
                     
                 </div>
