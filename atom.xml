@@ -6,7 +6,7 @@
   <link href="/WYW1314/atom.xml" rel="self"/>
   
   <link href="http://wyw1314.gitee.io/"/>
-  <updated>2020-08-08T15:02:21.203Z</updated>
+  <updated>2020-08-22T09:52:50.862Z</updated>
   <id>http://wyw1314.gitee.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>配置ESP8266wifi杀手</title>
+    <link href="http://wyw1314.gitee.io/posts/51419.html"/>
+    <id>http://wyw1314.gitee.io/posts/51419.html</id>
+    <published>2020-08-22T09:52:00.000Z</published>
+    <updated>2020-08-22T09:52:50.862Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了&quot;&gt;&lt;a href=&quot;#配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hack" scheme="http://wyw1314.gitee.io/categories/hack/"/>
+    
+    
+      <category term="wifi攻击" scheme="http://wyw1314.gitee.io/tags/wifi%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VScode配置Python运行环境</title>
     <link href="http://wyw1314.gitee.io/posts/10987.html"/>
     <id>http://wyw1314.gitee.io/posts/10987.html</id>
     <published>2020-08-08T15:00:00.000Z</published>
-    <updated>2020-08-08T15:02:21.203Z</updated>
+    <updated>2020-08-22T09:52:56.185Z</updated>
     
     <summary type="html">
     
