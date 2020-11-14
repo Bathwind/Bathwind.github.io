@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="梯度下降法理解, 千空">
+    <meta name="keywords" content="YOLO模型部署到神经棒二代上, 千空">
     <meta name="description" content="永远相信美好的事情即将发生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>梯度下降法理解 | 千空</title>
+    <title>YOLO模型部署到神经棒二代上 | 千空</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">梯度下降法理解</h1>
+                    <h1 class="description center-align post-title">YOLO模型部署到神经棒二代上</h1>
                 </div>
             </div>
         </div>
@@ -461,8 +461,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
-                                <span class="chip bg-color">梯度下降</span>
+                            <a href="/tags/yolo/">
+                                <span class="chip bg-color">yolo</span>
                             </a>
                         
                     </div>
@@ -486,7 +486,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-14
+                    2020-11-14
                 </div>
                 
 
@@ -500,14 +500,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    892
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -522,9 +522,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="梯度下降法理解"><a href="#梯度下降法理解" class="headerlink" title="梯度下降法理解"></a>梯度下降法理解</h1><p><strong><em>梯度就是梯度啊，是一个矢量，大小为最大的方向导数，方向为最大方向导数的方向。但在单变量的实值函数的情况，梯度只是导数梯度</em></strong>。在只有一个维度的情况下简单可以理解为就是咱们学习的导数。导数是啥想必大家都很清楚了。</p>
-<p>那么 <strong>梯度下降就是用来求某个函数最小值时自变量对应取值。</strong>这个函数名字叫做损失函数（cost/loss function），机器学习涉及到了最基础的概念，直白点就是误差函数。一个算法不同参数会产生不同拟合曲线，也意味着有不同的误差。<strong>损失函数就是一个自变量为算法的参数，函数值为误差值的函数。梯度下降就是找让误差值最小时候算法取的参数。</strong></p>
-<p>深度学习的话视频推荐吴恩达的视频，他的视频非常透彻。网易云课堂上能给有搜到相关的视频。机器学习中涉及到一个损失函数的概念，<strong>有一类算法</strong>就是产生一条曲线来拟合现有的数据，这样子就可以实现预测未来的数据，这个专业术语叫做回归（见到回归就替换成拟合就好了~^~）。<strong>还有另外一种类</strong>似也是产生一条曲线，但是这个曲线时用来将点分隔成两块，实现分类，在这个曲线一侧为一类另外一侧算一类。<strong>但是我怎么知道这个算法产生的拟合曲线效果好不好呢？</strong>这个判断效果的名词叫做误差，预测值减去真实值最后取绝对值，于是乎就产生了损失函数这一概念。那么如何找到这个损失函数值最小的点呢，咱们高中的时候求最大或者最小值时候是不是通过求导来求极值点，那么求损失函数的最小值也是这样。可以通过求导的方式去进行。前面的时候也已经说到过。梯度就是求导数。梯度下降的话就是求极小值的点。<br>那么用梯度下降的方法的去求最小值的时候，我们可以这样去理解，假如我们夜晚现在要下山，现在手里要拿着手电筒，我们如果照亮的一段路是下坡，我们就会接着往坡下走，这样一定最后能够到达山脚。那么梯度下降的原理也类似上面这样。<br>梯度下降含义（具体操作）是：改变x的值使得导数的绝对值变小，当导数小于0时候（情况1），我们要让目前x值大一点点，再看它导数值。当导数大于0时候（情况2），我们要让目前x值减小一点点，再看它导数值。当导数接近0时候，我们就得到想要的自变量x了。也就是说找到这个算法最佳参数，使得拟合曲线与真实值误差最小。害。自己太菜了。这次参加的比赛完全在划水，也没帮上啥忙。</p>
+                <h1 id="YOLO模型部署到神经棒二代上"><a href="#YOLO模型部署到神经棒二代上" class="headerlink" title="YOLO模型部署到神经棒二代上"></a>YOLO模型部署到神经棒二代上</h1><p>神经棒2019年出来的，说实话真的恶心。资料挺少的。我自己训练物体识别用的keras-yolo模型。但部署到树莓派上坑定运行不起来。所以将其部署到神经棒上。这个过程看似就几步，但是Python的环境稍微版本不一样，就会出现各种各样的错误，这个模型的转换足足恶心了我一星期多。<br>整个过程配置和转化的环境为：<br><img src="https://img-blog.csdnimg.cn/20201114215449653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>以上环境的配置都是用Anaconda配置的虚拟环境，具体这个anaconda如何配置虚拟环境以及如何换源网上都有很详细的教程。这里就不在赘述</p>
+<h2 id="1：下载程序，将yolo生成的h5权重文件转化为权重文件-weight"><a href="#1：下载程序，将yolo生成的h5权重文件转化为权重文件-weight" class="headerlink" title="1：下载程序，将yolo生成的h5权重文件转化为权重文件(weight)"></a>1：下载程序，将yolo生成的h5权重文件转化为权重文件(weight)</h2><p>重要的事情说三遍：</p>
+<p><strong><em>1：Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p>下载本步骤需要的代码：具体代码我已经上传到了<a href="https://wws.lanzous.com/i5TuOie91ob" target="_blank" rel="noopener">蓝奏云上</a>，下载完后解压可以看到以下文件结构，如下图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201114192305817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>记得这个工程的环境一定要和你yolo训练的模型所用的Python环境一样，否则就会报错，<br><img src="https://img-blog.csdnimg.cn/20201114191937618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>把你的h5文件放到该文件夹中，并且里面的voc_classes.txt要与你的yolo训练模型中的类别一致，下图中红框的文件都要跟你keras-yolo中的文件保持一直保持一致，你可以把yolov3.cfg,yolo_anchors.txt,等文件直接复制过来：<br><img src="https://img-blog.csdnimg.cn/20201114193151759.png#pic_center" alt="在这里插入图片描述"></p>
+<p>之后要更改voc_classes.txt.这里面的类别也要保持一致。<br>我的训练的是俩类：bottle<br>spitball：<br><img src="https://img-blog.csdnimg.cn/20201114192745433.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>所以将其更改为bottle和spitball<br>运行check_weight.py，如果转换成功的话就可以出现下图：<br><img src="https://img-blog.csdnimg.cn/20201114194728306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="2：将权重文件-weight-转化为tensorflow的pb文件："><a href="#2：将权重文件-weight-转化为tensorflow的pb文件：" class="headerlink" title="2：将权重文件(weight)转化为tensorflow的pb文件："></a>2：将权重文件(weight)转化为tensorflow的pb文件：</h2><p>下载程序，我已经上传到了<a href="https://wws.lanzous.com/iQQChie949e" target="_blank" rel="noopener">蓝奏云上</a>：下载完之后：命令行切到你程序所在的目录，<img src="https://img-blog.csdnimg.cn/20201114213741629.png#pic_center" alt="在这里插入图片描述"><br>目录中的文件也需要更改：<img src="https://img-blog.csdnimg.cn/20201114214240907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>将coco.name中的类更改为你训练的种类数，我这里训练的是2类，所以仍旧改为：bottle和spitball。<br>之后在命令行输入指令：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">python convert_weights_pb.py --class_names coco.names --data_format NHWC --weights_file yolov3.weights
+</code></pre>
+<p>等待一会，可以看到命令行中出现下图，则证明转换成功：<br><img src="https://img-blog.csdnimg.cn/20201114214827456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>下面就可以愉快地进行下一步转化了。<br>3：安装英特尔openvino2019进行转化的最后一步（终于最后一步了）。<br>我安装的openvino版本为：<img src="https://img-blog.csdnimg.cn/20201114215545593.png#pic_center" alt="在这里插入图片描述"><br>下载安装的过程不再说了，都是下载完后安装包默认安装即可。安装完后找到程序所在的文件夹：<br>我的文件夹是：C:\openvino_2019.1.087\deployment_tools\model_optimizer\install_prerequisite。<br>命令行依次输入：install_prerequisites.bat和install_prerequisites_tf.bat。输入完之后，进入文件夹下的这个路径：C:\openvino_2019.1.087\deployment_tools\model_optimizer\extensions\front\tf\yolo_v3.json<br>更改yolo_v3.json中的内容，如下图所示：<img src="https://img-blog.csdnimg.cn/20201114222424148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>将classes改为你训练的类别数即可，其余保持默认即可。<br>这一步只需更改该文件就可以，之后命令行输入指令：</p>
+<pre class=" language-lang-python"><code class="language-lang-python"> python mo_tf.py --input_model frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config C:\openvino_2019.1.087\deployment_tools\model_optimizer\extensions\front\tf\yolo_v3.json --batch 1
+</code></pre>
+<p>以上指令中的路径均为自己文件所在的路径，自己更改即可。输入指令回车，等待大概几十秒。如果转换成功的话贼会出现以下提示：<br><img src="https://img-blog.csdnimg.cn/20201114222736406.png#pic_center" alt="在这里插入图片描述"><br>好几个success。看着就很舒服。到这一步的话自己yolo训练的模型就成功转化为神经棒所需要的的XML和Bin文件了。最后附上模型文件在树莓派上yolo跑起来的样子，害，别提有多舒服了。<br><img src="https://img-blog.csdnimg.cn/20201114223053991.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201114223053965.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>下篇文章介绍树莓派3b上的部署以及自己训练yolo模型。<img src="https://img-blog.csdnimg.cn/20201114223143753.png#pic_center" alt="在这里插入图片描述"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -568,7 +585,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/Bathwind/Bathwind.github.io/posts/57153.html">https://github.com/Bathwind/Bathwind.github.io/posts/57153.html</a>
+                    <a href="https://github.com/Bathwind/Bathwind.github.io/posts/1622.html">https://github.com/Bathwind/Bathwind.github.io/posts/1622.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -606,8 +623,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
-                                    <span class="chip bg-color">梯度下降</span>
+                                <a href="/tags/yolo/">
+                                    <span class="chip bg-color">yolo</span>
                                 </a>
                             
                         </div>
@@ -1038,47 +1055,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/11865.html">
+                <a href="/posts/1622.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="解决Pyqt5每次修改Ui界面对应的Py文件都要改变">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="YOLO模型部署到神经棒二代上">
                         
-                        <span class="card-title">解决Pyqt5每次修改Ui界面对应的Py文件都要改变</span>
+                        <span class="card-title">YOLO模型部署到神经棒二代上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            鸽王回来了自己的博客也不知道鸽了多久，只记得从六月份打完数学建模后就接着期末考试。期末考试完然后就去接着学车，考驾照，这个月终于要把驾照的事情给忙完了，哈哈哈，开心:happy:，可以接着在家安心宅着写程序了。
-一直以来使用pyqt5时候会
+                            YOLO模型部署到神经棒二代上神经棒2019年出来的，说实话真的恶心。资料挺少的。我自己训练物体识别用的keras-yolo模型。但部署到树莓派上坑定运行不起来。所以将其部署到神经棒上。这个过程看似就几步，但是Python的环境稍微版本不一
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/qt%E7%95%8C%E9%9D%A2/" class="post-category">
-                                    qt界面
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/qtdesigner/">
-                        <span class="chip bg-color">qtdesigner</span>
+                    <a href="/tags/yolo/">
+                        <span class="chip bg-color">yolo</span>
                     </a>
                     
                 </div>
@@ -1092,31 +1110,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/63933.html">
+                <a href="/posts/51419.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="心情Note">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="配置ESP8266wifi杀手">
                         
-                        <span class="card-title">心情Note</span>
+                        <span class="card-title">配置ESP8266wifi杀手</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            心情Note：疫情这段期间发生了太多事情，这半年。先是四月初被女朋友分手，好不容易从里面走出来，接下来因为项目的事情得罪了俩个老师。接下来自己刚开始从大一开始呆的社团感觉变味了，想着想要离开社团。终于在前天晚上开会后坚定了这个想法。自己也算
+                            配置ESP8266wifi杀手(只能支持802.11协议的路由器，kali linux 可以更屌直接干就完了)Esp8266我觉得真是一个神奇的芯片，啥都能干，用来做毕设。ESP8266可以实现的主要功能包括：串口透传，PWM调控，GPIO
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/hack/" class="post-category">
+                                    hack
                                 </a>
                             
                             
@@ -1126,8 +1144,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BF%83%E6%83%85/">
-                        <span class="chip bg-color">心情</span>
+                    <a href="/tags/wifi%E6%94%BB%E5%87%BB/">
+                        <span class="chip bg-color">wifi攻击</span>
                     </a>
                     
                 </div>

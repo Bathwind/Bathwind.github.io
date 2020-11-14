@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>YOLO模型部署到神经棒二代上</title>
+    <url>/posts/1622.html</url>
+    <content><![CDATA[<h1 id="YOLO模型部署到神经棒二代上"><a href="#YOLO模型部署到神经棒二代上" class="headerlink" title="YOLO模型部署到神经棒二代上"></a>YOLO模型部署到神经棒二代上</h1><p>神经棒2019年出来的，说实话真的恶心。资料挺少的。我自己训练物体识别用的keras-yolo模型。但部署到树莓派上坑定运行不起来。所以将其部署到神经棒上。这个过程看似就几步，但是Python的环境稍微版本不一样，就会出现各种各样的错误，这个模型的转换足足恶心了我一星期多。<br>整个过程配置和转化的环境为：<br><img src="https://img-blog.csdnimg.cn/20201114215449653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>以上环境的配置都是用Anaconda配置的虚拟环境，具体这个anaconda如何配置虚拟环境以及如何换源网上都有很详细的教程。这里就不在赘述</p>
+<h2 id="1：下载程序，将yolo生成的h5权重文件转化为权重文件-weight"><a href="#1：下载程序，将yolo生成的h5权重文件转化为权重文件-weight" class="headerlink" title="1：下载程序，将yolo生成的h5权重文件转化为权重文件(weight)"></a>1：下载程序，将yolo生成的h5权重文件转化为权重文件(weight)</h2><p>重要的事情说三遍：</p>
+<p><strong><em>1：Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>Yolo训练的模型文件切记要用save方法去保存</em></strong>，否则就会之后读取不到权重网络，这个地方我会在另一篇Yolo模型训练的文章里面把这个地方详细说明，</p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p><strong><em>2：不要直接用yolo生成的h5文件去转tensorflow的pb文件，然后再用Pb文件转XML和bin。这样会报错。</em></strong></p>
+<p>下载本步骤需要的代码：具体代码我已经上传到了<a href="https://wws.lanzous.com/i5TuOie91ob" target="_blank" rel="noopener">蓝奏云上</a>，下载完后解压可以看到以下文件结构，如下图所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201114192305817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>记得这个工程的环境一定要和你yolo训练的模型所用的Python环境一样，否则就会报错，<br><img src="https://img-blog.csdnimg.cn/20201114191937618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>把你的h5文件放到该文件夹中，并且里面的voc_classes.txt要与你的yolo训练模型中的类别一致，下图中红框的文件都要跟你keras-yolo中的文件保持一直保持一致，你可以把yolov3.cfg,yolo_anchors.txt,等文件直接复制过来：<br><img src="https://img-blog.csdnimg.cn/20201114193151759.png#pic_center" alt="在这里插入图片描述"></p>
+<p>之后要更改voc_classes.txt.这里面的类别也要保持一致。<br>我的训练的是俩类：bottle<br>spitball：<br><img src="https://img-blog.csdnimg.cn/20201114192745433.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>所以将其更改为bottle和spitball<br>运行check_weight.py，如果转换成功的话就可以出现下图：<br><img src="https://img-blog.csdnimg.cn/20201114194728306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="2：将权重文件-weight-转化为tensorflow的pb文件："><a href="#2：将权重文件-weight-转化为tensorflow的pb文件：" class="headerlink" title="2：将权重文件(weight)转化为tensorflow的pb文件："></a>2：将权重文件(weight)转化为tensorflow的pb文件：</h2><p>下载程序，我已经上传到了<a href="https://wws.lanzous.com/iQQChie949e" target="_blank" rel="noopener">蓝奏云上</a>：下载完之后：命令行切到你程序所在的目录，<img src="https://img-blog.csdnimg.cn/20201114213741629.png#pic_center" alt="在这里插入图片描述"><br>目录中的文件也需要更改：<img src="https://img-blog.csdnimg.cn/20201114214240907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>将coco.name中的类更改为你训练的种类数，我这里训练的是2类，所以仍旧改为：bottle和spitball。<br>之后在命令行输入指令：</p>
+<pre class=" language-lang-python"><code class="language-lang-python">python convert_weights_pb.py --class_names coco.names --data_format NHWC --weights_file yolov3.weights
+</code></pre>
+<p>等待一会，可以看到命令行中出现下图，则证明转换成功：<br><img src="https://img-blog.csdnimg.cn/20201114214827456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>下面就可以愉快地进行下一步转化了。<br>3：安装英特尔openvino2019进行转化的最后一步（终于最后一步了）。<br>我安装的openvino版本为：<img src="https://img-blog.csdnimg.cn/20201114215545593.png#pic_center" alt="在这里插入图片描述"><br>下载安装的过程不再说了，都是下载完后安装包默认安装即可。安装完后找到程序所在的文件夹：<br>我的文件夹是：C:\openvino_2019.1.087\deployment_tools\model_optimizer\install_prerequisite。<br>命令行依次输入：install_prerequisites.bat和install_prerequisites_tf.bat。输入完之后，进入文件夹下的这个路径：C:\openvino_2019.1.087\deployment_tools\model_optimizer\extensions\front\tf\yolo_v3.json<br>更改yolo_v3.json中的内容，如下图所示：<img src="https://img-blog.csdnimg.cn/20201114222424148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>将classes改为你训练的类别数即可，其余保持默认即可。<br>这一步只需更改该文件就可以，之后命令行输入指令：</p>
+<pre class=" language-lang-python"><code class="language-lang-python"> python mo_tf.py --input_model frozen_darknet_yolov3_model.pb --tensorflow_use_custom_operations_config C:\openvino_2019.1.087\deployment_tools\model_optimizer\extensions\front\tf\yolo_v3.json --batch 1
+</code></pre>
+<p>以上指令中的路径均为自己文件所在的路径，自己更改即可。输入指令回车，等待大概几十秒。如果转换成功的话贼会出现以下提示：<br><img src="https://img-blog.csdnimg.cn/20201114222736406.png#pic_center" alt="在这里插入图片描述"><br>好几个success。看着就很舒服。到这一步的话自己yolo训练的模型就成功转化为神经棒所需要的的XML和Bin文件了。最后附上模型文件在树莓派上yolo跑起来的样子，害，别提有多舒服了。<br><img src="https://img-blog.csdnimg.cn/20201114223053991.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201114223053965.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>下篇文章介绍树莓派3b上的部署以及自己训练yolo模型。<img src="https://img-blog.csdnimg.cn/20201114223143753.png#pic_center" alt="在这里插入图片描述"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>yolo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>配置ESP8266wifi杀手</title>
     <url>/posts/51419.html</url>
     <content><![CDATA[<h1 id="配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了"><a href="#配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了" class="headerlink" title="配置ESP8266wifi杀手(只能支持802.11协议的路由器，kali linux 可以更屌直接干就完了)"></a>配置ESP8266wifi杀手(只能支持802.11协议的路由器，kali linux 可以更屌直接干就完了)</h1><p>Esp8266我觉得真是一个神奇的芯片，啥都能干，用来做毕设。ESP8266可以实现的主要功能包括：串口透传，PWM调控，GPIO控制。（1）串口透传：数据传输，传输的可靠性好，最大的传输速率为：460800bps。（2）PWM 调控：灯光调节，三色LED调节，电机调速等。（3）GPIO控制：控制开关，继电器等。<br>其中作为wifi杀手是真的好使，首先手里有一个esp8266即可。<br><img src="https://img-blog.csdnimg.cn/20200822171357689.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
@@ -121,7 +170,7 @@
 <p><img src="https://img-blog.csdnimg.cn/20200807111708861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064119633">在这个界面先连下网，然后点击黄框选中的，开始一步步傻瓜式安装，接下来几幅图就是对应的：</p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111757778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064349625"></p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111810314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064421389"></p>
-<p><img src="/posts/27692/20200807112151745.png" alt="image-20200807064447679"></p>
+<p><img src="/Bathwind/Bathwind.github.io/posts/27692/20200807112151745.png" alt="image-20200807064447679"></p>
 <p>分区的话选择自动替换一个分区就可以。记得分区选择我们之前分出那个区域。让<code>manjoro</code>帮我们自动分区。</p>
 <p>接下来设置账户信息，这个就不用多说了吧，设置好以后就下一步就行咯。</p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111858279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064723022"></p>
