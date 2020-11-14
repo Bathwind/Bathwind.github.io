@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>配置ESP8266wifi杀手</title>
-    <url>/WYW1314/posts/51419.html</url>
+    <url>/posts/51419.html</url>
     <content><![CDATA[<h1 id="配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了"><a href="#配置ESP8266wifi杀手-只能支持802-11协议的路由器，kali-linux-可以更屌直接干就完了" class="headerlink" title="配置ESP8266wifi杀手(只能支持802.11协议的路由器，kali linux 可以更屌直接干就完了)"></a>配置ESP8266wifi杀手(只能支持802.11协议的路由器，kali linux 可以更屌直接干就完了)</h1><p>Esp8266我觉得真是一个神奇的芯片，啥都能干，用来做毕设。ESP8266可以实现的主要功能包括：串口透传，PWM调控，GPIO控制。（1）串口透传：数据传输，传输的可靠性好，最大的传输速率为：460800bps。（2）PWM 调控：灯光调节，三色LED调节，电机调速等。（3）GPIO控制：控制开关，继电器等。<br>其中作为wifi杀手是真的好使，首先手里有一个esp8266即可。<br><img src="https://img-blog.csdnimg.cn/20200822171357689.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p>其中最解气的功能也就是也就是wifi杀手。首先把要用到的东西分享一下：</p>
 <ol>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <title>VScode配置Python运行环境</title>
-    <url>/WYW1314/posts/10987.html</url>
+    <url>/posts/10987.html</url>
     <content><![CDATA[<h1 id="VScode配置Python运行环境"><a href="#VScode配置Python运行环境" class="headerlink" title="VScode配置Python运行环境"></a>VScode配置Python运行环境</h1><p>最近打算用python做一个东西，但是感觉用Pycharm不是特别舒服把，于是自己就打算用万能的VScode配置下环境，然后去找帖子，发现大部分网上的帖子真的水的一批，找了半天配置Python运行环境的帖子，都长得一样还不好使。本地原本安装python的库都识别不出来。最后自己试了半天才好使，把这个过程记录一下。</p>
 <p>首先确认你电脑本地已经安装了Python和VScode。这俩个软件的安装就不在赘述。直接进入正题。</p>
 <p>首先进入命令行，先安装俩个插件，分别是flake8和yapf.这俩个插件的作用分别是flake8会检查编写代码时的不规范的地方和语法错误。yapf可以把你写的代码不规范的地方给格式化。</p>
@@ -97,7 +97,7 @@
   </entry>
   <entry>
     <title>Manjoro kde双系统的踩坑之路</title>
-    <url>/WYW1314/posts/27692.html</url>
+    <url>/posts/27692.html</url>
     <content><![CDATA[<h1 id="Manjoro-kde双系统的踩坑之路"><a href="#Manjoro-kde双系统的踩坑之路" class="headerlink" title="Manjoro kde双系统的踩坑之路"></a>Manjoro kde双系统的踩坑之路</h1><p>本来打算是想在虚拟机里面玩玩这个系统，但是觉得虚拟机玩着没那个意思。于是自己就打算搞个双系统。这几天在这里面踩了好多坑。唉，搞到最后，发现其实还不如在windows上，做开发用真的足够了，但是我挺烦这个开机贼慢和进桌面都会黑屏的问题。另外自己，有许多搞嵌入式的在<code>linux</code>上实在没有。所以我打算写完这篇文章后继续回到我的Windows。相信<code>linux</code>系统的未来会更好。略有些遗憾告别了这个系统。</p>
 <h2 id="1：下载镜像"><a href="#1：下载镜像" class="headerlink" title="1：下载镜像"></a>1：下载镜像</h2><p>首先第一步，去<a href="https://manjaro.org/" target="_blank" rel="noopener">Manjoro官网</a>下载镜像。镜像的话这里是有三个版本，第一个版本是<code>xfce</code>,第二个版本是<code>kde</code>版本的，第三个gnome.然后我觉得<code>kde</code>版本的比较友好吧。而且功能比较强大，里面我觉得最好的一个软件就是<code>kdeconnect</code>,这个软件真的好用，可惜windows没有类似的软件。</p>
 <p><img src="https://img-blog.csdnimg.cn/20200807110844383.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70" alt="image-20200807061733642"></p>
@@ -121,7 +121,7 @@
 <p><img src="https://img-blog.csdnimg.cn/20200807111708861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064119633">在这个界面先连下网，然后点击黄框选中的，开始一步步傻瓜式安装，接下来几幅图就是对应的：</p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111757778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064349625"></p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111810314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064421389"></p>
-<p><img src="/WYW1314/posts/27692/20200807112151745.png" alt="image-20200807064447679"></p>
+<p><img src="/posts/27692/20200807112151745.png" alt="image-20200807064447679"></p>
 <p>分区的话选择自动替换一个分区就可以。记得分区选择我们之前分出那个区域。让<code>manjoro</code>帮我们自动分区。</p>
 <p>接下来设置账户信息，这个就不用多说了吧，设置好以后就下一步就行咯。</p>
 <p><img src="https://img-blog.csdnimg.cn/20200807111858279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="image-20200807064723022"></p>
@@ -559,7 +559,7 @@ Defaults env_reset,pwfeedback
   </entry>
   <entry>
     <title>控制台信息转移到textedit控件上显示</title>
-    <url>/WYW1314/posts/15671.html</url>
+    <url>/posts/15671.html</url>
     <content><![CDATA[<h1 id="控制台信息转移到textedit控件上显示"><a href="#控制台信息转移到textedit控件上显示" class="headerlink" title="控制台信息转移到textedit控件上显示"></a>控制台信息转移到textedit控件上显示</h1><p>因为大创要做一个人脸测温的项目部署到树莓派上，所以界面是必须的，<code>pyqt5</code>比较幸运的之前我也接触过，由于需要将控制台输出的结果转移到界面上便于调试和观察，实现的具体效果为：</p>
 <p><img src="https://img-blog.csdnimg.cn/20200730192343636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>实现的具体效果大概就是这个样子，实际在程序里面写的时候还是用<code>printf()</code>语句去打印，只不过相当于把<code>printf</code>打印的地方换了一个地方输出。<br>程序里面涉及到了sys模块,sys这个模块是python中一个很重要的模块。下面是sys比较常用的函数列表：</p>
@@ -652,7 +652,7 @@ print(a)
   </entry>
   <entry>
     <title>Pyinstaller将Py文件打包为EXE可执行文件</title>
-    <url>/WYW1314/posts/42312.html</url>
+    <url>/posts/42312.html</url>
     <content><![CDATA[<h1 id="Pyinstaller将Py文件打包为EXE可执行文件"><a href="#Pyinstaller将Py文件打包为EXE可执行文件" class="headerlink" title="Pyinstaller将Py文件打包为EXE可执行文件"></a>Pyinstaller将Py文件打包为EXE可执行文件</h1><h2 id="1-python作为一门解释型脚本语言，它有三种发布方式"><a href="#1-python作为一门解释型脚本语言，它有三种发布方式" class="headerlink" title="1:python作为一门解释型脚本语言，它有三种发布方式"></a>1:python作为一门解释型脚本语言，它有三种发布方式</h2><ol>
 <li>.py文件 : 源码文件，运行需要使用者安装Python环境并且安装依赖的各种库</li>
 <li>.pyc文件：pyc文件是Python解释器可以识别的二进制码，可跨平台的，需要使用者安装相应版本的Python和依赖库。</li>
@@ -698,7 +698,7 @@ print(a)
   </entry>
   <entry>
     <title>解决Pyqt5每次修改Ui界面对应的Py文件都要改变</title>
-    <url>/WYW1314/posts/11865.html</url>
+    <url>/posts/11865.html</url>
     <content><![CDATA[<h1 id="鸽王回来了"><a href="#鸽王回来了" class="headerlink" title="鸽王回来了"></a>鸽王回来了</h1><p>自己的博客也不知道鸽了多久，只记得从六月份打完数学建模后就接着期末考试。期末考试完然后就去接着学车，考驾照，这个月终于要把驾照的事情给忙完了，哈哈哈，开心:happy:，可以接着在家安心宅着写程序了。</p>
 <p>一直以来使用<code>pyqt5</code>时候会遇到ui文件反复修改的问题，然后<code>ui</code>文件每次修改的时候导出的Python的程序都会跟着改变，然而以前自己太傻了，每次都重复做着相同的没有意义的事情，把覆盖掉的代码再重新一行一行接着码上，那个过程贼酸爽。:cry:,知道某天突然脑袋灵光了一阵，</p>
 <p>想到了既然每次写程序那个<code>Ui</code>转换出来的<code>Py</code>文件都是作为父类来继承，那么咱们可以创建一个新的Py文件，来继承父类的各项东西以及属性，这个没毛病吧。下面举一个例子：</p>
@@ -1005,7 +1005,7 @@ if __name__ == '__main__':
   </entry>
   <entry>
     <title>梯度下降法理解</title>
-    <url>/WYW1314/posts/57153.html</url>
+    <url>/posts/57153.html</url>
     <content><![CDATA[<h1 id="梯度下降法理解"><a href="#梯度下降法理解" class="headerlink" title="梯度下降法理解"></a>梯度下降法理解</h1><p><strong><em>梯度就是梯度啊，是一个矢量，大小为最大的方向导数，方向为最大方向导数的方向。但在单变量的实值函数的情况，梯度只是导数梯度</em></strong>。在只有一个维度的情况下简单可以理解为就是咱们学习的导数。导数是啥想必大家都很清楚了。</p>
 <p>那么 <strong>梯度下降就是用来求某个函数最小值时自变量对应取值。</strong>这个函数名字叫做损失函数（cost/loss function），机器学习涉及到了最基础的概念，直白点就是误差函数。一个算法不同参数会产生不同拟合曲线，也意味着有不同的误差。<strong>损失函数就是一个自变量为算法的参数，函数值为误差值的函数。梯度下降就是找让误差值最小时候算法取的参数。</strong></p>
 <p>深度学习的话视频推荐吴恩达的视频，他的视频非常透彻。网易云课堂上能给有搜到相关的视频。机器学习中涉及到一个损失函数的概念，<strong>有一类算法</strong>就是产生一条曲线来拟合现有的数据，这样子就可以实现预测未来的数据，这个专业术语叫做回归（见到回归就替换成拟合就好了~^~）。<strong>还有另外一种类</strong>似也是产生一条曲线，但是这个曲线时用来将点分隔成两块，实现分类，在这个曲线一侧为一类另外一侧算一类。<strong>但是我怎么知道这个算法产生的拟合曲线效果好不好呢？</strong>这个判断效果的名词叫做误差，预测值减去真实值最后取绝对值，于是乎就产生了损失函数这一概念。那么如何找到这个损失函数值最小的点呢，咱们高中的时候求最大或者最小值时候是不是通过求导来求极值点，那么求损失函数的最小值也是这样。可以通过求导的方式去进行。前面的时候也已经说到过。梯度就是求导数。梯度下降的话就是求极小值的点。<br>那么用梯度下降的方法的去求最小值的时候，我们可以这样去理解，假如我们夜晚现在要下山，现在手里要拿着手电筒，我们如果照亮的一段路是下坡，我们就会接着往坡下走，这样一定最后能够到达山脚。那么梯度下降的原理也类似上面这样。<br>梯度下降含义（具体操作）是：改变x的值使得导数的绝对值变小，当导数小于0时候（情况1），我们要让目前x值大一点点，再看它导数值。当导数大于0时候（情况2），我们要让目前x值减小一点点，再看它导数值。当导数接近0时候，我们就得到想要的自变量x了。也就是说找到这个算法最佳参数，使得拟合曲线与真实值误差最小。害。自己太菜了。这次参加的比赛完全在划水，也没帮上啥忙。</p>
@@ -1037,7 +1037,7 @@ if __name__ == '__main__':
   </entry>
   <entry>
     <title>心情Note</title>
-    <url>/WYW1314/posts/63933.html</url>
+    <url>/posts/63933.html</url>
     <content><![CDATA[<h1 id="心情Note："><a href="#心情Note：" class="headerlink" title="心情Note："></a>心情Note：</h1><p>疫情这段期间发生了太多事情，这半年。先是四月初被女朋友分手，好不容易从里面走出来，接下来因为项目的事情得罪了俩个老师。接下来自己刚开始从大一开始呆的社团感觉变味了，想着想要离开社团。终于在前天晚上开会后坚定了这个想法。自己也算是真正考虑清楚了把。自己退出后我也挺庆幸，能够看清楚身边人到底都是真心处的朋友和俩肋插刀的朋友。自己以为平时在社团无论谁叫我帮忙我都会去帮。以为走后会有人去给我唠唠，没想到还是你们俩个，健哥你和老狗你。失恋的时候也是你们。害，说实话自己昨天晚上做了老多梦，里面都是以前的回忆吧，大一刚来的时候和杨秀奇还不认识，那时候自我介绍我就说我去了电协嘛，然后老狗你知道了，之后就认识了老狗你，那时候和你一人买了一个二手车，天天大一有晚自习的时候自己一有时间就呆到晚自习上课前十几分钟，不吃饭疯狂骑车子从工程楼到电信楼，每次电信楼那个大上坡真的累死人。害，还有次然后焊一个音响白，我焊了六七次都还不好使。然后健哥一遍成。我当时还被嘲笑，哈哈。接下来就是寒假了白，我和老狗你就商量校赛的事情，咱们就商量了做一个物联网大棚，然后我假期学习32，你学电源的东西，然后很快开学了。校赛第一周，我们基本就快整完了。然后被要求换题，审核的第一周的时候那天晚上，真的算是非常自闭的一个晚上把。当时回到寝室后，寝室还停电了，其实自己大学够幸运了，能够遇到一群好的室友和你们俩个好朋友。之后换题换成风洞，然后第三周的时候做不完了，咱们就打算包宿，但是那天也发生了不愉快的事情吧，不过也都过去了。校赛后，假期备战电赛的时候压力也很大，不过那时候老狗你和健哥你的座位你们在我后面，天天没事就唠嗑，哈哈哈哈。想想就挺开心的，那段时间。打完电赛那个暑假后，我们又一块参加了物理实验竞赛，虽然物理实验过程中有点小插曲，但是一块录视频，去徐老师那边填表那段日子真的很开心呢，徐老师这个老师也真的很好。虽然最后的结果不是特别好，但是很开心能经历这次比赛，之后就大二了，要竞选部门，我和老狗你都想去培训部把自己会的教下去，现在我的退出可能也违背自己的初心了吧，健哥说的很对，其实电协传承的不应该只有知识，还有电协人的精神，但是我退出的原因是我自己感觉不到这种感觉了，感觉就是为了培训而培训。没有了所谓的精神。成了所谓的面子活。安排时候从来就想着和去年怎么怎么样，害，过去就过去了吧。不提了。我知道昨晚你俩给我唠是因为担心我的以后会受到影响，嘿嘿，你俩不用担心，我已经有了自己的想法，会一步一步继续走下去的，感觉写着写着像毕业分离一样，整的很感伤。哈哈哈，以后我不在社团也会天天见面啊。哈哈哈。加油吧。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1067,7 +1067,7 @@ if __name__ == '__main__':
   </entry>
   <entry>
     <title>Python导入qtdesigner和pyuic</title>
-    <url>/WYW1314/posts/37573.html</url>
+    <url>/posts/37573.html</url>
     <content><![CDATA[<h1 id="Python导入qtdesigner和pyuic"><a href="#Python导入qtdesigner和pyuic" class="headerlink" title="Python导入qtdesigner和pyuic"></a>Python导入qtdesigner和pyuic</h1><h2 id="1：cmd安装qtsdesigner和pyuic："><a href="#1：cmd安装qtsdesigner和pyuic：" class="headerlink" title="1：cmd安装qtsdesigner和pyuic："></a>1：cmd安装qtsdesigner和pyuic：</h2><pre class=" language-lang-python"><code class="language-lang-python">pip install pyqt5
 pip install pyqt5_tools
 </code></pre>
@@ -1114,7 +1114,7 @@ pip install pyqt5_tools
   </entry>
   <entry>
     <title>钢铁表面缺陷检测</title>
-    <url>/WYW1314/posts/32968.html</url>
+    <url>/posts/32968.html</url>
     <content><![CDATA[<h1 id="钢铁表面缺陷检测"><a href="#钢铁表面缺陷检测" class="headerlink" title="钢铁表面缺陷检测"></a>钢铁表面缺陷检测</h1><p><u><del><strong>勿喷，感觉自己写的老菜了，都是参考别人写的论文搞的。</strong></del></u></p>
 <p>4月末的某一天，老师打电话问我对一个比赛有没有兴趣。关于工业质量钢板质量检测的，当时也就答应了，其实自己有好多事情要去做。但是还是答应了，于是就去做。其实自己也没有啥思路，自己去找了找网上相关的论文。其中有一篇挺好的。照着里面的思路慢慢去做。发现识别出来的效果还行。</p>
 <h2 id="主要方法："><a href="#主要方法：" class="headerlink" title="主要方法："></a>主要方法：</h2><h3 id="1对图片进行top-hat变换："><a href="#1对图片进行top-hat变换：" class="headerlink" title="1对图片进行top-hat变换："></a>1对图片进行top-hat变换：</h3><p>Top-hat 去光照不均图像增强方法 数学形态学是在集合的层次上来描述和分析图像，着重研究图像的几何结构。<br>腐蚀和膨胀是形态学的两种最基本的运算，从数学角度来说，就是将图像与结构元素进行卷积。常见的数学形态学有二值形态学和灰度形态学。灰度形态学就是直接对灰度图像进行形态操作，二值形态学是对二值化的图像进行形态操作。形<br>态学运算在图像处理领域常被用来进行图像分割，特征提取，有的文献也介绍了用形态学运算对图像进行滤波处理，而且效果很好。二值形态学是在集合理论的基础上定义的。<strong>二值形态学最基本的运算腐蚀和膨胀。膨胀和腐蚀是相反的一对操作，膨胀就是求局部最大值的操作，腐蚀就是求局部最小值的操作</strong>。这里需要先介绍结构元素的概念。结构元素也被称为核元素，是进行形态学运算的模板。在腐蚀或者膨胀的时候，通过结构元素在图像区域按约定的规则进行运算，然后将变换结果输出，最后就得到形态运算后的结果。常见的结构元素是扁平型的，即结构元素高度为 0，也有非扁平型结构元素。结构元素的形状也有很多种，比如矩形的，十字交叉形的，菱形的，圆形的和椭圆形的。在选择结构元素时，需要<br>根据具体的目的来选择。结构元素一个重要的参考点，也称为锚点，决定了对图像进行形态操作时，以哪一个点为基准点。结构元素的大小也对最后的形态运算结果有很大影响。比如 3×3 的和 5×5 的结构元素。在进行形态学操作时，较大<br>的结构元素可以获得更好的处理效果，但是通常会耗时很多，相反，较小的结构元素处理起来会很快，但是处理效果欠佳。实际运用中需要通过一定的实验来确定灰度图像的腐蚀和膨胀过程可通过灰度图像和结构元素的二元函数关系计算出<br>来。Top-hat 则是灰度图像与灰度腐蚀、膨胀相结合的一种复合运算。设 F(x, y) 表示输入图像的二元函数，S(x, y) 为结构元素，SD 表示结构元素的定义域，则 S 对F 的腐蚀（ FS ）和膨胀（ F S ）运算定义如下：</p>
@@ -1165,7 +1165,7 @@ g(x,y) = \frac{1}{m}\sum{f(k,l)}</script><p>g(x,y)为处理后的像素的灰度
   </entry>
   <entry>
     <title>Python自动部署码云</title>
-    <url>/WYW1314/posts/47649.html</url>
+    <url>/posts/47649.html</url>
     <content><![CDATA[<h1 id="Python自动部署码云："><a href="#Python自动部署码云：" class="headerlink" title="Python自动部署码云："></a>Python自动部署码云：</h1><h2 id="1：大概思路："><a href="#1：大概思路：" class="headerlink" title="1：大概思路："></a>1：大概思路：</h2><p>其实还是打开浏览器登录，只不过不用你自己再一步一步登录部署干啥。python代替你完成了这个过程。我用的谷歌浏览器，谷歌真香，用的人都说爽。</p>
 <h2 id="2-下载chromedriver-exe文件："><a href="#2-下载chromedriver-exe文件：" class="headerlink" title="2:下载chromedriver.exe文件："></a>2:下载chromedriver.exe文件：</h2><p>首先打开你的谷歌浏览器。直接在地址栏输入：<a href="chrome://settings/help">chrome://settings/help</a>.这样会出来和你浏览器相对应的版本。如下图所示：<img src="https://img-blog.csdnimg.cn/20200413205439163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>我的浏览器版本是81.0.4044.9.我下载的版本只要是81.0.4044.xxx就可以。下载文件的链接是：<a href="http://chromedriver.storage.googleapis.com/index.html。" target="_blank" rel="noopener">http://chromedriver.storage.googleapis.com/index.html。</a><br>下载完文件后把这个exe文件当到谷歌浏览器的路径下：我的路径为：<strong>E:\Chrome\Application</strong>。同时还要把这个文件放到你电脑上python的安装根目录下。</p>
@@ -1262,7 +1262,7 @@ fp.close()
   </entry>
   <entry>
     <title>齐次坐标的理解</title>
-    <url>/WYW1314/posts/64390.html</url>
+    <url>/posts/64390.html</url>
     <content><![CDATA[<h1 id="齐次坐标的理解"><a href="#齐次坐标的理解" class="headerlink" title="齐次坐标的理解"></a>齐次坐标的理解</h1><p>齐次坐标这个概念是在看图像仿射变换时候看到的。当初看的因为没接触过，就查了一下概念。<a id="more"></a><br>问题：两条平行线可以相交于一点 在欧氏几何空间，同一平面的两条平行线不能相交，这是我们都熟悉的一种场景。 然而，在透视空间里面，两条平行线可以相交，例如：火车轨道随着我们的视线越来越窄，最后两条平行线在无穷远处交于一点。  欧氏空间（或者笛卡尔空间）描述2D/3D几何非常适合，但是这种方法却不适合处理透视空间的问题（实际上，欧氏几何是透视几何的一个子集合），2维笛卡尔坐标可以表示为（x,y）。  如果一个点在无穷远处，这个点的坐标将会(∞,∞)，在欧氏空间，这变得没有意义。平行线在透视空间的无穷远处交于一点，但是在欧氏空间却不能，数学家发现了一种方式来解决这个问题。  方法：齐次坐标 简而言之，齐次坐标就是用N+1维来代表N维坐标  我们可以在一个2D笛卡尔坐标末尾加上一个额外的变量w来形成2D齐次坐标，因此，一个点(X,Y)在齐次坐标里面变成了（x,y,w），并且有 </p>
 <p>X = x/w</p>
 <p>Y = y/w</p>
@@ -1302,7 +1302,7 @@ fp.close()
   </entry>
   <entry>
     <title>树莓派换源以及pip安装</title>
-    <url>/WYW1314/posts/3101.html</url>
+    <url>/posts/3101.html</url>
     <content><![CDATA[<h1 id="树莓派换源以及opencv还有opencv-contrib"><a href="#树莓派换源以及opencv还有opencv-contrib" class="headerlink" title="树莓派换源以及opencv还有opencv-contrib"></a>树莓派换源以及opencv还有opencv-contrib</h1><p>树莓派刷好系统后一般情况下都是国外的源，所以说及其的慢。可以换成国内的源。<a id="more"></a>其实很简单</p>
 <h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">lsb_release  -a
@@ -1359,7 +1359,7 @@ sudo apt-get update
   </entry>
   <entry>
     <title>汇编语言的学习记录</title>
-    <url>/WYW1314/posts/31290.html</url>
+    <url>/posts/31290.html</url>
     <content><![CDATA[<h1 id="汇编语言的学习笔记："><a href="#汇编语言的学习笔记：" class="headerlink" title="汇编语言的学习笔记："></a>汇编语言的学习笔记：</h1><p>汇编语言我看的是王爽写的《汇编语言第三版》，这本书写的挺好的。<br>链接: <a href="https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1yoK7uoJhbmmg-o58mWkerQ</a> 提取码: va7t<br>感觉在看汇编语言的前一部分时候感觉和学51单片机时候的寄存器一样。其实都还是相通的。由于最近还是因为疫情，而且过几天要开网课了。苦逼。所以在家只能学习。于是就学习汇编玩下。<a id="more"></a>然后我打算把我每天学习的记录一下。为了日后看的时候方便一点。</p>
 <h2 id="机器语言："><a href="#机器语言：" class="headerlink" title="机器语言："></a>机器语言：</h2><p>机器语言就是0和1，但机器语言实在过于复杂，所以以前的程序猿真的苦逼，要写一堆0和1.所以汇编语言就产生了。与现在的高级语言的效率相比。汇编语言的效率是最快的。</p>
 <h2 id="编译器作用"><a href="#编译器作用" class="headerlink" title="编译器作用"></a>编译器作用</h2><p>编译器的作用就是将汇编指令转换为机器指令。</p>
@@ -1399,7 +1399,7 @@ sudo apt-get update
   </entry>
   <entry>
     <title>PCA主成分分析：</title>
-    <url>/WYW1314/posts/53510.html</url>
+    <url>/posts/53510.html</url>
     <content><![CDATA[<h1 id="PCA主成分分析："><a href="#PCA主成分分析：" class="headerlink" title="PCA主成分分析："></a>PCA主成分分析：</h1><p>主成分分析是一种矩阵的压缩算法，在减少矩阵维数的同时尽可能的保留原矩阵的信息，简单来说就是将 n×m的矩阵转换成n×k的矩阵（通常k是小于m的），仅保留矩阵中所存在的主要特性，从而可以大大节省空间和数据量。<a id="more"></a>然后假期学习到图像主成分分析的书上直接给出了程序实现的过程，而其中原理并不是特别清楚。去网上找别人写的博客去看的时候，感觉都写的过于片面。然后我就想在这些基础之上总结一下。</p>
 <p><strong>PCA数学原理分析</strong>：</p>
 <p><a href="http://blog.codinglabs.org/articles/pca-tutorial.html" target="_blank" rel="noopener">PCA数学原理分析</a></p>
@@ -1559,7 +1559,7 @@ for i in range(9):
   </entry>
   <entry>
     <title>Harris角点检测</title>
-    <url>/WYW1314/posts/48085.html</url>
+    <url>/posts/48085.html</url>
     <content><![CDATA[<h1 id="Harris角点检测"><a href="#Harris角点检测" class="headerlink" title="Harris角点检测"></a>Harris角点检测</h1><h2 id="角点的定义："><a href="#角点的定义：" class="headerlink" title="角点的定义："></a>角点的定义：</h2><p>角点检测算法基本思想是使用一个固定窗口（取某个像素的一个邻域窗口）在图像上进行<strong>任意方向</strong>上的滑动，比较滑动前与滑动后两种情况，窗口中的像素灰度变化程度，<strong>如果存在任意方向上的滑动，都有着较大灰度变化，那么我们可以认为该窗口中存在角点。</strong><br><a id="more"></a><br>角点：最直观的印象就是在水平和竖直两个方向变化均较大的两个点，即X,Y方向梯度都较大</p>
 <p>边缘：仅在水平或竖直方向有较大的变化量，即X、Y方向梯度只有一个较大</p>
 <p>平坦区域：在水平和竖直方向的变化量均较小，即X、Y方向梯度都较小</p>
