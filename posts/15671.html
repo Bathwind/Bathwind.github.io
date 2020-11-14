@@ -29,8 +29,8 @@
 
     <script src="/Bathwind.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/Bathwind.github.io/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/Bathwind.github.io/atom.xml" title="千空" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/Bathwind.github.io/atom.xml" title="千空" type="application/atom+xml">
+<link rel="stylesheet" href="/Bathwind.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -523,7 +523,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="控制台信息转移到textedit控件上显示"><a href="#控制台信息转移到textedit控件上显示" class="headerlink" title="控制台信息转移到textedit控件上显示"></a>控制台信息转移到textedit控件上显示</h1><p>因为大创要做一个人脸测温的项目部署到树莓派上，所以界面是必须的，<code>pyqt5</code>比较幸运的之前我也接触过，由于需要将控制台输出的结果转移到界面上便于调试和观察，实现的具体效果为：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200730192343636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200730192343636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>实现的具体效果大概就是这个样子，实际在程序里面写的时候还是用<code>printf()</code>语句去打印，只不过相当于把<code>printf</code>打印的地方换了一个地方输出。<br>程序里面涉及到了sys模块,sys这个模块是python中一个很重要的模块。下面是sys比较常用的函数列表：</p>
 <p><code>sys.argv: 实现从程序外部向程序传递参数。</code><br><code>sys.exit([arg]): 程序中间的退出，arg=0为正常退出。</code><br><code>sys.getdefaultencoding(): 获取系统当前编码，一般默认为ascii。</code><br><code>sys.setdefaultencoding(): 设置系统默认编码，执行dir（sys）时不会看到这个方法，在解释器中执行不通过，可以先执行reload(sys)，在执行 setdefaultencoding('utf8')，此时将系统默认编码设置为utf8。（见设置系统默认编码 ）</code><br><code>sys.getfilesystemencoding(): 获取文件系统使用编码方式，Windows下返回'mbcs'，mac下返回'utf-8'.</code><br><code>sys.path: 获取指定模块搜索路径的字符串集合，可以将写好的模块放在得到的某个路径下，就可以在程序中import时正确找到。</code><br><code>sys.platform: 获取当前系统平台。</code><br><code>sys.stdin,sys.stdout,sys.stderr: stdin , stdout , 以及stderr 变量包含与标准I/O 流对应的流对象. 如果需要更好地控制输出,而print 不能满足你的要求, 它们就是你所需要的. 你也可以替换它们, 这时候你就可以重定向输出和输入到其它设备( device ), 或者以非标准的方式处理它们</code></p>
 <p>思路的话参考的网上其他大佬的程序，</p>
@@ -538,7 +538,7 @@
 </code></pre>
 <p><code>QtCore.pyqtSignal</code>的作用是创建一个<code>str</code>的信号，之后就对这个创建的信号进行操作，这部分又涉及到了<code>Pyqt5</code>中的信号与槽的机制的知识，<u><del>莫名觉得又挖了一个坑进去</del></u>。下面可能废话比较多，主要讲讲信号与槽的机制原理：</p>
 <p>下面是信号与槽机制的示意图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200730205314124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200730205314124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>当事件或者状态发生改变时，就会发出信号，同时的话，信号也会触发所有与这个事件(信号)相关的函数(槽)，信号与槽的话可以多对多的关系，一个信号可以连接多个槽，一个槽也可以监听多个信号。</p>
 <p>由于<code>Pyqt</code>的内置信号是自动定义的。使用<code>QtCore.pyqtSignal()</code>函数可以为<code>Qobject</code>创建一个信号，使用这个函数可以自定义信号的属性，使用这个函数创建信号时候，信号可以传递多个参数，并指定信号传递参数的类型，参数类型必须是标准的Python数据类型(字符串，日期，布尔类型，数字，列表，元组和字典)。信号与槽的运用我打算单独再写出一篇。又挖了一个大坑，啊哈哈哈哈，o(<em>￣︶￣</em>)o。</p>
 <p>程序下面一句自定义了一个write函数，第一句emit函数的作用就是可以发射一个信号，这个步骤也是信号与槽的必须的一个步骤。</p>
@@ -584,7 +584,7 @@ a = 1%0
 print(a)
 </code></pre>
 <p>这很明显有错误，对吧。然后我打开生成的<code>out.log</code>,发现错误内容被记录了进去，就说明该程序没有错误。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200731143159910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200731143159910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>至于为啥那个界面不显示，暂且没找到原因。以上就大概完成这个功能。另外俩个坑很快就会填上.</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -619,7 +619,7 @@ print(a)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/Bathwind.github.io" rel="external nofollow noreferrer">WYW</a>
+                    <a href="https://github.com" rel="external nofollow noreferrer">WYW</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -629,7 +629,7 @@ print(a)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/Bathwind.github.io/Bathwind.github.io/posts/15671.html">https://github.com/Bathwind.github.io/Bathwind.github.io/posts/15671.html</a>
+                    <a href="https://github.com/Bathwind.github.io/posts/15671.html">https://github.com/Bathwind.github.io/posts/15671.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,7 +642,7 @@ print(a)
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://github.com/Bathwind.github.io" target="_blank">WYW</a>
+                    <a href="https://github.com" target="_blank">WYW</a>
                     !
                 </span>
             </div>
@@ -1424,7 +1424,7 @@ print(a)
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="https://github.com/Bathwind.github.io" target="_blank">WYW</a>
+            <a href="https://github.com" target="_blank">WYW</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
