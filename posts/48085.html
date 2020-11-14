@@ -543,7 +543,7 @@ E(u,v)=\sum_{x,y}w(x,y) \left[]
   IxIy & Iy^2
   \end{matrix}
   \right] \tag{B}</script><p>w(x,y)是窗口函数，最简单情形就是窗口WW内的所有像素所对应的w权重系数均为1.但有时候，我们会将w(x,y)函数设置为以窗口WW中心为原点的二元正态分布。如果窗口WW中心点是角点时，移动前与移动后，该点在灰度变化贡献最大；而离窗口WW中心(角点)较远的点，这些点的灰度变化几近平缓，这些点的权重系数，可以设定小值，以示该点对灰度变化贡献较小，那么我们自然而然想到使用二元高斯函数来表示窗口函数；</p>
-<p><img src="https://img-blog.csdnimg.cn/20200413211148346.png#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200413211148346.png#pic_center" alt></p>
 <h2 id="Harris矩阵推导过程"><a href="#Harris矩阵推导过程" class="headerlink" title="Harris矩阵推导过程:"></a>Harris矩阵推导过程:</h2><p>使用一个固定窗口在图像上进行任意方向上的滑动。滑动分别为u和v.</p>
 <p>比较滑动前与滑动后俩种情况。所以可以得到以下公式：</p>
 <script type="math/tex; mode=display">
@@ -581,7 +581,7 @@ Mi =\left[
 <p>根据上述表达式，当窗口在平坦区域上移动，可以想象得到，灰度不会发生什么变换。E(u,v)=0；如果窗口处在纹理比较丰富的区域上滑动，那么灰度变化会很大。算法最终思想就是计算灰度发生较大变化时所对应的位置，当然这个较大是指任意方向上的滑动，并非单指某个方向。</p>
 <p>接下来我们对矩阵M的特征值进行分析。设矩阵M的特征值为λ1,λ2.</p>
 <p>则有以下三种情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200413211353226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200413211353226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>具体为什么有这三种情况以下就是推导过程：</p>
 <p>我们可以将E(u,v)近似为二项函数：</p>
 <script type="math/tex; mode=display">

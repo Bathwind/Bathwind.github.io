@@ -526,21 +526,21 @@
 <h2 id="查看自己的系统版本"><a href="#查看自己的系统版本" class="headerlink" title="查看自己的系统版本"></a>查看自己的系统版本</h2><p>一般情况下刷好系统后，有各种各样的版本，在这里输入指令查看：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">lsb_release  -a
 </code></pre>
-<p><br>如下图所示：<br><br><img src="https://img-blog.csdnimg.cn/20200413213727373.jpg#pic_center" alt=""><br>可以看到codename为buster,所以一会换源的时候一定要记住。</p>
-<h2 id="更改souces-list软件源"><a href="#更改souces-list软件源" class="headerlink" title="更改souces.list软件源"></a>更改souces.list软件源</h2><p>1:nano 编辑/etc/apt/目录下的sources.list<br>终端输入：sudo nano /etc/apt/sources.list<br><br><br><img src="https://img-blog.csdnimg.cn/20200413213852306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""><br>我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。<br>ctrl + o 保存。回车确认。ctrl + x 退出。</p>
+<p><br>如下图所示：<br><br><img src="https://img-blog.csdnimg.cn/20200413213727373.jpg#pic_center" alt><br>可以看到codename为buster,所以一会换源的时候一定要记住。</p>
+<h2 id="更改souces-list软件源"><a href="#更改souces-list软件源" class="headerlink" title="更改souces.list软件源"></a>更改souces.list软件源</h2><p>1:nano 编辑/etc/apt/目录下的sources.list<br>终端输入：sudo nano /etc/apt/sources.list<br><br><br><img src="https://img-blog.csdnimg.cn/20200413213852306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt><br>我换的是清华大学镜像站的源，所以你换的时候输入下图的俩个网址就可以。<br>ctrl + o 保存。回车确认。ctrl + x 退出。</p>
 <pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
 </code></pre>
 <h2 id="更换系统源"><a href="#更换系统源" class="headerlink" title="更换系统源"></a>更换系统源</h2><p>执行命令：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">sudo nano /etc/apt/sources.list.d/raspi.list
 </code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200413214127463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""><br><br>输入以下网址：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200413214127463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt><br><br>输入以下网址：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 </code></pre>
 <h2 id="pip命令安装Opencv"><a href="#pip命令安装Opencv" class="headerlink" title="pip命令安装Opencv"></a>pip命令安装Opencv</h2><p>由于树莓派上是py3.7.所以使用pip命令安装时候要用pip3.<br>打开终端：</p>
 <pre class=" language-lang-python"><code class="language-lang-python">sudo pip3  install opencv-python
 </code></pre>
-<p>这里我已经装完了。<br><img src="https://img-blog.csdnimg.cn/20200413214258552.png#pic_center" alt="">这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。</p>
+<p>这里我已经装完了。<br><img src="https://img-blog.csdnimg.cn/20200413214258552.png#pic_center" alt>这里要注意你装之前一定要有numpy这个库。一般情况下刷完系统就有了。<br>装完之后你可以终端输入python3回车。输入import cv2<br><br>然后回车。如果出现以下错误：ImportError: libhdf5_serial.so.100: cannot open shared object file: No such file or directory.缺少若干依赖模块，<br>就把下面的所有来一遍就好了。</p>
 <pre class=" language-lang-python"><code class="language-lang-python">sudo apt-get update #安装依赖库
 sudo apt-get install libhdf5-dev
 sudo apt-get install libatlas-base-dev

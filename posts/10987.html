@@ -527,7 +527,7 @@
 <p>首先进入命令行，先安装俩个插件，分别是flake8和yapf.这俩个插件的作用分别是flake8会检查编写代码时的不规范的地方和语法错误。yapf可以把你写的代码不规范的地方给格式化。</p>
 <p>命令分别是：<code>pip install flake8</code> 和 <code>pip install yapf</code>.</p>
 <p><strong><em>安装完成后进入VScode安装python插件：</em></strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200808104848775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200808104848775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>这个插件的作用并不是就是Python这个解释器，</p>
 <ol>
 <li>第一：这个插件不是python语言的解释器，vscode想要运行python代码，必须另外指定在windows上安装的python解释器路径才可以。</li>
@@ -536,9 +536,9 @@
 <li>第四：具有代码提示功能。</li>
 </ol>
 <p>接下来就可以愉快的写代码了。首先创建一个文件夹存放你的程序。这里我新建一个mysocket文件夹存放程序，记得这里一定要以Vscode右键打开文件夹，</p>
-<p><img src="https://img-blog.csdnimg.cn/2020080821294839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/2020080821294839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>打开之后，ctrl+shift+P调出命令面板，在命令行输入第一行的内容，Python:Select Interpreter.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200808213948790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/20200808213948790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt></p>
 <p>接下来就会出来你电脑上所有的python环境，如图所示：<br><img src="https://img-blog.csdnimg.cn/2020080822095490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这里选择好你要的环境之后，然后你创建的文件下就会出现一个.vscode文件夹，然后文件夹里面有一个setting.json.这个时候你打开setting.json,这个时候里面只有一句:python的路径设置。<br><img src="https://img-blog.csdnimg.cn/20200808221539556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0MjE5ODgz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p>然后接下来添加几条语句： </p>
 <pre class=" language-lang-bash"><code class="language-lang-bash">    "python.linting.flake8Enabled": true,
